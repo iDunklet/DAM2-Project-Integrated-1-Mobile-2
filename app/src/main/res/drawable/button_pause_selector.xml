@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Cuando está seleccionado -->
+    <item
+        android:state_selected="true"
+        android:drawable="@drawable/button_pause_paused" />
+
+    <!-- Cuando NO está seleccionado -->
+    <item
+        android:drawable="@drawable/button_pause" />
+
+</selector>
