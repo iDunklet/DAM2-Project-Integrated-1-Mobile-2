@@ -26,7 +26,6 @@
             android:src="@drawable/game_background" />
 
         <ImageView
-            android:id="@+id/gato_imagen"
             android:layout_width="241dp"
             android:layout_height="245dp"
             android:src="@drawable/happy_cat"
