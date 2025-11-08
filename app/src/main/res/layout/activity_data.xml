@@ -1,29 +1,145 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_data"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".DataActivity">
+    android:padding="24dp"
+    android:background="@color/grey">
 
     <TextView
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rellene"
+        android:fontFamily="@font/baloo_bold"
+        android:textSize="120dp"
+        android:layout_gravity="center"
+        android:layout_margin="20dp"
+        android:textColor="@color/clear_grey" />
+
+    <LinearLayout
+        android:layout_width="800dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:textAlignment="center"
-        android:text="INICIO"
-        android:textSize="30sp"
-        android:layout_marginTop="50dp"
-        >
-    </TextView>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center">
+        android:gravity="center"
+        android:layout_marginBottom="16dp"
+        android:orientation="vertical">
 
+        <!-- Campo Nombre (alineado a la izquierda) -->
+        <LinearLayout
+            android:layout_width="800dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="16dp">
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nombre:"
+                android:fontFamily="@font/baloo_bold"
+                android:textSize="70dp"
+                android:layout_weight="1"
+                android:textColor="@color/clear_grey" />
+
+            <EditText
+                android:id="@+id/etNombre"
+                android:layout_width="400dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="80dp"
+                android:background="@drawable/edit_box"
+                android:hint="@string/app_name"
+                android:padding="12dp" />
+        </LinearLayout>
+
+        <!-- Campo Edad (alineado a la derecha) -->
+        <LinearLayout
+            android:layout_width="800dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Edad:"
+                android:fontFamily="@font/baloo_bold"
+                android:textSize="70dp"
+                android:layout_weight="1"
+                android:textColor="@color/clear_grey" />
+
+            <EditText
+                android:id="@+id/etEdad"
+                android:layout_width="400dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="80dp"
+                android:background="@drawable/edit_box"
+                android:hint="@string/app_name"
+                android:padding="12dp" />
+        </LinearLayout>
     </LinearLayout>
+
+    <!-- Dificultad - TextView fuera del RadioGroup -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dificultad:"
+            android:fontFamily="@font/baloo_bold"
+            android:textSize="70dp"
+            android:textColor="@color/clear_grey"
+            android:layout_marginEnd="40dp" />
+
+        <RadioGroup
+            android:id="@+id/rbEasyHard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rbEasy"
+                android:layout_width="wrap_content"
+                android:layout_height="120dp"
+                android:text="FÁCIL"
+                android:fontFamily="@font/baloo_bold"
+                android:textSize="70dp"
+                android:padding="10dp"
+                android:gravity="center"
+                android:layout_marginEnd="20dp"
+                android:button="@null"
+                android:textColor="@color/grey"
+                android:background="@drawable/radio_selector" />
+
+            <RadioButton
+                android:id="@+id/rbHard"
+                android:layout_width="wrap_content"
+                android:layout_height="120dp"
+                android:text="DIFÍCIL"
+                android:fontFamily="@font/baloo_bold"
+                android:textSize="70dp"
+                android:gravity="center"
+                android:padding="10dp"
+                android:button="@null"
+                android:textColor="@color/grey"
+                android:background="@drawable/radio_selector" />
+
+        </RadioGroup>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/bContinue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="20dp"
+        android:backgroundTint="@color/azul"
+        android:fontFamily="@font/baloo_bold"
+        android:text="Continuar"
+        android:textColor="@color/white"
+        android:textSize="40dp" />
 
 </LinearLayout>

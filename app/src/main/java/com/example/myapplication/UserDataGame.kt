@@ -6,5 +6,6 @@ class UserDataGame(
     val gameTime: Int,
     val errors: Int,
     val points: Int,
-    val date: LocalDateTime
+    val date: LocalDateTime,
+    val dificulty: String
 )

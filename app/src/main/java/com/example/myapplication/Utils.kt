@@ -18,14 +18,16 @@ val user = User(
             gameTime = 120,
             errors = 3,
             points = 4500,
-            date = LocalDateTime.now()
+            date = LocalDateTime.now(),
+            dificulty = "hard"
         ),
         UserDataGame(
             gameTime = 85,
             errors = 1,
             points = 5200,
-            date = LocalDateTime.now().minusDays(1)
+            date = LocalDateTime.now().minusDays(1),
             //api ns que 26
+            dificulty = "easy"
         )
     )
 )
