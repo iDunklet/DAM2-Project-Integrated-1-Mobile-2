@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
         <activity
+            android:name=".GameDificulty"
+            android:exported="false" />
+        <activity
             android:name=".DataActivity"
             android:exported="true" />
         <activity

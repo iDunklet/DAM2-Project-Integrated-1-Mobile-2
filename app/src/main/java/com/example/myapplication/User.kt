@@ -1,6 +1,5 @@
 package com.example.myapplication
-
-import java.time.LocalDateTime
+import java.io.Serializable
 
 class User(
     // user basic stuff
@@ -8,5 +7,5 @@ class User(
     val age: Int,
 
     // game data
-    val listaDeClases: MutableList<UserDataGame> = mutableListOf()
-)
+    val gameList: MutableList<UserDataGame>? = mutableListOf()
+): Serializable

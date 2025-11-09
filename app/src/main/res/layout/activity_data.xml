@@ -78,57 +78,7 @@
     </LinearLayout>
 
     <!-- Dificultad - TextView fuera del RadioGroup -->
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:orientation="horizontal"
-        android:gravity="center_vertical">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Dificultad:"
-            android:fontFamily="@font/baloo_bold"
-            android:textSize="70dp"
-            android:textColor="@color/clear_grey"
-            android:layout_marginEnd="40dp" />
-
-        <RadioGroup
-            android:id="@+id/rbEasyHard"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <RadioButton
-                android:id="@+id/rbEasy"
-                android:layout_width="wrap_content"
-                android:layout_height="120dp"
-                android:text="FÁCIL"
-                android:fontFamily="@font/baloo_bold"
-                android:textSize="70dp"
-                android:padding="10dp"
-                android:gravity="center"
-                android:layout_marginEnd="20dp"
-                android:button="@null"
-                android:textColor="@color/grey"
-                android:background="@drawable/radio_selector" />
-
-            <RadioButton
-                android:id="@+id/rbHard"
-                android:layout_width="wrap_content"
-                android:layout_height="120dp"
-                android:text="DIFÍCIL"
-                android:fontFamily="@font/baloo_bold"
-                android:textSize="70dp"
-                android:gravity="center"
-                android:padding="10dp"
-                android:button="@null"
-                android:textColor="@color/grey"
-                android:background="@drawable/radio_selector" />
-
-        </RadioGroup>
-    </LinearLayout>
 
     <Button
         android:id="@+id/bContinue"

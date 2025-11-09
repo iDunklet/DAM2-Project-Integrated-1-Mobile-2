@@ -19,8 +19,6 @@ class GameWon : AppCompatActivity() {
 
 
         val buttonExit = findViewById<ImageButton>(R.id.button_exit)
-        findViewById<ImageButton>(R.id.button_exit).setOnClickListener {
-            setupExitButton(this, buttonExit )
-        }
+
     }
 }
