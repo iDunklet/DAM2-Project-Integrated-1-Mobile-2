@@ -13,7 +13,7 @@
         android:theme="@style/Theme.MyApplication">
         <activity
             android:name=".GameDificulty"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".DataActivity"
             android:exported="true" />
