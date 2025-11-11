@@ -275,5 +275,6 @@ class Game : AppCompatActivity() {
             gatoView.setImageResource(gatos[golpesGato])
             golpesGato++
         }
+
     }
 }
