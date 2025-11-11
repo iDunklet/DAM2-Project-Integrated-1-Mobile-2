@@ -16,6 +16,7 @@
         android:layout_height="match_parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/zonaDerecha"
+        android:src="@drawable/game_background"
         app:layout_constraintWidth_percent="0.7">
 
         <!-- Fondo de la zona -->
@@ -26,6 +27,7 @@
             android:src="@drawable/game_background" />
 
         <ImageView
+            android:id="@+id/imgViewGato"
             android:layout_width="241dp"
             android:layout_height="245dp"
             android:src="@drawable/happy_cat"
@@ -73,16 +75,19 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <ImageView
+                android:id="@+id/heart1"
                 android:layout_width="@dimen/hearts"
                 android:layout_height="@dimen/hearts"
                 android:src="@drawable/heart" />
 
             <ImageView
+                android:id="@+id/heart2"
                 android:layout_width="@dimen/hearts"
                 android:layout_height="@dimen/hearts"
                 android:src="@drawable/heart" />
 
             <ImageView
+                android:id="@+id/heart3"
                 android:layout_width="@dimen/hearts"
                 android:layout_height="@dimen/hearts"
                 android:src="@drawable/heart" />
@@ -98,7 +103,9 @@
             <View
                 android:id="@+id/barraRelleno"
                 android:layout_width="0dp"
-                android:layout_height="match_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="start|center_vertical"
+                android:layout_margin="40dp"
                 android:background="@color/clear_blue" />
 
             <!-- Imagen de la barra -->
