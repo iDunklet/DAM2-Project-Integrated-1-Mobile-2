@@ -20,7 +20,6 @@ class DataActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_data)
         startViews()
-        //setupRadioButtonDificulty()
 
         bContinue.setOnClickListener {
             val userName = etName.text.toString().trim()
