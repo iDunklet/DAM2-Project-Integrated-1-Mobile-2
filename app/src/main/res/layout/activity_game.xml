@@ -81,11 +81,13 @@
                 android:src="@drawable/heart" />
 
             <ImageView
+                android:id="@+id/heart2"
                 android:layout_width="@dimen/hearts"
                 android:layout_height="@dimen/hearts"
                 android:src="@drawable/heart" />
 
             <ImageView
+                android:id="@+id/heart3"
                 android:layout_width="@dimen/hearts"
                 android:layout_height="@dimen/hearts"
                 android:src="@drawable/heart" />
