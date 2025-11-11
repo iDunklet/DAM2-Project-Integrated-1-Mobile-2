@@ -16,6 +16,7 @@ import android.content.res.Resources
 import android.speech.RecognitionListener
 import android.speech.RecognizerIntent
 import android.speech.SpeechRecognizer
+import kotlin.math.abs
 
 class Game : AppCompatActivity() {
 
@@ -26,6 +27,15 @@ class Game : AppCompatActivity() {
         CUATRO(4, "cuatro"),
         CINCO(5, "cinco")
     }
+    private var gotasCreadas = 0
+    private val maxGotas = 10
+    private var vidasRestantes = 3
+    private lateinit var hearts: List<ImageView>
+    private lateinit var gatos: List<Int>
+    private var golpesGato = 0 // 0 = happy, 1 = neutral, 2 = sad
+
+
+    private lateinit var gatoView: ImageView
 
     private val gotasActivas = mutableListOf<Gota>()
     private lateinit var speechRecognizer: SpeechRecognizer
@@ -37,13 +47,21 @@ class Game : AppCompatActivity() {
         val buttonMike = findViewById<ImageButton>(R.id.buttonMike)
         val btnPausa = findViewById<ImageButton>(R.id.butonPausa)
         val overlay = findViewById<View>(R.id.pauseEfect)
+        hearts = listOf(
+            findViewById(R.id.heart3),
+            findViewById(R.id.heart2),
+            findViewById(R.id.heart1)
+        )
+        gatos = listOf(
+            R.drawable.neutral_cat,
+            R.drawable.sad_cat
+        )
 
         btnPausa.setOnClickListener {
             btnPausa.isSelected = !btnPausa.isSelected
             overlay.visibility = if (btnPausa.isSelected) View.VISIBLE else View.GONE
         }
 
-        // Solicitar permiso de micrófono si no está dado
         if (checkSelfPermission(android.Manifest.permission.RECORD_AUDIO) != PackageManager.PERMISSION_GRANTED) {
             requestPermissions(arrayOf(android.Manifest.permission.RECORD_AUDIO), 101)
         }
@@ -51,7 +69,7 @@ class Game : AppCompatActivity() {
         if (!SpeechRecognizer.isRecognitionAvailable(this)) {
             Log.e("SpeechDebug", "Speech recognition no disponible en este dispositivo")
             Toast.makeText(this, "No se puede usar reconocimiento de voz en esta tablet", Toast.LENGTH_LONG).show()
-        }// Inicializar SpeechRecognizer
+        }
 
         speechRecognizer = SpeechRecognizer.createSpeechRecognizer(this)
         val recognizerIntent = Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH).apply {
@@ -64,17 +82,14 @@ class Game : AppCompatActivity() {
             override fun onReadyForSpeech(params: Bundle?) {
                 Log.d("SpeechDebug", "SpeechRecognizer: listo para escuchar")
             }
-
             override fun onBeginningOfSpeech() {
                 Log.d("SpeechDebug", "SpeechRecognizer: comenzó a hablar")
             }
-
             override fun onRmsChanged(rmsdB: Float) {}
             override fun onBufferReceived(buffer: ByteArray?) {}
             override fun onEndOfSpeech() {
                 Log.d("SpeechDebug", "SpeechRecognizer: terminó de hablar")
             }
-
             override fun onError(error: Int) {
                 val mensaje = when (error) {
                     SpeechRecognizer.ERROR_NETWORK_TIMEOUT -> "ERROR_NETWORK_TIMEOUT"
@@ -90,7 +105,6 @@ class Game : AppCompatActivity() {
                 }
                 Log.d("SpeechDebug", "SpeechRecognizer Error: $mensaje")
             }
-
             override fun onResults(results: Bundle?) {
                 val matches = results?.getStringArrayList(SpeechRecognizer.RESULTS_RECOGNITION)
                 Log.d("SpeechDebug", "SpeechRecognizer - onResults: $matches")
@@ -105,11 +119,9 @@ class Game : AppCompatActivity() {
                     }
                 }
             }
-
             override fun onPartialResults(partialResults: Bundle?) {
                 Log.d("SpeechDebug", "SpeechRecognizer - resultados parciales: $partialResults")
             }
-
             override fun onEvent(eventType: Int, params: Bundle?) {}
         })
 
@@ -117,8 +129,7 @@ class Game : AppCompatActivity() {
             speechRecognizer.startListening(recognizerIntent)
         }
 
-        // Iniciar movimiento de gotas
-        moverImagenVertical()
+        iniciarCicloGotas()
     }
 
     override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
@@ -128,7 +139,17 @@ class Game : AppCompatActivity() {
         }
     }
 
-    private fun moverImagenVertical() {
+    private fun iniciarCicloGotas() {
+        if (gotasCreadas < maxGotas) {
+            moverImagenVertical {
+                gotasCreadas++
+                iniciarCicloGotas()
+            }
+        } else {
+            Log.d("Game", "Se completaron todas las gotas")
+        }
+    }
+    private fun moverImagenVertical(onFinish: () -> Unit) {
         val zonaIzq = findViewById<ConstraintLayout>(R.id.zonaIzquierda)
         val gato = findViewById<ImageView>(R.id.imgViewGato)
         val heart1 = findViewById<ImageView>(R.id.heart1)
@@ -176,13 +197,12 @@ class Game : AppCompatActivity() {
                     imagen.translationY = desplazamiento
                     textoExpresion.translationY = desplazamiento
 
-                    if (Math.abs(imagen.y - gato.y) < 80) {
-                        heart1.setImageResource(R.drawable.heartbroken)
-                        gato.setImageResource(R.drawable.neutral_cat)
-                        (imagen.parent as? ConstraintLayout)?.removeView(imagen)
-                        (textoExpresion.parent as? ConstraintLayout)?.removeView(textoExpresion)
-                        gotasActivas.remove(gota)
+                    if (abs(imagen.y - gato.y) < 80) {
+                        eliminarGota(gota)
+                        actualizarGato()   // <-- cambia la imagen del gato
+                        perderVida()
                         handler.removeCallbacks(this)
+                        onFinish()
                         return
                     }
 
@@ -222,12 +242,37 @@ class Game : AppCompatActivity() {
             else -> texto.toIntOrNull()
         }
     }
-
     fun sumarNumeros(vararg numeros: Numeros): Int = numeros.sumOf { it.valor }
-
     fun verificarNumero(numeroSpeech: Int, numerosEnGota: List<Numeros>): Boolean {
         return numeroSpeech == sumarNumeros(*numerosEnGota.toTypedArray())
     }
-
     private fun Int.dpToPx(): Int = (this * Resources.getSystem().displayMetrics.density).toInt()
+
+    private fun eliminarGota(gota: Gota) {
+        (gota.imagen.parent as? ConstraintLayout)?.removeView(gota.imagen)
+        (gota.texto.parent as? ConstraintLayout)?.removeView(gota.texto)
+        gotasActivas.remove(gota)
+    }
+    private fun perderVida() {
+        if (vidasRestantes > 0) {
+            vidasRestantes--
+            hearts[vidasRestantes].setImageResource(R.drawable.heartbroken)
+        }
+
+        if (vidasRestantes == 0) {
+            Log.d("Game", "Game Over")
+            val intent = Intent(this, GameLost::class.java)
+            startActivity(intent)
+            finish()
+
+        }
+
+    }
+
+    private fun actualizarGato() {
+        if (golpesGato < gatos.size) {
+            gatoView.setImageResource(gatos[golpesGato])
+            golpesGato++
+        }
+    }
 }
