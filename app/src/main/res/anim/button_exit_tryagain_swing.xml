@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+    android:fillAfter="false"
+    android:interpolator="@android:anim/accelerate_decelerate_interpolator">
+
+    <!-- Fase 1: Balance hacia atrás -->
+    <rotate
+        android:duration="150"
+        android:fromDegrees="0"
+        android:toDegrees="-8"
+        android:pivotX="50%"
+        android:pivotY="100%"/>
+
+    <!-- Fase 2: Balance hacia adelante (más exagerado) -->
+    <rotate
+        android:startOffset="150"
+        android:duration="200"
+        android:fromDegrees="-8"
+        android:toDegrees="12"
+        android:pivotX="50%"
+        android:pivotY="100%"/>
+
+    <!-- Fase 3: Volver al centro con pequeño rebote -->
+    <rotate
+        android:startOffset="350"
+        android:duration="250"
+        android:fromDegrees="12"
+        android:toDegrees="0"
+        android:pivotX="50%"
+        android:pivotY="100%"
+        android:interpolator="@android:anim/bounce_interpolator"/>
+
+</set>
