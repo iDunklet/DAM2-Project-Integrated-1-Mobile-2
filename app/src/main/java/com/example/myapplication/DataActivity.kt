@@ -25,7 +25,7 @@ class DataActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_data)
         startViews()
-        setupRadioButtonDificulty()
+        //setupRadioButtonDificulty()
 
 
 
