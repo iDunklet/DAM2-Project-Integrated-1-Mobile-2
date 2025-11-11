@@ -103,6 +103,7 @@ class Game : AppCompatActivity() {
                     SpeechRecognizer.ERROR_INSUFFICIENT_PERMISSIONS -> "ERROR_INSUFFICIENT_PERMISSIONS"
                     else -> "ERROR_DESCONOCIDO: $error"
                 }
+
                 Log.d("SpeechDebug", "SpeechRecognizer Error: $mensaje")
             }
             override fun onResults(results: Bundle?) {
