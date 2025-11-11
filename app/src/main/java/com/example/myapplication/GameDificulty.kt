@@ -11,9 +11,8 @@ import androidx.appcompat.app.AppCompatActivity
 
 
 class GameDificulty : AppCompatActivity() {
+    //private var user: User? = null
     private lateinit var user: User
-    private lateinit var userTryAgain: User
-
     private lateinit var rgDificulty: RadioGroup
     private lateinit var rbEasy: RadioButton
     private lateinit var rbHard: RadioButton

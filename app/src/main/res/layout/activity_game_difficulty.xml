@@ -1,71 +1,106 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="24dp"
-    android:background="@color/grey">
-    <LinearLayout
+    android:padding="32dp"
+    android:background="@drawable/gradient_background"
+    android:gravity="center">
+
+    <!-- Título principal -->
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:orientation="horizontal"
-        android:gravity="center_vertical">
+        android:text="Selecciona Dificultad"
+        android:fontFamily="@font/baloo_bold"
+        android:textSize="52dp"
+        android:textColor="@color/white"
+        android:layout_marginBottom="60dp"
+        android:shadowColor="#80000000"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="4" />
+
+    <!-- Contenedor de dificultad -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginBottom="40dp"
+        android:background="@drawable/card_background"
+        android:padding="24dp"
+        android:elevation="8dp">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Dificultad:"
+            android:text="Nivel de Dificultad"
             android:fontFamily="@font/baloo_bold"
-            android:textSize="70dp"
+            android:textSize="36dp"
             android:textColor="@color/clear_grey"
-            android:layout_marginEnd="40dp" />
+            android:layout_marginBottom="20dp" />
 
         <RadioGroup
             android:id="@+id/rbEasyHard"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:gravity="center">
 
             <RadioButton
                 android:id="@+id/rbEasy"
-                android:layout_width="wrap_content"
-                android:layout_height="120dp"
+                android:layout_width="0dp"
+                android:layout_height="140dp"
+                android:layout_weight="1"
                 android:text="FÁCIL"
                 android:fontFamily="@font/baloo_bold"
-                android:textSize="70dp"
-                android:padding="10dp"
+                android:textSize="42dp"
+                android:padding="16dp"
                 android:gravity="center"
-                android:layout_marginEnd="20dp"
+                android:layout_marginEnd="12dp"
                 android:button="@null"
-                android:textColor="@color/grey"
-                android:background="@drawable/radio_selector" />
+                android:textColor="@color/white"
+                android:background="@drawable/difficulty_selector"
+                android:drawablePadding="8dp"
+                android:stateListAnimator="@null" />
 
             <RadioButton
                 android:id="@+id/rbHard"
-                android:layout_width="wrap_content"
-                android:layout_height="120dp"
+                android:layout_width="0dp"
+                android:layout_height="140dp"
+                android:layout_weight="1"
                 android:text="DIFÍCIL"
                 android:fontFamily="@font/baloo_bold"
-                android:textSize="70dp"
+                android:textSize="42dp"
                 android:gravity="center"
-                android:padding="10dp"
+                android:padding="16dp"
+                android:layout_marginStart="12dp"
                 android:button="@null"
-                android:textColor="@color/grey"
-                android:background="@drawable/radio_selector" />
+                android:textColor="@color/white"
+                android:background="@drawable/difficulty_selector"
+                android:drawablePadding="8dp"
+                android:stateListAnimator="@null" />
 
         </RadioGroup>
     </LinearLayout>
+
+    <!-- Botón continuar mejorado -->
     <Button
         android:id="@+id/bContinue"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="280dp"
+        android:layout_height="100dp"
         android:layout_gravity="center"
-        android:layout_margin="20dp"
-        android:backgroundTint="@color/azul"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/button_gradient"
         android:fontFamily="@font/baloo_bold"
-        android:text="Continuar"
+        android:text="CONTINUAR"
         android:textColor="@color/white"
-        android:textSize="40dp" />
+        android:textSize="36dp"
+        android:textStyle="bold"
+        android:elevation="8dp"
+        android:stateListAnimator="@null"
+        android:letterSpacing="0.02" />
 
 </LinearLayout>
