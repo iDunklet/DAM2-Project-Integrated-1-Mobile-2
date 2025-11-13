@@ -12,13 +12,16 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
 import android.content.res.Resources
+import android.graphics.Color
 import android.speech.RecognitionListener
 import android.speech.RecognizerIntent
 import android.speech.SpeechRecognizer
+import android.view.Gravity
 import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
 import kotlin.math.abs
+
 
 class Game : AppCompatActivity() {
 
@@ -30,16 +33,14 @@ class Game : AppCompatActivity() {
         CINCO(5, "cinco")
     }
 
-    val user = intent.getSerializableExtra("user") as? User
-    val userData = intent.getSerializableExtra("UserDataGame") as? UserDataGame
-
+    private lateinit var user: User
+    private var userData: UserDataGame? = null
     private var gotasCreadas = 0
     private var maxGotas = 10
     private var vidasRestantes = 3
     private var tiempoCaidaGota = 50f
     private var puntos = 0
     private var startTime: Long = 0
-    var elapsedTime: Int = 0
     private val timerHandler = Handler(Looper.getMainLooper())
     private lateinit var timerRunnable: Runnable
     private lateinit var hearts: List<ImageView>
@@ -56,6 +57,8 @@ class Game : AppCompatActivity() {
         val buttonMike = findViewById<ImageButton>(R.id.buttonMike)
         val btnPausa = findViewById<ImageButton>(R.id.butonPausa)
         val overlay = findViewById<View>(R.id.pauseEfect)
+        gatoView = findViewById(R.id.imgViewGato)
+
         hearts = listOf(
             findViewById(R.id.heart3),
             findViewById(R.id.heart2),
@@ -66,8 +69,8 @@ class Game : AppCompatActivity() {
             R.drawable.sad_cat
         )
 
-        val user = intent.getSerializableExtra("user") as? User
-        val userData = intent.getSerializableExtra("UserDataGame") as? UserDataGame
+        user = intent.getSerializableExtra("user") as User
+        userData = buscarUserGameData()
 
         if (userData?.dificulty.equals("difficult")){
             maxGotas = 20;
@@ -166,20 +169,23 @@ class Game : AppCompatActivity() {
                 iniciarCicloGotas()
             }
         }else{
-            timerHandler.removeCallbacks(timerRunnable)
-            userData?.gameTime = ((System.currentTimeMillis() - startTime) / 1000).toInt()
-            userData?.errors = golpesGato
-            userData?.points = puntos
-            userData?.date = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss", Locale.getDefault()).format(
-                Date()
-            )
-            val intent = Intent(this, GameWon::class.java)
-            intent.putExtra("userDataGame", userData)
-            intent.putExtra("user", user)
-            startActivity(intent)
-            finish()
+            for (g in user?.gameList!!){
+                if (g.gameTime ==null && g.points ==null && g.errors == null){
+                    g.gameTime = ((System.currentTimeMillis() - startTime) / 1000).toInt()
+                    g.errors = golpesGato
+                    g.points = puntos
+                    g.date = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss", Locale.getDefault()).format(
+                        Date()
+                    )
+                    val intent = Intent(this, GameWon::class.java)
+                    intent.putExtra("user_data", user)
+                    startActivity(intent)
+                    finish()
+                }
+            }
         }
     }
+
     private fun moverImagenVertical(onFinish: () -> Unit) {
         val zonaIzq = findViewById<ConstraintLayout>(R.id.zonaIzquierda)
         val gato = findViewById<ImageView>(R.id.imgViewGato)
@@ -192,15 +198,15 @@ class Game : AppCompatActivity() {
             setImageResource(R.drawable.raindrop)
         }
 
-        val textoExpresion = android.widget.TextView(this).apply {
+        val textoExpresion = StrokeTextView(this).apply {
             layoutParams = ConstraintLayout.LayoutParams(
                 ConstraintLayout.LayoutParams.WRAP_CONTENT,
                 ConstraintLayout.LayoutParams.WRAP_CONTENT
             )
             text = "${numerosEnGota[0].valor}+${numerosEnGota[1].valor}"
-            textSize = 20f
-            setTextColor(android.graphics.Color.WHITE)
-            gravity = android.view.Gravity.CENTER
+            textSize = 22f
+            setTextColor(Color.WHITE)
+            gravity = Gravity.CENTER
         }
 
         zonaIzq.addView(imagen)
@@ -210,10 +216,14 @@ class Game : AppCompatActivity() {
         gotasActivas.add(gota)
 
         gato.post {
-            imagen.x = gato.x + gato.width / 2 - imagen.layoutParams.width / 2
-            imagen.y = gato.y
-            textoExpresion.x = imagen.x + imagen.layoutParams.width / 2 - textoExpresion.width / 2
-            textoExpresion.y = imagen.y + imagen.layoutParams.height / 2 - textoExpresion.height / 2
+            val startY = -imagen.layoutParams.height.toFloat()
+            val endY = gato.y + gato.height / 2f
+
+            imagen.x = gato.x + gato.width / 2f - imagen.layoutParams.width / 2f
+            imagen.y = startY
+
+            textoExpresion.x = imagen.x + (imagen.layoutParams.width - textoExpresion.width) / 2f
+            textoExpresion.y = startY + (imagen.layoutParams.height - textoExpresion.height) / 2f
 
             val handler = Handler(Looper.getMainLooper())
             val intervalo = 16L
@@ -221,27 +231,50 @@ class Game : AppCompatActivity() {
 
             val runnable = object : Runnable {
                 override fun run() {
-                    val elapsed = (System.currentTimeMillis() - startTime) / 1000f
-                    val desplazamiento = tiempoCaidaGota * elapsed
-                    imagen.translationY = desplazamiento
-                    textoExpresion.translationY = desplazamiento
+                    try {
+                        if (isFinishing || imagen.parent == null) return
 
-                    if (abs(imagen.y - gato.y) < 80) {
-                        eliminarGota(gota)
-                        actualizarGato()
-                        perderVida()
-                        handler.removeCallbacks(this)
-                        onFinish()
-                        return
+                        val elapsed = (System.currentTimeMillis() - startTime) / 1000f
+                        val desplazamiento = tiempoCaidaGota * elapsed
+
+                        val nuevaY = startY + desplazamiento
+                        imagen.y = nuevaY
+                        textoExpresion.y = nuevaY + (imagen.layoutParams.height - textoExpresion.height) / 2f
+
+                        // Colisión: centro de la gota vs parte superior del gato
+                        val centroGota = nuevaY + imagen.height / 2f
+                        Log.e("GameDebug", "CentroGota: $centroGota, GatoY: ${gato.y}, NuevaY: $nuevaY")
+
+                        if (centroGota >= gato.y) {
+                            Log.e("GameDebug", "Colisión detectada")
+                            handler.removeCallbacks(this)
+                            eliminarGota(gota)
+                            actualizarGato()
+                            perderVida()
+                            onFinish()
+                            return
+                        }
+
+                        // Si sale de pantalla
+                        if (nuevaY > zonaIzq.height) {
+                            Log.e("GameDebug", "Gota fuera de pantalla")
+                            handler.removeCallbacks(this)
+                            eliminarGota(gota)
+                            onFinish()
+                            return
+                        }
+
+                        handler.postDelayed(this, intervalo)
+                    } catch (e: Exception) {
+                        Log.e("GameDebug", "Error en Runnable de gota: ${e.message}")
                     }
-
-                    handler.postDelayed(this, intervalo)
                 }
             }
-
             handler.post(runnable)
         }
     }
+
+
     data class Gota(val imagen: ImageView, val numeros: List<Numeros>, val texto: android.widget.TextView)
     private fun verificarGotasPorNumero(numero: Int) {
         val iterator = gotasActivas.iterator()
@@ -287,15 +320,13 @@ class Game : AppCompatActivity() {
 
         if (vidasRestantes == 0) {
             Log.d("Game", "Game Over")
-            timerHandler.removeCallbacks(timerRunnable)
             userData?.gameTime = ((System.currentTimeMillis() - startTime) / 1000).toInt()
-            userData?.errors = golpesGato
+            userData?.errors = golpesGato +1
             userData?.points = puntos
             userData?.date = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss", Locale.getDefault()).format(
                 Date()
             )
             val intent = Intent(this, GameLost::class.java)
-            intent.putExtra("userDataGame", userData)
             intent.putExtra("user", user)
             startActivity(intent)
             finish()
@@ -308,4 +339,14 @@ class Game : AppCompatActivity() {
         }
 
     }
+
+    private fun buscarUserGameData(): UserDataGame? {
+        for (g in user?.gameList!!) {
+            if (g.gameTime == null && g.points == null && g.errors == null) {
+                return g
+            }
+        }
+        return null
+    }
+
 }

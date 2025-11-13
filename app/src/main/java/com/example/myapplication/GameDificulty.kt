@@ -60,7 +60,7 @@ class GameDificulty : AppCompatActivity() {
                     user.gameList?.add(newGameDificulty)
 
                     val intent = Intent(this, Game::class.java)
-                    intent.putExtra("USER", user)
+                    intent.putExtra("user", user)
                     startActivity(intent)
                 } else {
                     showAlert("Error", "Debes seleccionar una dificultad.", this)

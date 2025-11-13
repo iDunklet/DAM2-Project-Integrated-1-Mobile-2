@@ -30,6 +30,7 @@ class DataActivity : AppCompatActivity() {
                 val intent = Intent(this, GameDificulty::class.java)
                 intent.putExtra("user_data", user)
                 startActivity(intent)
+                finish()
             } else {
                 showAlert("Error", "Debes completar nombre y edad.", this)
             }
