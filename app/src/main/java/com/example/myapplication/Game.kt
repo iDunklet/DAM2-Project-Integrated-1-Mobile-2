@@ -1,5 +1,4 @@
 package com.example.myapplication
-
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Bundle
@@ -16,6 +15,9 @@ import android.content.res.Resources
 import android.speech.RecognitionListener
 import android.speech.RecognizerIntent
 import android.speech.SpeechRecognizer
+import java.text.SimpleDateFormat
+import java.util.Date
+import java.util.Locale
 import kotlin.math.abs
 
 class Game : AppCompatActivity() {
@@ -27,16 +29,23 @@ class Game : AppCompatActivity() {
         CUATRO(4, "cuatro"),
         CINCO(5, "cinco")
     }
+
+    val user = intent.getSerializableExtra("user") as? User
+    val userData = intent.getSerializableExtra("UserDataGame") as? UserDataGame
+
     private var gotasCreadas = 0
-    private val maxGotas = 10
+    private var maxGotas = 10
     private var vidasRestantes = 3
+    private var tiempoCaidaGota = 50f
+    private var puntos = 0
+    private var startTime: Long = 0
+    var elapsedTime: Int = 0
+    private val timerHandler = Handler(Looper.getMainLooper())
+    private lateinit var timerRunnable: Runnable
     private lateinit var hearts: List<ImageView>
     private lateinit var gatos: List<Int>
     private var golpesGato = 0 // 0 = happy, 1 = neutral, 2 = sad
-
-
     private lateinit var gatoView: ImageView
-
     private val gotasActivas = mutableListOf<Gota>()
     private lateinit var speechRecognizer: SpeechRecognizer
 
@@ -56,6 +65,14 @@ class Game : AppCompatActivity() {
             R.drawable.neutral_cat,
             R.drawable.sad_cat
         )
+
+        val user = intent.getSerializableExtra("user") as? User
+        val userData = intent.getSerializableExtra("UserDataGame") as? UserDataGame
+
+        if (userData?.dificulty.equals("difficult")){
+            maxGotas = 20;
+        }
+
 
         btnPausa.setOnClickListener {
             btnPausa.isSelected = !btnPausa.isSelected
@@ -131,6 +148,7 @@ class Game : AppCompatActivity() {
         }
 
         iniciarCicloGotas()
+
     }
 
     override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
@@ -139,21 +157,32 @@ class Game : AppCompatActivity() {
             Toast.makeText(this, "Necesitas dar permiso de micrófono para usar reconocimiento de voz", Toast.LENGTH_LONG).show()
         }
     }
-
     private fun iniciarCicloGotas() {
-        if (gotasCreadas < maxGotas) {
+        startTime = System.currentTimeMillis()
+
+        if (gotasCreadas <= maxGotas) {
             moverImagenVertical {
                 gotasCreadas++
                 iniciarCicloGotas()
             }
-        } else {
-            Log.d("Game", "Se completaron todas las gotas")
+        }else{
+            timerHandler.removeCallbacks(timerRunnable)
+            userData?.gameTime = ((System.currentTimeMillis() - startTime) / 1000).toInt()
+            userData?.errors = golpesGato
+            userData?.points = puntos
+            userData?.date = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss", Locale.getDefault()).format(
+                Date()
+            )
+            val intent = Intent(this, GameWon::class.java)
+            intent.putExtra("userDataGame", userData)
+            intent.putExtra("user", user)
+            startActivity(intent)
+            finish()
         }
     }
     private fun moverImagenVertical(onFinish: () -> Unit) {
         val zonaIzq = findViewById<ConstraintLayout>(R.id.zonaIzquierda)
         val gato = findViewById<ImageView>(R.id.imgViewGato)
-        val heart1 = findViewById<ImageView>(R.id.heart1)
 
         val numerosPosibles = Numeros.values()
         val numerosEnGota = List(2) { numerosPosibles.random() }
@@ -187,20 +216,19 @@ class Game : AppCompatActivity() {
             textoExpresion.y = imagen.y + imagen.layoutParams.height / 2 - textoExpresion.height / 2
 
             val handler = Handler(Looper.getMainLooper())
-            val velocidad = 50f
             val intervalo = 16L
             val startTime = System.currentTimeMillis()
 
             val runnable = object : Runnable {
                 override fun run() {
                     val elapsed = (System.currentTimeMillis() - startTime) / 1000f
-                    val desplazamiento = velocidad * elapsed
+                    val desplazamiento = tiempoCaidaGota * elapsed
                     imagen.translationY = desplazamiento
                     textoExpresion.translationY = desplazamiento
 
                     if (abs(imagen.y - gato.y) < 80) {
                         eliminarGota(gota)
-                        actualizarGato()   // <-- cambia la imagen del gato
+                        actualizarGato()
                         perderVida()
                         handler.removeCallbacks(this)
                         onFinish()
@@ -214,20 +242,18 @@ class Game : AppCompatActivity() {
             handler.post(runnable)
         }
     }
-
     data class Gota(val imagen: ImageView, val numeros: List<Numeros>, val texto: android.widget.TextView)
-
     private fun verificarGotasPorNumero(numero: Int) {
         val iterator = gotasActivas.iterator()
         while (iterator.hasNext()) {
             val gota = iterator.next()
             if (verificarNumero(numero, gota.numeros)) {
-                (gota.imagen.parent as? ConstraintLayout)?.removeView(gota.imagen)
-                iterator.remove()
+                eliminarGota(gota)
+                val puntosAGanar = if (userData?.dificulty == "difficult") 3 else 1
+                puntos += puntosAGanar
             }
         }
     }
-
     private fun convertirTextoANumero(texto: String): Int? {
         return when (texto) {
             "uno" -> 1
@@ -248,7 +274,6 @@ class Game : AppCompatActivity() {
         return numeroSpeech == sumarNumeros(*numerosEnGota.toTypedArray())
     }
     private fun Int.dpToPx(): Int = (this * Resources.getSystem().displayMetrics.density).toInt()
-
     private fun eliminarGota(gota: Gota) {
         (gota.imagen.parent as? ConstraintLayout)?.removeView(gota.imagen)
         (gota.texto.parent as? ConstraintLayout)?.removeView(gota.texto)
@@ -262,14 +287,20 @@ class Game : AppCompatActivity() {
 
         if (vidasRestantes == 0) {
             Log.d("Game", "Game Over")
+            timerHandler.removeCallbacks(timerRunnable)
+            userData?.gameTime = ((System.currentTimeMillis() - startTime) / 1000).toInt()
+            userData?.errors = golpesGato
+            userData?.points = puntos
+            userData?.date = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss", Locale.getDefault()).format(
+                Date()
+            )
             val intent = Intent(this, GameLost::class.java)
+            intent.putExtra("userDataGame", userData)
+            intent.putExtra("user", user)
             startActivity(intent)
             finish()
-
         }
-
     }
-
     private fun actualizarGato() {
         if (golpesGato < gatos.size) {
             gatoView.setImageResource(gatos[golpesGato])
