@@ -41,8 +41,6 @@ class Game : AppCompatActivity() {
     private var tiempoCaidaGota = 50f
     private var puntos = 0
     private var startTime: Long = 0
-    private val timerHandler = Handler(Looper.getMainLooper())
-    private lateinit var timerRunnable: Runnable
     private lateinit var hearts: List<ImageView>
     private lateinit var gatos: List<Int>
     private var golpesGato = 0 // 0 = happy, 1 = neutral, 2 = sad
@@ -169,7 +167,7 @@ class Game : AppCompatActivity() {
                 iniciarCicloGotas()
             }
         }else{
-            for (g in user?.gameList!!){
+            for (g in user.gameList!!){
                 if (g.gameTime ==null && g.points ==null && g.errors == null){
                     g.gameTime = ((System.currentTimeMillis() - startTime) / 1000).toInt()
                     g.errors = golpesGato
@@ -327,7 +325,7 @@ class Game : AppCompatActivity() {
                 Date()
             )
             val intent = Intent(this, GameLost::class.java)
-            intent.putExtra("user", user)
+            intent.putExtra("user_data", user)
             startActivity(intent)
             finish()
         }
