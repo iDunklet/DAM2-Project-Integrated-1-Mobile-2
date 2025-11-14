@@ -47,6 +47,7 @@
                 android:layout_marginStart="80dp"
                 android:background="@drawable/edit_box"
                 android:hint="@string/app_name"
+                android:textColor="@color/grey"
                 android:padding="12dp" />
         </LinearLayout>
 
@@ -73,6 +74,7 @@
                 android:layout_marginStart="80dp"
                 android:background="@drawable/edit_box"
                 android:hint="@string/app_name"
+                android:textColor="@color/grey"
                 android:padding="12dp" />
         </LinearLayout>
     </LinearLayout>

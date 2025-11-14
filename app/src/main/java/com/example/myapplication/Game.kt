@@ -24,7 +24,6 @@ import kotlin.math.abs
 
 
 class Game : AppCompatActivity() {
-
     enum class Numeros(val valor: Int, val texto: String) {
         UNO(1, "uno"),
         DOS(2, "dos"),
@@ -32,19 +31,21 @@ class Game : AppCompatActivity() {
         CUATRO(4, "cuatro"),
         CINCO(5, "cinco")
     }
-
     private lateinit var user: User
     private var userData: UserDataGame? = null
     private var gotasCreadas = 0
     private var maxGotas = 10
     private var vidasRestantes = 3
+    private var isPaused = false
+    private var startTime: Long = 0
+    private var speedMultiplier = 1
     private var tiempoCaidaGota = 50f
     private var puntos = 0
-    private var startTime: Long = 0
     private lateinit var hearts: List<ImageView>
     private lateinit var gatos: List<Int>
     private var golpesGato = 0 // 0 = happy, 1 = neutral, 2 = sad
     private lateinit var gatoView: ImageView
+    lateinit var barraRelleno: View
     private val gotasActivas = mutableListOf<Gota>()
     private lateinit var speechRecognizer: SpeechRecognizer
 
@@ -56,7 +57,7 @@ class Game : AppCompatActivity() {
         val btnPausa = findViewById<ImageButton>(R.id.butonPausa)
         val overlay = findViewById<View>(R.id.pauseEfect)
         gatoView = findViewById(R.id.imgViewGato)
-
+        barraRelleno = findViewById<View>(R.id.barraRelleno)
         hearts = listOf(
             findViewById(R.id.heart3),
             findViewById(R.id.heart2),
@@ -70,12 +71,13 @@ class Game : AppCompatActivity() {
         user = intent.getSerializableExtra("user") as User
         userData = buscarUserGameData()
 
-        if (userData?.dificulty.equals("difficult")){
+        if (userData?.dificulty.equals("hard")){
             maxGotas = 20;
+            speedMultiplier = 4;
         }
 
-
         btnPausa.setOnClickListener {
+            isPaused = !isPaused
             btnPausa.isSelected = !btnPausa.isSelected
             overlay.visibility = if (btnPausa.isSelected) View.VISIBLE else View.GONE
         }
@@ -134,7 +136,7 @@ class Game : AppCompatActivity() {
                     val numero = convertirTextoANumero(textoDicho)
                     Log.d("SpeechDebug", "Número convertido: $numero")
                     if (numero != null) {
-                        verificarGotasPorNumero(numero)
+                        verificarGotasPorNumero(numero) {}
                     }
                 }
             }
@@ -159,31 +161,32 @@ class Game : AppCompatActivity() {
         }
     }
     private fun iniciarCicloGotas() {
-        startTime = System.currentTimeMillis()
+        if (isPaused) return  // ← importantísimo
 
-        if (gotasCreadas <= maxGotas) {
-            moverImagenVertical {
-                gotasCreadas++
+        if (gotasCreadas >= maxGotas) {
+            terminarJuego()
+            return
+        }
+
+        gotasCreadas++
+        moverImagenVertical {
+            if (!isPaused) {
                 iniciarCicloGotas()
-            }
-        }else{
-            for (g in user.gameList!!){
-                if (g.gameTime ==null && g.points ==null && g.errors == null){
-                    g.gameTime = ((System.currentTimeMillis() - startTime) / 1000).toInt()
-                    g.errors = golpesGato
-                    g.points = puntos
-                    g.date = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss", Locale.getDefault()).format(
-                        Date()
-                    )
-                    val intent = Intent(this, GameWon::class.java)
-                    intent.putExtra("user_data", user)
-                    startActivity(intent)
-                    finish()
-                }
             }
         }
     }
+    private fun terminarJuego(){
+        Log.d("Game", "Juego completado")
+        userData?.gameTime = ((System.currentTimeMillis() - startTime) / 1000).toInt()
+        userData?.errors = golpesGato
+        userData?.points = puntos
+        userData?.date = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss", Locale.getDefault()).format(Date())
 
+        val intent = Intent(this, GameWon::class.java)
+        intent.putExtra("user_data", user)
+        startActivity(intent)
+        finish()
+    }
     private fun moverImagenVertical(onFinish: () -> Unit) {
         val zonaIzq = findViewById<ConstraintLayout>(R.id.zonaIzquierda)
         val gato = findViewById<ImageView>(R.id.imgViewGato)
@@ -215,66 +218,56 @@ class Game : AppCompatActivity() {
 
         gato.post {
             val startY = -imagen.layoutParams.height.toFloat()
-            val endY = gato.y + gato.height / 2f
+            val endY = gato.y
 
             imagen.x = gato.x + gato.width / 2f - imagen.layoutParams.width / 2f
             imagen.y = startY
-
             textoExpresion.x = imagen.x + (imagen.layoutParams.width - textoExpresion.width) / 2f
             textoExpresion.y = startY + (imagen.layoutParams.height - textoExpresion.height) / 2f
 
             val handler = Handler(Looper.getMainLooper())
             val intervalo = 16L
-            val startTime = System.currentTimeMillis()
-
+            var lastTime = System.currentTimeMillis()
             val runnable = object : Runnable {
                 override fun run() {
-                    try {
-                        if (isFinishing || imagen.parent == null) return
 
-                        val elapsed = (System.currentTimeMillis() - startTime) / 1000f
-                        val desplazamiento = tiempoCaidaGota * elapsed
+                    if (isFinishing || imagen.parent == null) return
 
-                        val nuevaY = startY + desplazamiento
+                    val now = System.currentTimeMillis()
+
+                    if (!isPaused) {
+                        val delta = (now - lastTime) / 1000f
+                        val nuevaY = imagen.y + tiempoCaidaGota * delta * speedMultiplier
+
                         imagen.y = nuevaY
                         textoExpresion.y = nuevaY + (imagen.layoutParams.height - textoExpresion.height) / 2f
 
-                        // Colisión: centro de la gota vs parte superior del gato
-                        val centroGota = nuevaY + imagen.height / 2f
-                        Log.e("GameDebug", "CentroGota: $centroGota, GatoY: ${gato.y}, NuevaY: $nuevaY")
-
-                        if (centroGota >= gato.y) {
-                            Log.e("GameDebug", "Colisión detectada")
-                            handler.removeCallbacks(this)
+                        if (abs(imagen.y - endY) < 60) {
                             eliminarGota(gota)
                             actualizarGato()
                             perderVida()
-                            onFinish()
-                            return
-                        }
-
-                        // Si sale de pantalla
-                        if (nuevaY > zonaIzq.height) {
-                            Log.e("GameDebug", "Gota fuera de pantalla")
                             handler.removeCallbacks(this)
-                            eliminarGota(gota)
                             onFinish()
                             return
                         }
 
-                        handler.postDelayed(this, intervalo)
-                    } catch (e: Exception) {
-                        Log.e("GameDebug", "Error en Runnable de gota: ${e.message}")
+                        if (nuevaY > zonaIzq.height) {
+                            eliminarGota(gota)
+                            handler.removeCallbacks(this)
+                            onFinish()
+                            return
+                        }
                     }
+
+                    lastTime = now
+                    handler.postDelayed(this, intervalo)
                 }
             }
+
             handler.post(runnable)
         }
     }
-
-
-    data class Gota(val imagen: ImageView, val numeros: List<Numeros>, val texto: android.widget.TextView)
-    private fun verificarGotasPorNumero(numero: Int) {
+    private fun verificarGotasPorNumero(numero: Int,  onFinish: () -> Unit) {
         val iterator = gotasActivas.iterator()
         while (iterator.hasNext()) {
             val gota = iterator.next()
@@ -282,6 +275,9 @@ class Game : AppCompatActivity() {
                 eliminarGota(gota)
                 val puntosAGanar = if (userData?.dificulty == "difficult") 3 else 1
                 puntos += puntosAGanar
+                actualizarBarraProgreso()
+                onFinish()
+                iniciarCicloGotas()
             }
         }
     }
@@ -337,7 +333,6 @@ class Game : AppCompatActivity() {
         }
 
     }
-
     private fun buscarUserGameData(): UserDataGame? {
         for (g in user?.gameList!!) {
             if (g.gameTime == null && g.points == null && g.errors == null) {
@@ -346,5 +341,11 @@ class Game : AppCompatActivity() {
         }
         return null
     }
-
+    private fun actualizarBarraProgreso() {
+        val barra = findViewById<View>(R.id.barraRelleno)
+        val incremento = (305.dpToPx() / (maxGotas-1))
+        val params = barra.layoutParams
+        params.width = barra.width + incremento
+        barra.layoutParams = params
+    }
 }
