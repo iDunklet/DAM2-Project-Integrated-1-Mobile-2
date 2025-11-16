@@ -47,11 +47,12 @@ class GameDificulty : AppCompatActivity() {
         bContinue.setOnClickListener {
             bContinue.setOnClickListener {
                 if (this::difficulty.isInitialized) {
-                    val newGameDificulty = UserDataGame(
+                    val newGameDificulty = UserGameData(
                         gameTime = null,
                         errors = null,
                         points = null,
-                        dificulty = difficulty
+                        dificulty = difficulty,
+                        reactionTime = mutableListOf()
                     )
 
                     if (user.gameList == null) {

@@ -18,8 +18,10 @@ import android.speech.RecognizerIntent
 import android.speech.SpeechRecognizer
 import android.view.Gravity
 import java.text.SimpleDateFormat
+import java.time.format.DateTimeFormatter
 import java.util.Date
 import java.util.Locale
+import java.util.TimeZone
 import kotlin.math.abs
 
 
@@ -32,15 +34,16 @@ class Game : AppCompatActivity() {
         CINCO(5, "cinco")
     }
     private lateinit var user: User
-    private var userData: UserDataGame? = null
+    private var userData: UserGameData? = null
     private var gotasCreadas = 0
-    private var maxGotas = 10
+    private var maxGotas: Int? = null
     private var vidasRestantes = 3
     private var isPaused = false
-    private var startTime: Long = 0
-    private var speedMultiplier = 1
+    private var startTime: Long = 0L
+    private var speedMultiplier: Int? = null
     private var tiempoCaidaGota = 50f
     private var puntos = 0
+    private var puntosAGanar: Int? = null
     private lateinit var hearts: List<ImageView>
     private lateinit var gatos: List<Int>
     private var golpesGato = 0 // 0 = happy, 1 = neutral, 2 = sad
@@ -53,28 +56,16 @@ class Game : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_game)
 
-        val buttonMike = findViewById<ImageButton>(R.id.buttonMike)
+        startGame()
         val btnPausa = findViewById<ImageButton>(R.id.butonPausa)
         val overlay = findViewById<View>(R.id.pauseEfect)
-        gatoView = findViewById(R.id.imgViewGato)
-        barraRelleno = findViewById<View>(R.id.barraRelleno)
-        hearts = listOf(
-            findViewById(R.id.heart3),
-            findViewById(R.id.heart2),
-            findViewById(R.id.heart1)
-        )
-        gatos = listOf(
-            R.drawable.neutral_cat,
-            R.drawable.sad_cat
-        )
+        val buttonMike = findViewById<ImageButton>(R.id.buttonMike)
+
 
         user = intent.getSerializableExtra("user") as User
         userData = buscarUserGameData()
 
-        if (userData?.dificulty.equals("hard")){
-            maxGotas = 20;
-            speedMultiplier = 4;
-        }
+        setDifficulty()
 
         btnPausa.setOnClickListener {
             isPaused = !isPaused
@@ -150,8 +141,34 @@ class Game : AppCompatActivity() {
             speechRecognizer.startListening(recognizerIntent)
         }
 
+        startTime = System.currentTimeMillis()
         iniciarCicloGotas()
+    }
 
+    private fun setDifficulty(){
+        if (userData?.dificulty.equals("easy")){
+            maxGotas = 10
+            speedMultiplier = 1
+            puntosAGanar = 1
+        }else if(userData?.dificulty.equals("hard")){
+            maxGotas = 20
+            speedMultiplier = 4
+            puntosAGanar = 3
+        }
+    }
+    private fun startGame(){
+
+        gatoView = findViewById(R.id.imgViewGato)
+        barraRelleno = findViewById<View>(R.id.barraRelleno)
+        hearts = listOf(
+            findViewById(R.id.heart3),
+            findViewById(R.id.heart2),
+            findViewById(R.id.heart1)
+        )
+        gatos = listOf(
+            R.drawable.neutral_cat,
+            R.drawable.sad_cat
+        )
     }
 
     override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
@@ -161,9 +178,9 @@ class Game : AppCompatActivity() {
         }
     }
     private fun iniciarCicloGotas() {
-        if (isPaused) return  // ← importantísimo
+        if (isPaused) return
 
-        if (gotasCreadas >= maxGotas) {
+        if (gotasCreadas >= maxGotas!!) {
             terminarJuego()
             return
         }
@@ -175,19 +192,8 @@ class Game : AppCompatActivity() {
             }
         }
     }
-    private fun terminarJuego(){
-        Log.d("Game", "Juego completado")
-        userData?.gameTime = ((System.currentTimeMillis() - startTime) / 1000).toInt()
-        userData?.errors = golpesGato
-        userData?.points = puntos
-        userData?.date = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss", Locale.getDefault()).format(Date())
-
-        val intent = Intent(this, GameWon::class.java)
-        intent.putExtra("user_data", user)
-        startActivity(intent)
-        finish()
-    }
     private fun moverImagenVertical(onFinish: () -> Unit) {
+
         val zonaIzq = findViewById<ConstraintLayout>(R.id.zonaIzquierda)
         val gato = findViewById<ImageView>(R.id.imgViewGato)
 
@@ -201,11 +207,11 @@ class Game : AppCompatActivity() {
 
         val textoExpresion = StrokeTextView(this).apply {
             layoutParams = ConstraintLayout.LayoutParams(
-                ConstraintLayout.LayoutParams.WRAP_CONTENT,
+                ConstraintLayout.LayoutParams.MATCH_PARENT,
                 ConstraintLayout.LayoutParams.WRAP_CONTENT
             )
-            text = "${numerosEnGota[0].valor}+${numerosEnGota[1].valor}"
-            textSize = 22f
+            text = "${numerosEnGota[0].valor}  +  ${numerosEnGota[1].valor}"
+            textSize = 25f
             setTextColor(Color.WHITE)
             gravity = Gravity.CENTER
         }
@@ -214,6 +220,8 @@ class Game : AppCompatActivity() {
         zonaIzq.addView(textoExpresion)
 
         val gota = Gota(imagen, numerosEnGota, textoExpresion)
+        val creationTime = System.currentTimeMillis()
+        gota.creationTime = creationTime
         gotasActivas.add(gota)
 
         gato.post {
@@ -237,7 +245,7 @@ class Game : AppCompatActivity() {
 
                     if (!isPaused) {
                         val delta = (now - lastTime) / 1000f
-                        val nuevaY = imagen.y + tiempoCaidaGota * delta * speedMultiplier
+                        val nuevaY = imagen.y + tiempoCaidaGota * delta * speedMultiplier!!
 
                         imagen.y = nuevaY
                         textoExpresion.y = nuevaY + (imagen.layoutParams.height - textoExpresion.height) / 2f
@@ -250,7 +258,6 @@ class Game : AppCompatActivity() {
                             onFinish()
                             return
                         }
-
                         if (nuevaY > zonaIzq.height) {
                             eliminarGota(gota)
                             handler.removeCallbacks(this)
@@ -258,12 +265,10 @@ class Game : AppCompatActivity() {
                             return
                         }
                     }
-
                     lastTime = now
                     handler.postDelayed(this, intervalo)
                 }
             }
-
             handler.post(runnable)
         }
     }
@@ -273,8 +278,9 @@ class Game : AppCompatActivity() {
             val gota = iterator.next()
             if (verificarNumero(numero, gota.numeros)) {
                 eliminarGota(gota)
-                val puntosAGanar = if (userData?.dificulty == "difficult") 3 else 1
-                puntos += puntosAGanar
+                val elapsed = (System.currentTimeMillis() - gota.creationTime) / 1000f
+                userData?.reactionTime?.add(elapsed)
+                puntos += puntosAGanar!!
                 actualizarBarraProgreso()
                 onFinish()
                 iniciarCicloGotas()
@@ -308,22 +314,13 @@ class Game : AppCompatActivity() {
     }
     private fun perderVida() {
         if (vidasRestantes > 0) {
+            userData?.reactionTime?.add(-1f)
             vidasRestantes--
             hearts[vidasRestantes].setImageResource(R.drawable.heartbroken)
         }
 
-        if (vidasRestantes == 0) {
-            Log.d("Game", "Game Over")
-            userData?.gameTime = ((System.currentTimeMillis() - startTime) / 1000).toInt()
-            userData?.errors = golpesGato +1
-            userData?.points = puntos
-            userData?.date = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss", Locale.getDefault()).format(
-                Date()
-            )
-            val intent = Intent(this, GameLost::class.java)
-            intent.putExtra("user_data", user)
-            startActivity(intent)
-            finish()
+        if (vidasRestantes == 0){
+            terminarJuego()
         }
     }
     private fun actualizarGato() {
@@ -333,7 +330,7 @@ class Game : AppCompatActivity() {
         }
 
     }
-    private fun buscarUserGameData(): UserDataGame? {
+    private fun buscarUserGameData(): UserGameData? {
         for (g in user?.gameList!!) {
             if (g.gameTime == null && g.points == null && g.errors == null) {
                 return g
@@ -343,9 +340,39 @@ class Game : AppCompatActivity() {
     }
     private fun actualizarBarraProgreso() {
         val barra = findViewById<View>(R.id.barraRelleno)
-        val incremento = (305.dpToPx() / (maxGotas-1))
+        val incremento = (305.dpToPx() / (maxGotas!!-1))
         val params = barra.layoutParams
         params.width = barra.width + incremento
         barra.layoutParams = params
     }
+    private fun terminarJuego(){
+        if (vidasRestantes == 0) {
+                Log.d("Game", "Game Over")
+                val totalTime = ((System.currentTimeMillis() - startTime) / 1000).toInt()
+                userData?.gameTime = totalTime
+                userData?.errors = golpesGato +1
+                userData?.points = puntos
+                val sdf = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss", Locale.getDefault())
+                sdf.timeZone = TimeZone.getTimeZone("Europe/Madrid")
+                val isoNow = sdf.format(Date())
+                userData?.date = isoNow
+                val intent = Intent(this, GameLost::class.java)
+                intent.putExtra("user_data", user)
+                startActivity(intent)
+                finish()
+        }else{
+            Log.d("Game", "Juego completado")
+            userData?.gameTime = ((System.currentTimeMillis() - startTime) / 1000).toInt()
+            userData?.errors = golpesGato
+            userData?.points = puntos
+            userData?.date = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss", Locale.getDefault()).format(Date())
+
+            val intent = Intent(this, GameWon::class.java)
+            intent.putExtra("user_data", user)
+            startActivity(intent)
+            finish()
+        }
+
+    }
+
 }

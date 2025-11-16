@@ -9,5 +9,7 @@ data class Gota(
     val numeros: List<Game.Numeros>,
     val texto: TextView,
     var handler: Handler? = null,
-    var runnable: Runnable? = null
+    var runnable: Runnable? = null,
+    var creationTime: Long = 0L
+
 )

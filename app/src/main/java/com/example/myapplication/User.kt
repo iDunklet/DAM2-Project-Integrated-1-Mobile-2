@@ -7,5 +7,5 @@ class User(
     val age: Int,
 
     // game data
-    var gameList: MutableList<UserDataGame>? = mutableListOf()
+    var gameList: MutableList<UserGameData>? = mutableListOf()
 ): Serializable

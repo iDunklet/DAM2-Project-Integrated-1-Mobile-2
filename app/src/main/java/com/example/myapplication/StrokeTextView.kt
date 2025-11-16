@@ -13,7 +13,7 @@ class StrokeTextView @JvmOverloads constructor(
     defStyle: Int = 0
 ) : AppCompatTextView(context, attrs, defStyle) {
 
-    var strokeWidth = 12f          // Grosor del borde
+    var strokeWidth = 10f          // Grosor del borde
     var strokeColor = Color.parseColor("#2A3A44")  // Color del borde
 
     override fun onDraw(canvas: Canvas) {
