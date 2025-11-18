@@ -25,6 +25,7 @@ class GameLost : AppCompatActivity() {
             Handler().postDelayed({
                 setupExitButton(user, this)
             }, 600)
+
         }
 
         bTryAgain.setOnClickListener {
