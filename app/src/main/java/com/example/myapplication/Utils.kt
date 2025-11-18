@@ -46,23 +46,25 @@ public fun showAlert(title: String, message: String, activity: AppCompatActivity
 }
 fun appendUserToJsonFile(activity: Activity, user: User, filename: String = "export.json") {
     val gson = GsonBuilder()
-        .setPrettyPrinting()  // Esto formatea el JSON
+        .setPrettyPrinting()
         .create()
 
     val existingJson = try {
         activity.openFileInput(filename).bufferedReader().use { it.readText() }
     } catch (e: Exception) {
-        "[]"
+        """{"cat":[]}"""
     }
 
-    val userArray: Array<User> = gson.fromJson(existingJson, Array<User>::class.java)
-    val userList = userArray.toMutableList()
+    val type = object : TypeToken<Map<String, List<User>>>() {}.type
+    val existingMap: Map<String, List<User>> = gson.fromJson(existingJson, type) ?: mapOf("cat" to emptyList())
 
+    val userList = existingMap["cat"]?.toMutableList() ?: mutableListOf()
     userList.add(user)
 
-    val newJson = gson.toJson(userList)
+    val newJson = gson.toJson(mapOf("cat" to userList))
     saveJsonToInternal(activity, filename, newJson)
 }
+
 
 
 

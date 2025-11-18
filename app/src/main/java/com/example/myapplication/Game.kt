@@ -13,6 +13,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
 import android.content.res.Resources
 import android.graphics.Color
+import android.media.MediaPlayer
 import android.speech.RecognitionListener
 import android.speech.RecognizerIntent
 import android.speech.SpeechRecognizer
@@ -52,15 +53,17 @@ class Game : AppCompatActivity() {
     private val gotasActivas = mutableListOf<Gota>()
     private lateinit var speechRecognizer: SpeechRecognizer
 
+    private var mediaCorrect: MediaPlayer? = null
+    private var mediaIncorrect: MediaPlayer? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_game)
-
+        initializeMediaPlayers()
         startGame()
         val btnPausa = findViewById<ImageButton>(R.id.butonPausa)
         val overlay = findViewById<View>(R.id.pauseEfect)
         val buttonMike = findViewById<ImageButton>(R.id.buttonMike)
-
 
         user = intent.getSerializableExtra("user") as User
         userData = buscarUserGameData()
@@ -143,6 +146,42 @@ class Game : AppCompatActivity() {
 
         startTime = System.currentTimeMillis()
         iniciarCicloGotas()
+    }
+
+    private fun initializeMediaPlayers() {
+        mediaCorrect = MediaPlayer.create(this, R.raw.correct_answer).apply {
+            setOnCompletionListener { mp ->
+                mp?.seekTo(0) // Resetear al finalizar
+            }
+        }
+
+        mediaIncorrect = MediaPlayer.create(this, R.raw.wrong_answer).apply {
+            setOnCompletionListener { mp ->
+                mp?.seekTo(0) // Resetear al finalizar
+            }
+        }
+    }
+    private fun playCorrectSound() {
+        mediaCorrect?.let { media ->
+            if (!media.isPlaying) {
+                media.start()
+            } else {
+                // Si ya está reproduciendo, resetear y volver a reproducir
+                media.seekTo(0)
+                media.start()
+            }
+        }
+    }
+
+    private fun playIncorrectSound() {
+        mediaIncorrect?.let { media ->
+            if (!media.isPlaying) {
+                media.start()
+            } else {
+                media.seekTo(0)
+                media.start()
+            }
+        }
     }
 
     private fun setDifficulty(){
@@ -281,6 +320,7 @@ class Game : AppCompatActivity() {
                 val elapsed = (System.currentTimeMillis() - gota.creationTime) / 1000f
                 userData?.reactionTime?.add(elapsed)
                 puntos += puntosAGanar!!
+                playCorrectSound()
                 actualizarBarraProgreso()
                 onFinish()
                 iniciarCicloGotas()
@@ -317,6 +357,7 @@ class Game : AppCompatActivity() {
             userData?.reactionTime?.add(-1f)
             vidasRestantes--
             hearts[vidasRestantes].setImageResource(R.drawable.heartbroken)
+            playIncorrectSound()
         }
 
         if (vidasRestantes == 0){
