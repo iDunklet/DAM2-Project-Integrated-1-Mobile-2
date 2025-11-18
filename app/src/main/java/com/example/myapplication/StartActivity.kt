@@ -8,6 +8,8 @@ import android.view.animation.AnimationUtils
 import android.widget.ImageButton
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import android.widget.Button
+
 
 class StartActivity : AppCompatActivity() {
 
@@ -19,7 +21,12 @@ class StartActivity : AppCompatActivity() {
         val btnPlay = findViewById<ImageButton>(R.id.playButton)
         val clickAnimation = AnimationUtils.loadAnimation(this, R.anim.button_play_click)
         val releaseAnimation = AnimationUtils.loadAnimation(this, R.anim.button_play_release)
+        val btnSecret = findViewById<Button>(R.id.bSecret)
 
+
+        btnSecret.setOnClickListener {
+            showPasswordDialog()
+        }
         btnPlay.setOnClickListener {
             // Animación de presionado
             btnPlay.startAnimation(clickAnimation)
@@ -58,6 +65,35 @@ class StartActivity : AppCompatActivity() {
             Log.e("AudioDebug", "Excepción al reproducir sonido: ${e.message}")
         }
     }
+    private fun showPasswordDialog() {
+        val builder = android.app.AlertDialog.Builder(this)
+        builder.setTitle("Enter password")
 
-    // No necesitamos onDestroy() ya que liberamos el MediaPlayer inmediatamente después de usarlo
+        val input = android.widget.EditText(this)
+        input.hint = "Password"
+        input.inputType = android.text.InputType.TYPE_CLASS_NUMBER or
+                android.text.InputType.TYPE_NUMBER_VARIATION_PASSWORD
+
+        builder.setView(input)
+
+        builder.setPositiveButton("OK") { dialog, _ ->
+            val password = input.text.toString()
+
+            if (password == "231204") {
+                // Correct password → go to DataActivity
+                val intent = Intent(this, DataPython::class.java)
+                startActivity(intent)
+                overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
+            } else {
+                // Wrong password
+                android.widget.Toast.makeText(this, "Incorrect password", android.widget.Toast.LENGTH_SHORT).show()
+            }
+        }
+
+        builder.setNegativeButton("Cancel") { dialog, _ ->
+            dialog.dismiss()
+        }
+
+        builder.show()
+    }
 }

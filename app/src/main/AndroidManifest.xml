@@ -13,7 +13,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
-
+        <activity
+            android:name=".DataPython"
+            android:exported="false" />
         <activity
             android:name=".GameDificulty"
             android:exported="true" />
@@ -28,18 +30,16 @@
             android:exported="true" />
         <activity
             android:name=".Game"
-            android:exported="true" />
-
-        <!-- Solo UNA vez la StartActivity -->
+            android:exported="true" /> <!-- Solo UNA vez la StartActivity -->
         <activity
             android:name=".StartActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
     </application>
 
 </manifest>
