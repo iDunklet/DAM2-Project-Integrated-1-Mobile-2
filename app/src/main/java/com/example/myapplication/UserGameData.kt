@@ -12,4 +12,4 @@ class UserGameData(
     var date: String = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss", Locale.getDefault()).format(Date()),
     val dificulty: String,
     var reactionTime: MutableList<Float>
-                  ) : Serializable
+) : Serializable
