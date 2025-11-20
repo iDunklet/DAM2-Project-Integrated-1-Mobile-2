@@ -15,7 +15,7 @@
         android:theme="@style/Theme.MyApplication">
         <activity
             android:name=".DataPython"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".GameDificulty"
             android:exported="true" />
