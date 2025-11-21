@@ -2,14 +2,10 @@ package com.example.myapplication
 
 import android.os.Bundle
 import android.util.Log
-import android.widget.Toast
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
+import com.chaquo.python.PyObject
 import com.chaquo.python.Python
 import com.chaquo.python.android.AndroidPlatform
-
 
 class DataPython : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,9 +17,12 @@ class DataPython : AppCompatActivity() {
             Python.start(AndroidPlatform(this))
         }
 
-        val py = Python.getInstance()
-        val pyObj = py.getModule("script") // o el módulo que uses
-        val result = pyObj.callAttr("saludar")
-        Log.d("Python", result.toString())    }
+        // Obtener instancia de Python
+        val python = Python.getInstance()
+        val py = python.getModule("script")
+        val result: PyObject = py.callAttr("get_hello")
+        val helloWorldString = result.toString()
 
+        Log.d("PYTHON_TEST", helloWorldString)
+    }
 }
