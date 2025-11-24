@@ -6,21 +6,24 @@ plugins {
 
 android {
     namespace = "com.example.myapplication"
-    compileSdk = 36
+    compileSdk = 34
+    buildToolsVersion = "34.0.0"
 
     defaultConfig {
         applicationId = "com.example.myapplication"
         minSdk = 25
-        targetSdk = 36
+        targetSdk = 34
         versionCode = 1
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
 
         ndk {
-            abiFilters += listOf("armeabi-v7a", "arm64-v8a", "x86", "x86_64")
+            abiFilters += listOf("arm64-v8a", "x86_64")
         }
     }
+
+
 
     buildTypes {
         release {
@@ -31,30 +34,21 @@ android {
             )
         }
     }
+
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
     }
+
     kotlinOptions {
-        jvmTarget = "11"
+        jvmTarget = "1.8"
     }
-
-    // Configuración de Chaquopy
-    flavorDimensions += "pyVersion"
-    productFlavors {
-        create("py311") {
-            dimension = "pyVersion"
-        }
-    }
-    buildToolsVersion = "36.1.0"
-
 }
 
+// ✅ chaquopy FUERA del bloque android
 chaquopy {
     defaultConfig {
-        version = "3.11"
-
-        // Paquetes pip (opcional)
+        version = "3.8"
         pip {
             install("numpy")
             install("pandas")
@@ -65,13 +59,11 @@ chaquopy {
 }
 
 dependencies {
-
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
-
     implementation("com.google.code.gson:gson:2.10.1")
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
