@@ -1,7 +1,6 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
-    id("com.chaquo.python")
 }
 
 android {
@@ -18,9 +17,6 @@ android {
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
 
-        ndk {
-            abiFilters += listOf("arm64-v8a", "x86_64")
-        }
     }
 
 
@@ -46,17 +42,7 @@ android {
 }
 
 // ✅ chaquopy FUERA del bloque android
-chaquopy {
-    defaultConfig {
-        version = "3.8"
-        pip {
-            install("numpy")
-            install("pandas")
-            install("matplotlib")
-            install("scikit-learn")
-        }
-    }
-}
+
 
 dependencies {
     implementation(libs.androidx.core.ktx)

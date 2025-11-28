@@ -81,7 +81,7 @@ class StartActivity : AppCompatActivity() {
 
             if (password == "231204") {
                 // Correct password → go to DataActivity
-                val intent = Intent(this, DataPython::class.java)
+
                 startActivity(intent)
                 overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
             } else {
