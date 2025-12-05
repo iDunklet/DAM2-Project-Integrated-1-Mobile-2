@@ -5,33 +5,30 @@ import android.util.Base64
 import android.graphics.BitmapFactory
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
-import com.chaquo.python.PyObject
 import com.chaquo.python.Python
 import com.chaquo.python.android.AndroidPlatform
+import java.io.File
+import java.io.FileOutputStream
 
 class DataPython : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_data_python)
 
-        // Inicializar Chaquopy
         if (!Python.isStarted()) {
             Python.start(AndroidPlatform(this))
         }
 
         val py = Python.getInstance()
-        val module = py.getModule("script")
+        val pythonFile = py.getModule("script")
 
-        // Llamar a la función train y obtener el diccionario de gráficos
+        // Si dataset.json está en la misma carpeta que script.py
+        // Chaquopy debería poder encontrarlo automáticamente
+        val result = pythonFile.callAttr("returnGraphs")
 
-
-        val result = module.callAttr("train", filesDir.absolutePath).asMap()
-
-        val imageView1 = findViewById<ImageView>(R.id.chartImage1)
-        val imageView2 = findViewById<ImageView>(R.id.chartImage2)
-        val imageView3 = findViewById<ImageView>(R.id.chartImage3)
-        val imageView4 = findViewById<ImageView>(R.id.chartImage4)
-        val imageView5 = findViewById<ImageView>(R.id.chartImage5)
+        val imagePoints = findViewById<ImageView>(R.id.chartImagePoints)
+        val imageRelation = findViewById<ImageView>(R.id.chartImageRelation)
+        val imageTree = findViewById<ImageView>(R.id.chartImageTree)
 
         fun setImage(base64Str: String?, imageView: ImageView) {
             if (base64Str != null) {
@@ -41,12 +38,8 @@ class DataPython : AppCompatActivity() {
             }
         }
 
-// Ojo: las claves son PyObject, así que hay que convertirlas a String
-        setImage(result[PyObject.fromJava("hist_gameTime")]?.toString(), imageView1)
-        setImage(result[PyObject.fromJava("points_per_player")]?.toString(), imageView2)
-        setImage(result[PyObject.fromJava("errors_per_difficulty")]?.toString(), imageView3)
-        setImage(result[PyObject.fromJava("reaction_per_player")]?.toString(), imageView4)
-        setImage(result[PyObject.fromJava("scatter_gameTime_points")]?.toString(), imageView5)
-
+        setImage(result?.get("points_per_player")?.toString(), imagePoints)
+        setImage(result?.get("scatter_gameTime_points")?.toString(), imageRelation)
+        setImage(result?.get("decision_tree")?.toString(), imageTree)
     }
 }

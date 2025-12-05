@@ -3,356 +3,6056 @@
     {
       "age": 5,
       "gameList": [
-        {"date": "2025-11-25T09:00:00", "dificulty": "easy", "errors": 1, "gameTime": 35, "points": 9, "reactionTime": [2.1, 2.3, 2.0]},
-        {"date": "2025-11-25T09:20:00", "dificulty": "easy", "errors": 0, "gameTime": 32, "points": 10, "reactionTime": [1.9, 2.1, 1.8]},
-        {"date": "2025-11-25T09:40:00", "dificulty": "medium", "errors": 2, "gameTime": 42, "points": 8, "reactionTime": [2.2, 2.4, 2.1]}
+        {
+          "date": "2025-11-25T08:00:00",
+          "dificulty": "hard",
+          "errors": 6,
+          "gameTime": 60,
+          "points": 1,
+          "reactionTime": [
+            2.3,
+            2.1,
+            3.9
+          ]
+        },
+        {
+          "date": "2025-11-25T08:20:00",
+          "dificulty": "hard",
+          "errors": 3,
+          "gameTime": 43,
+          "points": 0,
+          "reactionTime": [
+            2.7,
+            2.0,
+            1.8
+          ]
+        },
+        {
+          "date": "2025-11-25T08:40:00",
+          "dificulty": "easy",
+          "errors": 5,
+          "gameTime": 46,
+          "points": 13,
+          "reactionTime": [
+            3.9,
+            3.4,
+            3.9
+          ]
+        },
+        {
+          "date": "2025-11-25T09:00:00",
+          "dificulty": "hard",
+          "errors": 3,
+          "gameTime": 37,
+          "points": 15,
+          "reactionTime": [
+            3.5,
+            2.5,
+            1.8
+          ]
+        },
+        {
+          "date": "2025-11-25T09:20:00",
+          "dificulty": "hard",
+          "errors": 5,
+          "gameTime": 52,
+          "points": 0,
+          "reactionTime": [
+            2.0,
+            3.3,
+            3.6
+          ]
+        },
+        {
+          "date": "2025-11-25T09:40:00",
+          "dificulty": "easy",
+          "errors": 4,
+          "gameTime": 48,
+          "points": 7,
+          "reactionTime": [
+            3.2,
+            2.3,
+            3.7
+          ]
+        },
+        {
+          "date": "2025-11-25T10:00:00",
+          "dificulty": "hard",
+          "errors": 0,
+          "gameTime": 41,
+          "points": 11,
+          "reactionTime": [
+            2.9,
+            3.0,
+            1.9
+          ]
+        },
+        {
+          "date": "2025-11-25T10:20:00",
+          "dificulty": "medium",
+          "errors": 4,
+          "gameTime": 52,
+          "points": 7,
+          "reactionTime": [
+            2.3,
+            1.7,
+            2.6
+          ]
+        },
+        {
+          "date": "2025-11-25T10:40:00",
+          "dificulty": "hard",
+          "errors": 0,
+          "gameTime": 37,
+          "points": 6,
+          "reactionTime": [
+            2.7,
+            2.8,
+            3.6
+          ]
+        },
+        {
+          "date": "2025-11-25T11:00:00",
+          "dificulty": "easy",
+          "errors": 1,
+          "gameTime": 55,
+          "points": 6,
+          "reactionTime": [
+            3.6,
+            3.6,
+            3.8
+          ]
+        },
+        {
+          "date": "2025-11-25T11:20:00",
+          "dificulty": "easy",
+          "errors": 6,
+          "gameTime": 29,
+          "points": 8,
+          "reactionTime": [
+            3.4,
+            2.6,
+            2.8
+          ]
+        },
+        {
+          "date": "2025-11-25T11:40:00",
+          "dificulty": "hard",
+          "errors": 6,
+          "gameTime": 58,
+          "points": 8,
+          "reactionTime": [
+            3.3,
+            1.6,
+            1.9
+          ]
+        },
+        {
+          "date": "2025-11-25T12:00:00",
+          "dificulty": "easy",
+          "errors": 3,
+          "gameTime": 35,
+          "points": 10,
+          "reactionTime": [
+            3.5,
+            3.9,
+            3.1
+          ]
+        },
+        {
+          "date": "2025-11-25T12:20:00",
+          "dificulty": "medium",
+          "errors": 5,
+          "gameTime": 35,
+          "points": 7,
+          "reactionTime": [
+            1.5,
+            2.7,
+            2.4
+          ]
+        },
+        {
+          "date": "2025-11-25T12:40:00",
+          "dificulty": "hard",
+          "errors": 0,
+          "gameTime": 47,
+          "points": 10,
+          "reactionTime": [
+            1.6,
+            3.6,
+            2.8
+          ]
+        },
+        {
+          "date": "2025-11-25T13:00:00",
+          "dificulty": "medium",
+          "errors": 5,
+          "gameTime": 32,
+          "points": 4,
+          "reactionTime": [
+            1.7,
+            2.2,
+            2.9
+          ]
+        },
+        {
+          "date": "2025-11-25T13:20:00",
+          "dificulty": "hard",
+          "errors": 1,
+          "gameTime": 35,
+          "points": 6,
+          "reactionTime": [
+            3.3,
+            1.9,
+            3.6
+          ]
+        },
+        {
+          "date": "2025-11-25T13:40:00",
+          "dificulty": "medium",
+          "errors": 4,
+          "gameTime": 37,
+          "points": 5,
+          "reactionTime": [
+            2.7,
+            2.1,
+            2.0
+          ]
+        },
+        {
+          "date": "2025-11-25T14:00:00",
+          "dificulty": "hard",
+          "errors": 2,
+          "gameTime": 31,
+          "points": 3,
+          "reactionTime": [
+            3.1,
+            1.7,
+            2.9
+          ]
+        },
+        {
+          "date": "2025-11-25T14:20:00",
+          "dificulty": "hard",
+          "errors": 3,
+          "gameTime": 52,
+          "points": 14,
+          "reactionTime": [
+            2.5,
+            2.0,
+            2.1
+          ]
+        },
+        {
+          "date": "2025-11-25T14:40:00",
+          "dificulty": "medium",
+          "errors": 4,
+          "gameTime": 33,
+          "points": 9,
+          "reactionTime": [
+            3.8,
+            1.8,
+            2.3
+          ]
+        },
+        {
+          "date": "2025-11-25T15:00:00",
+          "dificulty": "easy",
+          "errors": 4,
+          "gameTime": 29,
+          "points": 4,
+          "reactionTime": [
+            2.8,
+            2.2,
+            3.8
+          ]
+        },
+        {
+          "date": "2025-11-25T15:20:00",
+          "dificulty": "hard",
+          "errors": 4,
+          "gameTime": 35,
+          "points": 1,
+          "reactionTime": [
+            2.8,
+            3.9,
+            2.9
+          ]
+        },
+        {
+          "date": "2025-11-25T15:40:00",
+          "dificulty": "hard",
+          "errors": 6,
+          "gameTime": 36,
+          "points": 11,
+          "reactionTime": [
+            1.7,
+            1.7,
+            2.6
+          ]
+        },
+        {
+          "date": "2025-11-25T16:00:00",
+          "dificulty": "easy",
+          "errors": 3,
+          "gameTime": 36,
+          "points": 10,
+          "reactionTime": [
+            3.4,
+            3.6,
+            2.0
+          ]
+        },
+        {
+          "date": "2025-11-25T16:20:00",
+          "dificulty": "medium",
+          "errors": 0,
+          "gameTime": 45,
+          "points": 5,
+          "reactionTime": [
+            2.6,
+            1.9,
+            2.8
+          ]
+        },
+        {
+          "date": "2025-11-25T16:40:00",
+          "dificulty": "easy",
+          "errors": 1,
+          "gameTime": 40,
+          "points": 9,
+          "reactionTime": [
+            1.5,
+            1.8,
+            2.8
+          ]
+        },
+        {
+          "date": "2025-11-25T17:00:00",
+          "dificulty": "hard",
+          "errors": 5,
+          "gameTime": 28,
+          "points": 2,
+          "reactionTime": [
+            3.6,
+            1.8,
+            2.9
+          ]
+        },
+        {
+          "date": "2025-11-25T17:20:00",
+          "dificulty": "medium",
+          "errors": 0,
+          "gameTime": 34,
+          "points": 9,
+          "reactionTime": [
+            2.1,
+            3.8,
+            3.3
+          ]
+        },
+        {
+          "date": "2025-11-25T17:40:00",
+          "dificulty": "hard",
+          "errors": 2,
+          "gameTime": 51,
+          "points": 11,
+          "reactionTime": [
+            3.5,
+            2.0,
+            3.1
+          ]
+        },
+        {
+          "date": "2025-11-25T18:00:00",
+          "dificulty": "easy",
+          "errors": 1,
+          "gameTime": 54,
+          "points": 0,
+          "reactionTime": [
+            2.3,
+            1.5,
+            3.9
+          ]
+        },
+        {
+          "date": "2025-11-25T18:20:00",
+          "dificulty": "easy",
+          "errors": 4,
+          "gameTime": 59,
+          "points": 4,
+          "reactionTime": [
+            1.7,
+            1.7,
+            1.8
+          ]
+        },
+        {
+          "date": "2025-11-25T18:40:00",
+          "dificulty": "hard",
+          "errors": 5,
+          "gameTime": 30,
+          "points": 13,
+          "reactionTime": [
+            2.7,
+            3.8,
+            1.5
+          ]
+        },
+        {
+          "date": "2025-11-25T19:00:00",
+          "dificulty": "hard",
+          "errors": 6,
+          "gameTime": 36,
+          "points": 0,
+          "reactionTime": [
+            1.6,
+            1.9,
+            3.1
+          ]
+        },
+        {
+          "date": "2025-11-25T19:20:00",
+          "dificulty": "easy",
+          "errors": 4,
+          "gameTime": 30,
+          "points": 3,
+          "reactionTime": [
+            2.2,
+            3.2,
+            3.0
+          ]
+        },
+        {
+          "date": "2025-11-25T19:40:00",
+          "dificulty": "medium",
+          "errors": 3,
+          "gameTime": 56,
+          "points": 11,
+          "reactionTime": [
+            2.5,
+            2.1,
+            3.8
+          ]
+        },
+        {
+          "date": "2025-11-25T20:00:00",
+          "dificulty": "hard",
+          "errors": 1,
+          "gameTime": 37,
+          "points": 14,
+          "reactionTime": [
+            2.7,
+            3.9,
+            1.9
+          ]
+        },
+        {
+          "date": "2025-11-25T20:20:00",
+          "dificulty": "hard",
+          "errors": 6,
+          "gameTime": 52,
+          "points": 15,
+          "reactionTime": [
+            2.6,
+            3.3,
+            3.3
+          ]
+        },
+        {
+          "date": "2025-11-25T20:40:00",
+          "dificulty": "medium",
+          "errors": 6,
+          "gameTime": 38,
+          "points": 12,
+          "reactionTime": [
+            2.7,
+            3.3,
+            3.5
+          ]
+        },
+        {
+          "date": "2025-11-25T21:00:00",
+          "dificulty": "medium",
+          "errors": 2,
+          "gameTime": 54,
+          "points": 13,
+          "reactionTime": [
+            1.5,
+            2.0,
+            2.5
+          ]
+        },
+        {
+          "date": "2025-11-25T21:20:00",
+          "dificulty": "hard",
+          "errors": 6,
+          "gameTime": 40,
+          "points": 9,
+          "reactionTime": [
+            1.8,
+            3.8,
+            2.6
+          ]
+        },
+        {
+          "date": "2025-11-25T21:40:00",
+          "dificulty": "hard",
+          "errors": 5,
+          "gameTime": 58,
+          "points": 15,
+          "reactionTime": [
+            3.5,
+            2.6,
+            3.4
+          ]
+        },
+        {
+          "date": "2025-11-25T22:00:00",
+          "dificulty": "hard",
+          "errors": 3,
+          "gameTime": 59,
+          "points": 14,
+          "reactionTime": [
+            3.3,
+            3.0,
+            2.1
+          ]
+        },
+        {
+          "date": "2025-11-25T22:20:00",
+          "dificulty": "easy",
+          "errors": 6,
+          "gameTime": 43,
+          "points": 15,
+          "reactionTime": [
+            3.2,
+            3.7,
+            1.5
+          ]
+        },
+        {
+          "date": "2025-11-25T22:40:00",
+          "dificulty": "easy",
+          "errors": 4,
+          "gameTime": 31,
+          "points": 7,
+          "reactionTime": [
+            2.5,
+            3.1,
+            1.8
+          ]
+        },
+        {
+          "date": "2025-11-25T23:00:00",
+          "dificulty": "medium",
+          "errors": 3,
+          "gameTime": 39,
+          "points": 4,
+          "reactionTime": [
+            2.9,
+            2.2,
+            2.5
+          ]
+        },
+        {
+          "date": "2025-11-25T23:20:00",
+          "dificulty": "medium",
+          "errors": 4,
+          "gameTime": 35,
+          "points": 15,
+          "reactionTime": [
+            3.8,
+            1.9,
+            2.7
+          ]
+        },
+        {
+          "date": "2025-11-25T23:40:00",
+          "dificulty": "easy",
+          "errors": 1,
+          "gameTime": 30,
+          "points": 7,
+          "reactionTime": [
+            3.2,
+            3.4,
+            1.5
+          ]
+        },
+        {
+          "date": "2025-11-26T00:00:00",
+          "dificulty": "easy",
+          "errors": 6,
+          "gameTime": 43,
+          "points": 6,
+          "reactionTime": [
+            3.6,
+            2.7,
+            3.5
+          ]
+        },
+        {
+          "date": "2025-11-26T00:20:00",
+          "dificulty": "hard",
+          "errors": 3,
+          "gameTime": 41,
+          "points": 3,
+          "reactionTime": [
+            2.2,
+            2.3,
+            3.8
+          ]
+        },
+        {
+          "date": "2025-11-26T00:40:00",
+          "dificulty": "easy",
+          "errors": 6,
+          "gameTime": 50,
+          "points": 7,
+          "reactionTime": [
+            3.2,
+            3.6,
+            2.6
+          ]
+        },
+        {
+          "date": "2025-11-26T01:00:00",
+          "dificulty": "hard",
+          "errors": 6,
+          "gameTime": 30,
+          "points": 4,
+          "reactionTime": [
+            3.5,
+            3.2,
+            4.0
+          ]
+        },
+        {
+          "date": "2025-11-26T01:20:00",
+          "dificulty": "hard",
+          "errors": 5,
+          "gameTime": 29,
+          "points": 5,
+          "reactionTime": [
+            2.1,
+            2.5,
+            3.2
+          ]
+        },
+        {
+          "date": "2025-11-26T01:40:00",
+          "dificulty": "hard",
+          "errors": 5,
+          "gameTime": 47,
+          "points": 3,
+          "reactionTime": [
+            3.5,
+            3.7,
+            1.6
+          ]
+        },
+        {
+          "date": "2025-11-26T02:00:00",
+          "dificulty": "easy",
+          "errors": 1,
+          "gameTime": 49,
+          "points": 14,
+          "reactionTime": [
+            2.9,
+            2.0,
+            3.6
+          ]
+        },
+        {
+          "date": "2025-11-26T02:20:00",
+          "dificulty": "hard",
+          "errors": 0,
+          "gameTime": 28,
+          "points": 15,
+          "reactionTime": [
+            1.9,
+            2.5,
+            2.8
+          ]
+        }
       ],
       "name": "Sofia"
     },
     {
       "age": 5,
       "gameList": [
-        {"date": "2025-11-25T10:00:00", "dificulty": "easy", "errors": 4, "gameTime": 48, "points": 6, "reactionTime": [3.2, 3.5, 3.0]},
-        {"date": "2025-11-25T10:25:00", "dificulty": "easy", "errors": 3, "gameTime": 45, "points": 7, "reactionTime": [2.8, 3.1, 2.9]}
+        {
+          "date": "2025-11-26T02:20:00",
+          "dificulty": "hard",
+          "errors": 3,
+          "gameTime": 60,
+          "points": 6,
+          "reactionTime": [
+            2.0,
+            2.7,
+            1.8
+          ]
+        },
+        {
+          "date": "2025-11-26T02:40:00",
+          "dificulty": "hard",
+          "errors": 2,
+          "gameTime": 60,
+          "points": 3,
+          "reactionTime": [
+            2.4,
+            2.8,
+            3.2
+          ]
+        },
+        {
+          "date": "2025-11-26T03:00:00",
+          "dificulty": "hard",
+          "errors": 2,
+          "gameTime": 33,
+          "points": 10,
+          "reactionTime": [
+            2.9,
+            1.9,
+            3.3
+          ]
+        },
+        {
+          "date": "2025-11-26T03:20:00",
+          "dificulty": "medium",
+          "errors": 6,
+          "gameTime": 40,
+          "points": 1,
+          "reactionTime": [
+            1.5,
+            3.6,
+            2.4
+          ]
+        },
+        {
+          "date": "2025-11-26T03:40:00",
+          "dificulty": "easy",
+          "errors": 6,
+          "gameTime": 39,
+          "points": 14,
+          "reactionTime": [
+            3.3,
+            1.7,
+            2.6
+          ]
+        },
+        {
+          "date": "2025-11-26T04:00:00",
+          "dificulty": "hard",
+          "errors": 1,
+          "gameTime": 46,
+          "points": 2,
+          "reactionTime": [
+            2.2,
+            1.7,
+            2.1
+          ]
+        },
+        {
+          "date": "2025-11-26T04:20:00",
+          "dificulty": "medium",
+          "errors": 4,
+          "gameTime": 58,
+          "points": 10,
+          "reactionTime": [
+            3.1,
+            3.0,
+            2.3
+          ]
+        },
+        {
+          "date": "2025-11-26T04:40:00",
+          "dificulty": "hard",
+          "errors": 0,
+          "gameTime": 52,
+          "points": 11,
+          "reactionTime": [
+            2.6,
+            2.5,
+            3.9
+          ]
+        },
+        {
+          "date": "2025-11-26T05:00:00",
+          "dificulty": "easy",
+          "errors": 6,
+          "gameTime": 56,
+          "points": 2,
+          "reactionTime": [
+            3.4,
+            2.2,
+            3.1
+          ]
+        },
+        {
+          "date": "2025-11-26T05:20:00",
+          "dificulty": "easy",
+          "errors": 0,
+          "gameTime": 36,
+          "points": 6,
+          "reactionTime": [
+            2.7,
+            2.2,
+            2.6
+          ]
+        },
+        {
+          "date": "2025-11-26T05:40:00",
+          "dificulty": "medium",
+          "errors": 2,
+          "gameTime": 30,
+          "points": 1,
+          "reactionTime": [
+            4.0,
+            3.1,
+            3.0
+          ]
+        },
+        {
+          "date": "2025-11-26T06:00:00",
+          "dificulty": "easy",
+          "errors": 5,
+          "gameTime": 55,
+          "points": 12,
+          "reactionTime": [
+            3.6,
+            3.4,
+            4.0
+          ]
+        },
+        {
+          "date": "2025-11-26T06:20:00",
+          "dificulty": "medium",
+          "errors": 4,
+          "gameTime": 52,
+          "points": 9,
+          "reactionTime": [
+            2.1,
+            3.5,
+            3.0
+          ]
+        },
+        {
+          "date": "2025-11-26T06:40:00",
+          "dificulty": "medium",
+          "errors": 5,
+          "gameTime": 49,
+          "points": 5,
+          "reactionTime": [
+            3.7,
+            2.9,
+            3.0
+          ]
+        },
+        {
+          "date": "2025-11-26T07:00:00",
+          "dificulty": "hard",
+          "errors": 0,
+          "gameTime": 47,
+          "points": 5,
+          "reactionTime": [
+            2.0,
+            3.4,
+            1.9
+          ]
+        },
+        {
+          "date": "2025-11-26T07:20:00",
+          "dificulty": "easy",
+          "errors": 0,
+          "gameTime": 49,
+          "points": 8,
+          "reactionTime": [
+            1.7,
+            2.4,
+            2.3
+          ]
+        },
+        {
+          "date": "2025-11-26T07:40:00",
+          "dificulty": "hard",
+          "errors": 2,
+          "gameTime": 42,
+          "points": 8,
+          "reactionTime": [
+            2.8,
+            2.6,
+            3.9
+          ]
+        },
+        {
+          "date": "2025-11-26T08:00:00",
+          "dificulty": "hard",
+          "errors": 6,
+          "gameTime": 51,
+          "points": 15,
+          "reactionTime": [
+            2.9,
+            3.7,
+            3.4
+          ]
+        },
+        {
+          "date": "2025-11-26T08:20:00",
+          "dificulty": "hard",
+          "errors": 6,
+          "gameTime": 31,
+          "points": 11,
+          "reactionTime": [
+            3.0,
+            4.0,
+            2.0
+          ]
+        },
+        {
+          "date": "2025-11-26T08:40:00",
+          "dificulty": "medium",
+          "errors": 3,
+          "gameTime": 50,
+          "points": 12,
+          "reactionTime": [
+            2.3,
+            3.8,
+            3.2
+          ]
+        },
+        {
+          "date": "2025-11-26T09:00:00",
+          "dificulty": "easy",
+          "errors": 0,
+          "gameTime": 41,
+          "points": 2,
+          "reactionTime": [
+            3.1,
+            3.7,
+            2.3
+          ]
+        },
+        {
+          "date": "2025-11-26T09:20:00",
+          "dificulty": "easy",
+          "errors": 3,
+          "gameTime": 48,
+          "points": 2,
+          "reactionTime": [
+            2.9,
+            3.4,
+            3.0
+          ]
+        },
+        {
+          "date": "2025-11-26T09:40:00",
+          "dificulty": "medium",
+          "errors": 6,
+          "gameTime": 60,
+          "points": 8,
+          "reactionTime": [
+            1.6,
+            3.8,
+            3.1
+          ]
+        },
+        {
+          "date": "2025-11-26T10:00:00",
+          "dificulty": "hard",
+          "errors": 5,
+          "gameTime": 48,
+          "points": 13,
+          "reactionTime": [
+            3.8,
+            3.9,
+            3.6
+          ]
+        },
+        {
+          "date": "2025-11-26T10:20:00",
+          "dificulty": "medium",
+          "errors": 0,
+          "gameTime": 48,
+          "points": 3,
+          "reactionTime": [
+            3.0,
+            1.9,
+            1.8
+          ]
+        },
+        {
+          "date": "2025-11-26T10:40:00",
+          "dificulty": "medium",
+          "errors": 4,
+          "gameTime": 43,
+          "points": 11,
+          "reactionTime": [
+            2.5,
+            3.7,
+            3.1
+          ]
+        },
+        {
+          "date": "2025-11-26T11:00:00",
+          "dificulty": "medium",
+          "errors": 6,
+          "gameTime": 49,
+          "points": 14,
+          "reactionTime": [
+            3.2,
+            2.7,
+            3.1
+          ]
+        },
+        {
+          "date": "2025-11-26T11:20:00",
+          "dificulty": "hard",
+          "errors": 2,
+          "gameTime": 45,
+          "points": 9,
+          "reactionTime": [
+            3.2,
+            2.1,
+            3.6
+          ]
+        },
+        {
+          "date": "2025-11-26T11:40:00",
+          "dificulty": "easy",
+          "errors": 6,
+          "gameTime": 49,
+          "points": 10,
+          "reactionTime": [
+            1.6,
+            3.8,
+            3.1
+          ]
+        },
+        {
+          "date": "2025-11-26T12:00:00",
+          "dificulty": "easy",
+          "errors": 6,
+          "gameTime": 30,
+          "points": 10,
+          "reactionTime": [
+            2.4,
+            3.7,
+            3.4
+          ]
+        },
+        {
+          "date": "2025-11-26T12:20:00",
+          "dificulty": "easy",
+          "errors": 6,
+          "gameTime": 51,
+          "points": 11,
+          "reactionTime": [
+            1.5,
+            1.8,
+            3.9
+          ]
+        },
+        {
+          "date": "2025-11-26T12:40:00",
+          "dificulty": "hard",
+          "errors": 4,
+          "gameTime": 44,
+          "points": 4,
+          "reactionTime": [
+            1.5,
+            3.4,
+            3.8
+          ]
+        },
+        {
+          "date": "2025-11-26T13:00:00",
+          "dificulty": "hard",
+          "errors": 3,
+          "gameTime": 47,
+          "points": 12,
+          "reactionTime": [
+            4.0,
+            3.2,
+            1.6
+          ]
+        },
+        {
+          "date": "2025-11-26T13:20:00",
+          "dificulty": "hard",
+          "errors": 0,
+          "gameTime": 55,
+          "points": 6,
+          "reactionTime": [
+            3.8,
+            3.5,
+            3.1
+          ]
+        },
+        {
+          "date": "2025-11-26T13:40:00",
+          "dificulty": "hard",
+          "errors": 0,
+          "gameTime": 46,
+          "points": 4,
+          "reactionTime": [
+            1.8,
+            2.6,
+            2.0
+          ]
+        },
+        {
+          "date": "2025-11-26T14:00:00",
+          "dificulty": "medium",
+          "errors": 2,
+          "gameTime": 55,
+          "points": 5,
+          "reactionTime": [
+            1.5,
+            2.4,
+            1.7
+          ]
+        },
+        {
+          "date": "2025-11-26T14:20:00",
+          "dificulty": "easy",
+          "errors": 2,
+          "gameTime": 57,
+          "points": 4,
+          "reactionTime": [
+            2.9,
+            3.6,
+            1.6
+          ]
+        },
+        {
+          "date": "2025-11-26T14:40:00",
+          "dificulty": "medium",
+          "errors": 3,
+          "gameTime": 36,
+          "points": 1,
+          "reactionTime": [
+            3.9,
+            2.2,
+            2.8
+          ]
+        },
+        {
+          "date": "2025-11-26T15:00:00",
+          "dificulty": "medium",
+          "errors": 6,
+          "gameTime": 60,
+          "points": 12,
+          "reactionTime": [
+            2.1,
+            2.1,
+            3.9
+          ]
+        },
+        {
+          "date": "2025-11-26T15:20:00",
+          "dificulty": "medium",
+          "errors": 5,
+          "gameTime": 50,
+          "points": 1,
+          "reactionTime": [
+            3.6,
+            2.9,
+            3.2
+          ]
+        },
+        {
+          "date": "2025-11-26T15:40:00",
+          "dificulty": "medium",
+          "errors": 4,
+          "gameTime": 28,
+          "points": 12,
+          "reactionTime": [
+            1.5,
+            3.1,
+            2.1
+          ]
+        },
+        {
+          "date": "2025-11-26T16:00:00",
+          "dificulty": "easy",
+          "errors": 5,
+          "gameTime": 44,
+          "points": 12,
+          "reactionTime": [
+            2.9,
+            2.5,
+            3.6
+          ]
+        },
+        {
+          "date": "2025-11-26T16:20:00",
+          "dificulty": "medium",
+          "errors": 3,
+          "gameTime": 30,
+          "points": 5,
+          "reactionTime": [
+            1.7,
+            2.5,
+            2.3
+          ]
+        },
+        {
+          "date": "2025-11-26T16:40:00",
+          "dificulty": "medium",
+          "errors": 2,
+          "gameTime": 43,
+          "points": 15,
+          "reactionTime": [
+            3.7,
+            2.8,
+            1.8
+          ]
+        },
+        {
+          "date": "2025-11-26T17:00:00",
+          "dificulty": "hard",
+          "errors": 1,
+          "gameTime": 38,
+          "points": 12,
+          "reactionTime": [
+            3.7,
+            2.8,
+            2.8
+          ]
+        },
+        {
+          "date": "2025-11-26T17:20:00",
+          "dificulty": "medium",
+          "errors": 1,
+          "gameTime": 54,
+          "points": 2,
+          "reactionTime": [
+            2.5,
+            1.6,
+            3.5
+          ]
+        },
+        {
+          "date": "2025-11-26T17:40:00",
+          "dificulty": "hard",
+          "errors": 3,
+          "gameTime": 46,
+          "points": 10,
+          "reactionTime": [
+            2.1,
+            1.7,
+            2.7
+          ]
+        },
+        {
+          "date": "2025-11-26T18:00:00",
+          "dificulty": "easy",
+          "errors": 0,
+          "gameTime": 45,
+          "points": 10,
+          "reactionTime": [
+            1.8,
+            2.7,
+            3.7
+          ]
+        },
+        {
+          "date": "2025-11-26T18:20:00",
+          "dificulty": "medium",
+          "errors": 1,
+          "gameTime": 37,
+          "points": 8,
+          "reactionTime": [
+            2.3,
+            2.4,
+            1.5
+          ]
+        },
+        {
+          "date": "2025-11-26T18:40:00",
+          "dificulty": "easy",
+          "errors": 3,
+          "gameTime": 32,
+          "points": 3,
+          "reactionTime": [
+            1.5,
+            2.4,
+            2.5
+          ]
+        },
+        {
+          "date": "2025-11-26T19:00:00",
+          "dificulty": "hard",
+          "errors": 2,
+          "gameTime": 45,
+          "points": 6,
+          "reactionTime": [
+            2.0,
+            3.6,
+            1.9
+          ]
+        },
+        {
+          "date": "2025-11-26T19:20:00",
+          "dificulty": "easy",
+          "errors": 1,
+          "gameTime": 45,
+          "points": 15,
+          "reactionTime": [
+            3.0,
+            3.5,
+            2.3
+          ]
+        },
+        {
+          "date": "2025-11-26T19:40:00",
+          "dificulty": "hard",
+          "errors": 0,
+          "gameTime": 54,
+          "points": 1,
+          "reactionTime": [
+            2.7,
+            3.8,
+            3.2
+          ]
+        },
+        {
+          "date": "2025-11-26T20:00:00",
+          "dificulty": "medium",
+          "errors": 4,
+          "gameTime": 60,
+          "points": 0,
+          "reactionTime": [
+            3.3,
+            2.8,
+            1.9
+          ]
+        },
+        {
+          "date": "2025-11-26T20:20:00",
+          "dificulty": "medium",
+          "errors": 1,
+          "gameTime": 44,
+          "points": 2,
+          "reactionTime": [
+            2.1,
+            2.7,
+            3.9
+          ]
+        },
+        {
+          "date": "2025-11-26T20:40:00",
+          "dificulty": "easy",
+          "errors": 2,
+          "gameTime": 41,
+          "points": 1,
+          "reactionTime": [
+            3.5,
+            2.2,
+            3.8
+          ]
+        }
       ],
       "name": "Mateo"
     },
     {
       "age": 5,
       "gameList": [
-        {"date": "2025-11-25T08:30:00", "dificulty": "easy", "errors": 2, "gameTime": 38, "points": 8, "reactionTime": [2.4, 2.7, 2.5]},
-        {"date": "2025-11-25T08:50:00", "dificulty": "easy", "errors": 1, "gameTime": 34, "points": 9, "reactionTime": [2.2, 2.5, 2.3]},
-        {"date": "2025-11-25T09:15:00", "dificulty": "medium", "errors": 3, "gameTime": 47, "points": 7, "reactionTime": [2.6, 2.9, 2.7]},
-        {"date": "2025-11-25T09:35:00", "dificulty": "medium", "errors": 2, "gameTime": 43, "points": 8, "reactionTime": [2.4, 2.6, 2.5]}
+        {
+          "date": "2025-11-26T20:40:00",
+          "dificulty": "medium",
+          "errors": 5,
+          "gameTime": 33,
+          "points": 0,
+          "reactionTime": [
+            3.5,
+            2.2,
+            2.3
+          ]
+        },
+        {
+          "date": "2025-11-26T21:00:00",
+          "dificulty": "hard",
+          "errors": 4,
+          "gameTime": 58,
+          "points": 7,
+          "reactionTime": [
+            3.2,
+            2.1,
+            1.7
+          ]
+        },
+        {
+          "date": "2025-11-26T21:20:00",
+          "dificulty": "medium",
+          "errors": 0,
+          "gameTime": 47,
+          "points": 8,
+          "reactionTime": [
+            2.0,
+            3.4,
+            1.6
+          ]
+        },
+        {
+          "date": "2025-11-26T21:40:00",
+          "dificulty": "medium",
+          "errors": 2,
+          "gameTime": 58,
+          "points": 6,
+          "reactionTime": [
+            3.9,
+            3.4,
+            2.9
+          ]
+        },
+        {
+          "date": "2025-11-26T22:00:00",
+          "dificulty": "hard",
+          "errors": 0,
+          "gameTime": 39,
+          "points": 2,
+          "reactionTime": [
+            3.5,
+            1.7,
+            2.7
+          ]
+        },
+        {
+          "date": "2025-11-26T22:20:00",
+          "dificulty": "hard",
+          "errors": 2,
+          "gameTime": 28,
+          "points": 6,
+          "reactionTime": [
+            2.5,
+            2.5,
+            2.0
+          ]
+        },
+        {
+          "date": "2025-11-26T22:40:00",
+          "dificulty": "hard",
+          "errors": 0,
+          "gameTime": 48,
+          "points": 1,
+          "reactionTime": [
+            3.5,
+            1.6,
+            3.2
+          ]
+        },
+        {
+          "date": "2025-11-26T23:00:00",
+          "dificulty": "easy",
+          "errors": 1,
+          "gameTime": 29,
+          "points": 5,
+          "reactionTime": [
+            1.8,
+            1.7,
+            1.8
+          ]
+        },
+        {
+          "date": "2025-11-26T23:20:00",
+          "dificulty": "hard",
+          "errors": 6,
+          "gameTime": 30,
+          "points": 4,
+          "reactionTime": [
+            3.9,
+            3.2,
+            3.0
+          ]
+        },
+        {
+          "date": "2025-11-26T23:40:00",
+          "dificulty": "easy",
+          "errors": 5,
+          "gameTime": 52,
+          "points": 0,
+          "reactionTime": [
+            2.0,
+            3.4,
+            2.5
+          ]
+        },
+        {
+          "date": "2025-11-27T00:00:00",
+          "dificulty": "medium",
+          "errors": 5,
+          "gameTime": 58,
+          "points": 13,
+          "reactionTime": [
+            1.9,
+            2.2,
+            2.5
+          ]
+        },
+        {
+          "date": "2025-11-27T00:20:00",
+          "dificulty": "hard",
+          "errors": 1,
+          "gameTime": 41,
+          "points": 2,
+          "reactionTime": [
+            3.9,
+            1.8,
+            2.5
+          ]
+        },
+        {
+          "date": "2025-11-27T00:40:00",
+          "dificulty": "hard",
+          "errors": 4,
+          "gameTime": 55,
+          "points": 4,
+          "reactionTime": [
+            3.5,
+            2.7,
+            2.4
+          ]
+        },
+        {
+          "date": "2025-11-27T01:00:00",
+          "dificulty": "easy",
+          "errors": 3,
+          "gameTime": 57,
+          "points": 5,
+          "reactionTime": [
+            3.6,
+            2.5,
+            2.9
+          ]
+        },
+        {
+          "date": "2025-11-27T01:20:00",
+          "dificulty": "hard",
+          "errors": 4,
+          "gameTime": 33,
+          "points": 10,
+          "reactionTime": [
+            3.2,
+            3.6,
+            2.2
+          ]
+        },
+        {
+          "date": "2025-11-27T01:40:00",
+          "dificulty": "hard",
+          "errors": 6,
+          "gameTime": 58,
+          "points": 14,
+          "reactionTime": [
+            2.1,
+            2.5,
+            2.9
+          ]
+        },
+        {
+          "date": "2025-11-27T02:00:00",
+          "dificulty": "medium",
+          "errors": 0,
+          "gameTime": 35,
+          "points": 12,
+          "reactionTime": [
+            2.4,
+            3.5,
+            3.6
+          ]
+        },
+        {
+          "date": "2025-11-27T02:20:00",
+          "dificulty": "medium",
+          "errors": 6,
+          "gameTime": 49,
+          "points": 14,
+          "reactionTime": [
+            3.9,
+            3.2,
+            2.9
+          ]
+        },
+        {
+          "date": "2025-11-27T02:40:00",
+          "dificulty": "medium",
+          "errors": 2,
+          "gameTime": 30,
+          "points": 13,
+          "reactionTime": [
+            2.8,
+            3.5,
+            3.4
+          ]
+        },
+        {
+          "date": "2025-11-27T03:00:00",
+          "dificulty": "hard",
+          "errors": 0,
+          "gameTime": 32,
+          "points": 15,
+          "reactionTime": [
+            1.5,
+            2.2,
+            2.3
+          ]
+        },
+        {
+          "date": "2025-11-27T03:20:00",
+          "dificulty": "hard",
+          "errors": 4,
+          "gameTime": 54,
+          "points": 2,
+          "reactionTime": [
+            3.7,
+            2.1,
+            2.3
+          ]
+        },
+        {
+          "date": "2025-11-27T03:40:00",
+          "dificulty": "easy",
+          "errors": 3,
+          "gameTime": 43,
+          "points": 5,
+          "reactionTime": [
+            1.9,
+            3.1,
+            3.5
+          ]
+        },
+        {
+          "date": "2025-11-27T04:00:00",
+          "dificulty": "hard",
+          "errors": 4,
+          "gameTime": 58,
+          "points": 8,
+          "reactionTime": [
+            2.1,
+            3.0,
+            1.7
+          ]
+        },
+        {
+          "date": "2025-11-27T04:20:00",
+          "dificulty": "medium",
+          "errors": 1,
+          "gameTime": 37,
+          "points": 10,
+          "reactionTime": [
+            2.4,
+            2.9,
+            1.8
+          ]
+        },
+        {
+          "date": "2025-11-27T04:40:00",
+          "dificulty": "medium",
+          "errors": 3,
+          "gameTime": 38,
+          "points": 4,
+          "reactionTime": [
+            3.3,
+            2.4,
+            2.6
+          ]
+        },
+        {
+          "date": "2025-11-27T05:00:00",
+          "dificulty": "medium",
+          "errors": 0,
+          "gameTime": 45,
+          "points": 7,
+          "reactionTime": [
+            3.8,
+            2.9,
+            3.6
+          ]
+        },
+        {
+          "date": "2025-11-27T05:20:00",
+          "dificulty": "medium",
+          "errors": 2,
+          "gameTime": 50,
+          "points": 5,
+          "reactionTime": [
+            2.9,
+            3.3,
+            3.0
+          ]
+        },
+        {
+          "date": "2025-11-27T05:40:00",
+          "dificulty": "easy",
+          "errors": 2,
+          "gameTime": 56,
+          "points": 3,
+          "reactionTime": [
+            3.3,
+            2.1,
+            3.7
+          ]
+        },
+        {
+          "date": "2025-11-27T06:00:00",
+          "dificulty": "hard",
+          "errors": 3,
+          "gameTime": 57,
+          "points": 0,
+          "reactionTime": [
+            2.1,
+            3.2,
+            1.6
+          ]
+        },
+        {
+          "date": "2025-11-27T06:20:00",
+          "dificulty": "medium",
+          "errors": 2,
+          "gameTime": 51,
+          "points": 11,
+          "reactionTime": [
+            3.5,
+            2.1,
+            2.9
+          ]
+        },
+        {
+          "date": "2025-11-27T06:40:00",
+          "dificulty": "easy",
+          "errors": 6,
+          "gameTime": 28,
+          "points": 8,
+          "reactionTime": [
+            3.3,
+            1.7,
+            3.1
+          ]
+        },
+        {
+          "date": "2025-11-27T07:00:00",
+          "dificulty": "hard",
+          "errors": 6,
+          "gameTime": 45,
+          "points": 5,
+          "reactionTime": [
+            3.6,
+            3.4,
+            3.3
+          ]
+        },
+        {
+          "date": "2025-11-27T07:20:00",
+          "dificulty": "hard",
+          "errors": 0,
+          "gameTime": 59,
+          "points": 3,
+          "reactionTime": [
+            2.0,
+            3.0,
+            3.2
+          ]
+        },
+        {
+          "date": "2025-11-27T07:40:00",
+          "dificulty": "hard",
+          "errors": 3,
+          "gameTime": 48,
+          "points": 2,
+          "reactionTime": [
+            2.6,
+            3.6,
+            3.8
+          ]
+        },
+        {
+          "date": "2025-11-27T08:00:00",
+          "dificulty": "medium",
+          "errors": 3,
+          "gameTime": 34,
+          "points": 10,
+          "reactionTime": [
+            3.3,
+            3.4,
+            3.6
+          ]
+        },
+        {
+          "date": "2025-11-27T08:20:00",
+          "dificulty": "hard",
+          "errors": 2,
+          "gameTime": 55,
+          "points": 15,
+          "reactionTime": [
+            1.8,
+            3.5,
+            2.1
+          ]
+        },
+        {
+          "date": "2025-11-27T08:40:00",
+          "dificulty": "easy",
+          "errors": 0,
+          "gameTime": 29,
+          "points": 7,
+          "reactionTime": [
+            3.3,
+            2.3,
+            3.6
+          ]
+        },
+        {
+          "date": "2025-11-27T09:00:00",
+          "dificulty": "easy",
+          "errors": 2,
+          "gameTime": 37,
+          "points": 14,
+          "reactionTime": [
+            3.7,
+            3.3,
+            2.4
+          ]
+        },
+        {
+          "date": "2025-11-27T09:20:00",
+          "dificulty": "medium",
+          "errors": 5,
+          "gameTime": 34,
+          "points": 14,
+          "reactionTime": [
+            2.1,
+            1.8,
+            3.7
+          ]
+        },
+        {
+          "date": "2025-11-27T09:40:00",
+          "dificulty": "medium",
+          "errors": 2,
+          "gameTime": 42,
+          "points": 15,
+          "reactionTime": [
+            2.5,
+            1.6,
+            3.2
+          ]
+        },
+        {
+          "date": "2025-11-27T10:00:00",
+          "dificulty": "easy",
+          "errors": 4,
+          "gameTime": 35,
+          "points": 3,
+          "reactionTime": [
+            2.9,
+            1.9,
+            2.7
+          ]
+        },
+        {
+          "date": "2025-11-27T10:20:00",
+          "dificulty": "easy",
+          "errors": 3,
+          "gameTime": 52,
+          "points": 6,
+          "reactionTime": [
+            3.8,
+            3.1,
+            3.6
+          ]
+        },
+        {
+          "date": "2025-11-27T10:40:00",
+          "dificulty": "hard",
+          "errors": 1,
+          "gameTime": 52,
+          "points": 5,
+          "reactionTime": [
+            3.1,
+            2.9,
+            3.0
+          ]
+        },
+        {
+          "date": "2025-11-27T11:00:00",
+          "dificulty": "hard",
+          "errors": 4,
+          "gameTime": 50,
+          "points": 13,
+          "reactionTime": [
+            2.2,
+            2.1,
+            2.7
+          ]
+        },
+        {
+          "date": "2025-11-27T11:20:00",
+          "dificulty": "easy",
+          "errors": 4,
+          "gameTime": 41,
+          "points": 1,
+          "reactionTime": [
+            2.5,
+            4.0,
+            3.1
+          ]
+        },
+        {
+          "date": "2025-11-27T11:40:00",
+          "dificulty": "easy",
+          "errors": 3,
+          "gameTime": 41,
+          "points": 1,
+          "reactionTime": [
+            1.6,
+            3.6,
+            2.1
+          ]
+        },
+        {
+          "date": "2025-11-27T12:00:00",
+          "dificulty": "easy",
+          "errors": 6,
+          "gameTime": 58,
+          "points": 2,
+          "reactionTime": [
+            4.0,
+            1.7,
+            2.3
+          ]
+        },
+        {
+          "date": "2025-11-27T12:20:00",
+          "dificulty": "hard",
+          "errors": 0,
+          "gameTime": 38,
+          "points": 0,
+          "reactionTime": [
+            1.6,
+            2.5,
+            3.7
+          ]
+        },
+        {
+          "date": "2025-11-27T12:40:00",
+          "dificulty": "easy",
+          "errors": 4,
+          "gameTime": 32,
+          "points": 6,
+          "reactionTime": [
+            3.6,
+            2.1,
+            1.8
+          ]
+        },
+        {
+          "date": "2025-11-27T13:00:00",
+          "dificulty": "easy",
+          "errors": 3,
+          "gameTime": 29,
+          "points": 1,
+          "reactionTime": [
+            2.5,
+            1.6,
+            3.1
+          ]
+        },
+        {
+          "date": "2025-11-27T13:20:00",
+          "dificulty": "easy",
+          "errors": 2,
+          "gameTime": 38,
+          "points": 13,
+          "reactionTime": [
+            2.3,
+            2.6,
+            2.1
+          ]
+        },
+        {
+          "date": "2025-11-27T13:40:00",
+          "dificulty": "hard",
+          "errors": 3,
+          "gameTime": 28,
+          "points": 15,
+          "reactionTime": [
+            3.8,
+            3.9,
+            2.2
+          ]
+        },
+        {
+          "date": "2025-11-27T14:00:00",
+          "dificulty": "medium",
+          "errors": 4,
+          "gameTime": 35,
+          "points": 14,
+          "reactionTime": [
+            3.3,
+            3.7,
+            3.6
+          ]
+        },
+        {
+          "date": "2025-11-27T14:20:00",
+          "dificulty": "easy",
+          "errors": 2,
+          "gameTime": 42,
+          "points": 9,
+          "reactionTime": [
+            3.9,
+            3.9,
+            1.8
+          ]
+        },
+        {
+          "date": "2025-11-27T14:40:00",
+          "dificulty": "easy",
+          "errors": 2,
+          "gameTime": 38,
+          "points": 4,
+          "reactionTime": [
+            3.9,
+            2.1,
+            3.3
+          ]
+        },
+        {
+          "date": "2025-11-27T15:00:00",
+          "dificulty": "hard",
+          "errors": 1,
+          "gameTime": 29,
+          "points": 14,
+          "reactionTime": [
+            2.9,
+            2.3,
+            1.9
+          ]
+        }
       ],
       "name": "Valentina"
     },
     {
       "age": 5,
       "gameList": [
-        {"date": "2025-11-25T11:00:00", "dificulty": "easy", "errors": 5, "gameTime": 52, "points": 5, "reactionTime": [3.5, 3.8, 3.6]},
-        {"date": "2025-11-25T11:25:00", "dificulty": "easy", "errors": 4, "gameTime": 49, "points": 6, "reactionTime": [3.2, 3.5, 3.3]}
+        {
+          "date": "2025-11-27T15:00:00",
+          "dificulty": "easy",
+          "errors": 1,
+          "gameTime": 46,
+          "points": 5,
+          "reactionTime": [
+            3.7,
+            2.9,
+            2.9
+          ]
+        },
+        {
+          "date": "2025-11-27T15:20:00",
+          "dificulty": "easy",
+          "errors": 5,
+          "gameTime": 41,
+          "points": 8,
+          "reactionTime": [
+            3.2,
+            3.0,
+            2.0
+          ]
+        },
+        {
+          "date": "2025-11-27T15:40:00",
+          "dificulty": "medium",
+          "errors": 1,
+          "gameTime": 40,
+          "points": 5,
+          "reactionTime": [
+            2.8,
+            4.0,
+            2.1
+          ]
+        },
+        {
+          "date": "2025-11-27T16:00:00",
+          "dificulty": "hard",
+          "errors": 5,
+          "gameTime": 47,
+          "points": 1,
+          "reactionTime": [
+            2.8,
+            1.6,
+            2.9
+          ]
+        },
+        {
+          "date": "2025-11-27T16:20:00",
+          "dificulty": "hard",
+          "errors": 6,
+          "gameTime": 42,
+          "points": 14,
+          "reactionTime": [
+            2.9,
+            2.4,
+            2.3
+          ]
+        },
+        {
+          "date": "2025-11-27T16:40:00",
+          "dificulty": "easy",
+          "errors": 4,
+          "gameTime": 44,
+          "points": 0,
+          "reactionTime": [
+            3.8,
+            3.3,
+            1.5
+          ]
+        },
+        {
+          "date": "2025-11-27T17:00:00",
+          "dificulty": "medium",
+          "errors": 6,
+          "gameTime": 47,
+          "points": 8,
+          "reactionTime": [
+            3.1,
+            2.2,
+            2.1
+          ]
+        },
+        {
+          "date": "2025-11-27T17:20:00",
+          "dificulty": "hard",
+          "errors": 2,
+          "gameTime": 30,
+          "points": 3,
+          "reactionTime": [
+            2.4,
+            3.2,
+            1.6
+          ]
+        },
+        {
+          "date": "2025-11-27T17:40:00",
+          "dificulty": "medium",
+          "errors": 2,
+          "gameTime": 48,
+          "points": 0,
+          "reactionTime": [
+            2.8,
+            2.4,
+            2.0
+          ]
+        },
+        {
+          "date": "2025-11-27T18:00:00",
+          "dificulty": "medium",
+          "errors": 0,
+          "gameTime": 58,
+          "points": 9,
+          "reactionTime": [
+            1.8,
+            2.1,
+            2.9
+          ]
+        },
+        {
+          "date": "2025-11-27T18:20:00",
+          "dificulty": "easy",
+          "errors": 5,
+          "gameTime": 44,
+          "points": 7,
+          "reactionTime": [
+            2.9,
+            3.1,
+            3.5
+          ]
+        },
+        {
+          "date": "2025-11-27T18:40:00",
+          "dificulty": "medium",
+          "errors": 4,
+          "gameTime": 59,
+          "points": 8,
+          "reactionTime": [
+            2.5,
+            1.7,
+            3.9
+          ]
+        },
+        {
+          "date": "2025-11-27T19:00:00",
+          "dificulty": "hard",
+          "errors": 3,
+          "gameTime": 38,
+          "points": 10,
+          "reactionTime": [
+            2.7,
+            2.6,
+            2.4
+          ]
+        },
+        {
+          "date": "2025-11-27T19:20:00",
+          "dificulty": "hard",
+          "errors": 1,
+          "gameTime": 55,
+          "points": 9,
+          "reactionTime": [
+            2.0,
+            1.8,
+            1.6
+          ]
+        },
+        {
+          "date": "2025-11-27T19:40:00",
+          "dificulty": "medium",
+          "errors": 3,
+          "gameTime": 50,
+          "points": 8,
+          "reactionTime": [
+            1.6,
+            2.5,
+            3.1
+          ]
+        },
+        {
+          "date": "2025-11-27T20:00:00",
+          "dificulty": "medium",
+          "errors": 2,
+          "gameTime": 36,
+          "points": 12,
+          "reactionTime": [
+            3.3,
+            3.5,
+            2.7
+          ]
+        },
+        {
+          "date": "2025-11-27T20:20:00",
+          "dificulty": "medium",
+          "errors": 2,
+          "gameTime": 42,
+          "points": 0,
+          "reactionTime": [
+            3.9,
+            2.9,
+            2.0
+          ]
+        },
+        {
+          "date": "2025-11-27T20:40:00",
+          "dificulty": "easy",
+          "errors": 4,
+          "gameTime": 46,
+          "points": 12,
+          "reactionTime": [
+            3.5,
+            2.0,
+            3.4
+          ]
+        },
+        {
+          "date": "2025-11-27T21:00:00",
+          "dificulty": "easy",
+          "errors": 6,
+          "gameTime": 47,
+          "points": 8,
+          "reactionTime": [
+            4.0,
+            3.5,
+            2.7
+          ]
+        },
+        {
+          "date": "2025-11-27T21:20:00",
+          "dificulty": "easy",
+          "errors": 3,
+          "gameTime": 28,
+          "points": 9,
+          "reactionTime": [
+            3.1,
+            2.2,
+            3.0
+          ]
+        },
+        {
+          "date": "2025-11-27T21:40:00",
+          "dificulty": "easy",
+          "errors": 3,
+          "gameTime": 34,
+          "points": 12,
+          "reactionTime": [
+            1.6,
+            3.7,
+            1.8
+          ]
+        },
+        {
+          "date": "2025-11-27T22:00:00",
+          "dificulty": "hard",
+          "errors": 2,
+          "gameTime": 31,
+          "points": 9,
+          "reactionTime": [
+            4.0,
+            2.1,
+            2.4
+          ]
+        },
+        {
+          "date": "2025-11-27T22:20:00",
+          "dificulty": "medium",
+          "errors": 5,
+          "gameTime": 31,
+          "points": 5,
+          "reactionTime": [
+            3.4,
+            1.6,
+            1.9
+          ]
+        },
+        {
+          "date": "2025-11-27T22:40:00",
+          "dificulty": "easy",
+          "errors": 4,
+          "gameTime": 54,
+          "points": 15,
+          "reactionTime": [
+            2.7,
+            2.6,
+            2.2
+          ]
+        },
+        {
+          "date": "2025-11-27T23:00:00",
+          "dificulty": "medium",
+          "errors": 5,
+          "gameTime": 55,
+          "points": 5,
+          "reactionTime": [
+            3.8,
+            1.7,
+            2.6
+          ]
+        },
+        {
+          "date": "2025-11-27T23:20:00",
+          "dificulty": "easy",
+          "errors": 3,
+          "gameTime": 59,
+          "points": 11,
+          "reactionTime": [
+            2.8,
+            3.8,
+            2.2
+          ]
+        },
+        {
+          "date": "2025-11-27T23:40:00",
+          "dificulty": "hard",
+          "errors": 4,
+          "gameTime": 33,
+          "points": 11,
+          "reactionTime": [
+            3.7,
+            2.9,
+            2.9
+          ]
+        },
+        {
+          "date": "2025-11-28T00:00:00",
+          "dificulty": "hard",
+          "errors": 0,
+          "gameTime": 29,
+          "points": 8,
+          "reactionTime": [
+            3.2,
+            3.7,
+            4.0
+          ]
+        },
+        {
+          "date": "2025-11-28T00:20:00",
+          "dificulty": "medium",
+          "errors": 1,
+          "gameTime": 41,
+          "points": 14,
+          "reactionTime": [
+            1.5,
+            3.0,
+            1.8
+          ]
+        },
+        {
+          "date": "2025-11-28T00:40:00",
+          "dificulty": "easy",
+          "errors": 6,
+          "gameTime": 30,
+          "points": 5,
+          "reactionTime": [
+            3.6,
+            3.1,
+            1.8
+          ]
+        },
+        {
+          "date": "2025-11-28T01:00:00",
+          "dificulty": "easy",
+          "errors": 0,
+          "gameTime": 39,
+          "points": 13,
+          "reactionTime": [
+            2.5,
+            2.6,
+            2.7
+          ]
+        },
+        {
+          "date": "2025-11-28T01:20:00",
+          "dificulty": "hard",
+          "errors": 0,
+          "gameTime": 46,
+          "points": 15,
+          "reactionTime": [
+            2.3,
+            3.4,
+            1.8
+          ]
+        },
+        {
+          "date": "2025-11-28T01:40:00",
+          "dificulty": "easy",
+          "errors": 1,
+          "gameTime": 57,
+          "points": 11,
+          "reactionTime": [
+            3.4,
+            2.8,
+            2.6
+          ]
+        },
+        {
+          "date": "2025-11-28T02:00:00",
+          "dificulty": "easy",
+          "errors": 3,
+          "gameTime": 46,
+          "points": 6,
+          "reactionTime": [
+            1.9,
+            3.6,
+            1.7
+          ]
+        },
+        {
+          "date": "2025-11-28T02:20:00",
+          "dificulty": "hard",
+          "errors": 2,
+          "gameTime": 57,
+          "points": 13,
+          "reactionTime": [
+            3.7,
+            3.1,
+            2.0
+          ]
+        },
+        {
+          "date": "2025-11-28T02:40:00",
+          "dificulty": "hard",
+          "errors": 6,
+          "gameTime": 52,
+          "points": 12,
+          "reactionTime": [
+            1.6,
+            2.4,
+            2.1
+          ]
+        },
+        {
+          "date": "2025-11-28T03:00:00",
+          "dificulty": "hard",
+          "errors": 0,
+          "gameTime": 45,
+          "points": 14,
+          "reactionTime": [
+            1.9,
+            3.2,
+            1.7
+          ]
+        },
+        {
+          "date": "2025-11-28T03:20:00",
+          "dificulty": "easy",
+          "errors": 2,
+          "gameTime": 53,
+          "points": 2,
+          "reactionTime": [
+            3.0,
+            3.1,
+            3.5
+          ]
+        },
+        {
+          "date": "2025-11-28T03:40:00",
+          "dificulty": "hard",
+          "errors": 1,
+          "gameTime": 44,
+          "points": 8,
+          "reactionTime": [
+            1.9,
+            3.7,
+            1.9
+          ]
+        },
+        {
+          "date": "2025-11-28T04:00:00",
+          "dificulty": "medium",
+          "errors": 4,
+          "gameTime": 29,
+          "points": 8,
+          "reactionTime": [
+            3.2,
+            1.8,
+            3.8
+          ]
+        },
+        {
+          "date": "2025-11-28T04:20:00",
+          "dificulty": "medium",
+          "errors": 5,
+          "gameTime": 58,
+          "points": 7,
+          "reactionTime": [
+            3.4,
+            2.0,
+            3.4
+          ]
+        },
+        {
+          "date": "2025-11-28T04:40:00",
+          "dificulty": "medium",
+          "errors": 0,
+          "gameTime": 56,
+          "points": 6,
+          "reactionTime": [
+            2.4,
+            2.3,
+            2.9
+          ]
+        },
+        {
+          "date": "2025-11-28T05:00:00",
+          "dificulty": "easy",
+          "errors": 0,
+          "gameTime": 40,
+          "points": 0,
+          "reactionTime": [
+            1.6,
+            3.8,
+            3.3
+          ]
+        },
+        {
+          "date": "2025-11-28T05:20:00",
+          "dificulty": "easy",
+          "errors": 0,
+          "gameTime": 34,
+          "points": 15,
+          "reactionTime": [
+            3.2,
+            1.6,
+            2.7
+          ]
+        },
+        {
+          "date": "2025-11-28T05:40:00",
+          "dificulty": "easy",
+          "errors": 4,
+          "gameTime": 60,
+          "points": 15,
+          "reactionTime": [
+            2.9,
+            2.4,
+            1.6
+          ]
+        },
+        {
+          "date": "2025-11-28T06:00:00",
+          "dificulty": "hard",
+          "errors": 3,
+          "gameTime": 50,
+          "points": 12,
+          "reactionTime": [
+            3.4,
+            2.0,
+            3.7
+          ]
+        },
+        {
+          "date": "2025-11-28T06:20:00",
+          "dificulty": "easy",
+          "errors": 4,
+          "gameTime": 31,
+          "points": 3,
+          "reactionTime": [
+            3.0,
+            3.5,
+            3.3
+          ]
+        },
+        {
+          "date": "2025-11-28T06:40:00",
+          "dificulty": "easy",
+          "errors": 0,
+          "gameTime": 60,
+          "points": 12,
+          "reactionTime": [
+            2.3,
+            2.3,
+            2.3
+          ]
+        },
+        {
+          "date": "2025-11-28T07:00:00",
+          "dificulty": "hard",
+          "errors": 1,
+          "gameTime": 50,
+          "points": 10,
+          "reactionTime": [
+            2.4,
+            3.2,
+            3.8
+          ]
+        },
+        {
+          "date": "2025-11-28T07:20:00",
+          "dificulty": "hard",
+          "errors": 0,
+          "gameTime": 52,
+          "points": 1,
+          "reactionTime": [
+            3.4,
+            2.0,
+            3.3
+          ]
+        },
+        {
+          "date": "2025-11-28T07:40:00",
+          "dificulty": "easy",
+          "errors": 0,
+          "gameTime": 37,
+          "points": 8,
+          "reactionTime": [
+            2.5,
+            1.5,
+            3.8
+          ]
+        },
+        {
+          "date": "2025-11-28T08:00:00",
+          "dificulty": "easy",
+          "errors": 4,
+          "gameTime": 41,
+          "points": 9,
+          "reactionTime": [
+            3.5,
+            2.8,
+            1.8
+          ]
+        },
+        {
+          "date": "2025-11-28T08:20:00",
+          "dificulty": "easy",
+          "errors": 6,
+          "gameTime": 39,
+          "points": 0,
+          "reactionTime": [
+            3.9,
+            2.0,
+            2.8
+          ]
+        },
+        {
+          "date": "2025-11-28T08:40:00",
+          "dificulty": "hard",
+          "errors": 6,
+          "gameTime": 42,
+          "points": 13,
+          "reactionTime": [
+            2.6,
+            3.2,
+            3.2
+          ]
+        },
+        {
+          "date": "2025-11-28T09:00:00",
+          "dificulty": "hard",
+          "errors": 1,
+          "gameTime": 34,
+          "points": 9,
+          "reactionTime": [
+            3.0,
+            1.8,
+            1.9
+          ]
+        },
+        {
+          "date": "2025-11-28T09:20:00",
+          "dificulty": "easy",
+          "errors": 6,
+          "gameTime": 44,
+          "points": 6,
+          "reactionTime": [
+            3.1,
+            3.9,
+            2.2
+          ]
+        }
       ],
       "name": "Lucas"
     },
     {
       "age": 5,
       "gameList": [
-        {"date": "2025-11-25T14:00:00", "dificulty": "easy", "errors": 0, "gameTime": 30, "points": 10, "reactionTime": [1.7, 1.9, 1.8]},
-        {"date": "2025-11-25T14:20:00", "dificulty": "easy", "errors": 0, "gameTime": 29, "points": 10, "reactionTime": [1.6, 1.8, 1.7]},
-        {"date": "2025-11-25T14:40:00", "dificulty": "medium", "errors": 1, "gameTime": 38, "points": 9, "reactionTime": [1.9, 2.1, 2.0]},
-        {"date": "2025-11-25T15:00:00", "dificulty": "medium", "errors": 1, "gameTime": 36, "points": 9, "reactionTime": [1.8, 2.0, 1.9]}
+        {
+          "date": "2025-11-28T09:20:00",
+          "dificulty": "medium",
+          "errors": 6,
+          "gameTime": 50,
+          "points": 1,
+          "reactionTime": [
+            3.9,
+            1.9,
+            3.3
+          ]
+        },
+        {
+          "date": "2025-11-28T09:40:00",
+          "dificulty": "easy",
+          "errors": 5,
+          "gameTime": 38,
+          "points": 13,
+          "reactionTime": [
+            1.9,
+            1.9,
+            2.8
+          ]
+        },
+        {
+          "date": "2025-11-28T10:00:00",
+          "dificulty": "medium",
+          "errors": 5,
+          "gameTime": 51,
+          "points": 10,
+          "reactionTime": [
+            1.7,
+            2.1,
+            3.0
+          ]
+        },
+        {
+          "date": "2025-11-28T10:20:00",
+          "dificulty": "medium",
+          "errors": 0,
+          "gameTime": 32,
+          "points": 1,
+          "reactionTime": [
+            2.1,
+            3.3,
+            3.8
+          ]
+        },
+        {
+          "date": "2025-11-28T10:40:00",
+          "dificulty": "easy",
+          "errors": 0,
+          "gameTime": 39,
+          "points": 7,
+          "reactionTime": [
+            2.6,
+            2.4,
+            3.8
+          ]
+        },
+        {
+          "date": "2025-11-28T11:00:00",
+          "dificulty": "easy",
+          "errors": 2,
+          "gameTime": 47,
+          "points": 14,
+          "reactionTime": [
+            3.7,
+            2.8,
+            2.8
+          ]
+        },
+        {
+          "date": "2025-11-28T11:20:00",
+          "dificulty": "medium",
+          "errors": 2,
+          "gameTime": 42,
+          "points": 14,
+          "reactionTime": [
+            2.9,
+            3.6,
+            3.7
+          ]
+        },
+        {
+          "date": "2025-11-28T11:40:00",
+          "dificulty": "hard",
+          "errors": 2,
+          "gameTime": 56,
+          "points": 9,
+          "reactionTime": [
+            2.1,
+            3.5,
+            3.4
+          ]
+        },
+        {
+          "date": "2025-11-28T12:00:00",
+          "dificulty": "medium",
+          "errors": 0,
+          "gameTime": 51,
+          "points": 9,
+          "reactionTime": [
+            2.7,
+            2.9,
+            3.7
+          ]
+        },
+        {
+          "date": "2025-11-28T12:20:00",
+          "dificulty": "hard",
+          "errors": 1,
+          "gameTime": 47,
+          "points": 4,
+          "reactionTime": [
+            3.1,
+            1.5,
+            3.7
+          ]
+        },
+        {
+          "date": "2025-11-28T12:40:00",
+          "dificulty": "easy",
+          "errors": 5,
+          "gameTime": 32,
+          "points": 12,
+          "reactionTime": [
+            1.8,
+            2.3,
+            2.8
+          ]
+        },
+        {
+          "date": "2025-11-28T13:00:00",
+          "dificulty": "medium",
+          "errors": 1,
+          "gameTime": 46,
+          "points": 3,
+          "reactionTime": [
+            3.6,
+            3.2,
+            3.8
+          ]
+        },
+        {
+          "date": "2025-11-28T13:20:00",
+          "dificulty": "hard",
+          "errors": 4,
+          "gameTime": 50,
+          "points": 11,
+          "reactionTime": [
+            3.6,
+            3.7,
+            2.1
+          ]
+        },
+        {
+          "date": "2025-11-28T13:40:00",
+          "dificulty": "easy",
+          "errors": 2,
+          "gameTime": 28,
+          "points": 7,
+          "reactionTime": [
+            2.2,
+            2.0,
+            4.0
+          ]
+        },
+        {
+          "date": "2025-11-28T14:00:00",
+          "dificulty": "medium",
+          "errors": 0,
+          "gameTime": 58,
+          "points": 12,
+          "reactionTime": [
+            2.9,
+            4.0,
+            3.5
+          ]
+        },
+        {
+          "date": "2025-11-28T14:20:00",
+          "dificulty": "medium",
+          "errors": 5,
+          "gameTime": 55,
+          "points": 15,
+          "reactionTime": [
+            3.9,
+            3.4,
+            1.5
+          ]
+        },
+        {
+          "date": "2025-11-28T14:40:00",
+          "dificulty": "hard",
+          "errors": 4,
+          "gameTime": 31,
+          "points": 9,
+          "reactionTime": [
+            3.9,
+            2.8,
+            1.8
+          ]
+        },
+        {
+          "date": "2025-11-28T15:00:00",
+          "dificulty": "easy",
+          "errors": 6,
+          "gameTime": 36,
+          "points": 4,
+          "reactionTime": [
+            2.2,
+            3.1,
+            2.7
+          ]
+        },
+        {
+          "date": "2025-11-28T15:20:00",
+          "dificulty": "hard",
+          "errors": 5,
+          "gameTime": 48,
+          "points": 9,
+          "reactionTime": [
+            3.5,
+            2.0,
+            2.5
+          ]
+        },
+        {
+          "date": "2025-11-28T15:40:00",
+          "dificulty": "medium",
+          "errors": 5,
+          "gameTime": 52,
+          "points": 11,
+          "reactionTime": [
+            2.4,
+            2.6,
+            2.4
+          ]
+        },
+        {
+          "date": "2025-11-28T16:00:00",
+          "dificulty": "easy",
+          "errors": 5,
+          "gameTime": 43,
+          "points": 5,
+          "reactionTime": [
+            2.9,
+            3.7,
+            2.8
+          ]
+        },
+        {
+          "date": "2025-11-28T16:20:00",
+          "dificulty": "medium",
+          "errors": 5,
+          "gameTime": 40,
+          "points": 7,
+          "reactionTime": [
+            3.7,
+            3.7,
+            3.3
+          ]
+        },
+        {
+          "date": "2025-11-28T16:40:00",
+          "dificulty": "hard",
+          "errors": 6,
+          "gameTime": 45,
+          "points": 0,
+          "reactionTime": [
+            1.8,
+            3.2,
+            2.5
+          ]
+        },
+        {
+          "date": "2025-11-28T17:00:00",
+          "dificulty": "easy",
+          "errors": 3,
+          "gameTime": 35,
+          "points": 14,
+          "reactionTime": [
+            2.5,
+            1.9,
+            2.8
+          ]
+        },
+        {
+          "date": "2025-11-28T17:20:00",
+          "dificulty": "hard",
+          "errors": 2,
+          "gameTime": 59,
+          "points": 10,
+          "reactionTime": [
+            2.9,
+            2.8,
+            1.5
+          ]
+        },
+        {
+          "date": "2025-11-28T17:40:00",
+          "dificulty": "hard",
+          "errors": 0,
+          "gameTime": 52,
+          "points": 7,
+          "reactionTime": [
+            1.9,
+            3.2,
+            3.6
+          ]
+        },
+        {
+          "date": "2025-11-28T18:00:00",
+          "dificulty": "hard",
+          "errors": 5,
+          "gameTime": 40,
+          "points": 13,
+          "reactionTime": [
+            4.0,
+            3.1,
+            2.5
+          ]
+        },
+        {
+          "date": "2025-11-28T18:20:00",
+          "dificulty": "medium",
+          "errors": 2,
+          "gameTime": 50,
+          "points": 14,
+          "reactionTime": [
+            3.8,
+            3.2,
+            3.9
+          ]
+        },
+        {
+          "date": "2025-11-28T18:40:00",
+          "dificulty": "hard",
+          "errors": 3,
+          "gameTime": 29,
+          "points": 2,
+          "reactionTime": [
+            3.6,
+            1.8,
+            2.9
+          ]
+        },
+        {
+          "date": "2025-11-28T19:00:00",
+          "dificulty": "easy",
+          "errors": 1,
+          "gameTime": 38,
+          "points": 4,
+          "reactionTime": [
+            1.9,
+            3.8,
+            3.1
+          ]
+        },
+        {
+          "date": "2025-11-28T19:20:00",
+          "dificulty": "hard",
+          "errors": 6,
+          "gameTime": 40,
+          "points": 13,
+          "reactionTime": [
+            3.9,
+            2.1,
+            3.5
+          ]
+        },
+        {
+          "date": "2025-11-28T19:40:00",
+          "dificulty": "medium",
+          "errors": 1,
+          "gameTime": 50,
+          "points": 6,
+          "reactionTime": [
+            3.9,
+            2.8,
+            3.8
+          ]
+        },
+        {
+          "date": "2025-11-28T20:00:00",
+          "dificulty": "easy",
+          "errors": 4,
+          "gameTime": 52,
+          "points": 5,
+          "reactionTime": [
+            3.6,
+            3.5,
+            3.4
+          ]
+        },
+        {
+          "date": "2025-11-28T20:20:00",
+          "dificulty": "easy",
+          "errors": 6,
+          "gameTime": 32,
+          "points": 11,
+          "reactionTime": [
+            3.1,
+            3.7,
+            1.7
+          ]
+        },
+        {
+          "date": "2025-11-28T20:40:00",
+          "dificulty": "medium",
+          "errors": 4,
+          "gameTime": 30,
+          "points": 1,
+          "reactionTime": [
+            2.1,
+            3.4,
+            2.2
+          ]
+        },
+        {
+          "date": "2025-11-28T21:00:00",
+          "dificulty": "medium",
+          "errors": 5,
+          "gameTime": 30,
+          "points": 7,
+          "reactionTime": [
+            3.2,
+            3.9,
+            1.9
+          ]
+        },
+        {
+          "date": "2025-11-28T21:20:00",
+          "dificulty": "easy",
+          "errors": 0,
+          "gameTime": 54,
+          "points": 12,
+          "reactionTime": [
+            2.0,
+            3.1,
+            1.7
+          ]
+        },
+        {
+          "date": "2025-11-28T21:40:00",
+          "dificulty": "hard",
+          "errors": 1,
+          "gameTime": 45,
+          "points": 12,
+          "reactionTime": [
+            1.8,
+            1.6,
+            3.4
+          ]
+        },
+        {
+          "date": "2025-11-28T22:00:00",
+          "dificulty": "medium",
+          "errors": 6,
+          "gameTime": 55,
+          "points": 1,
+          "reactionTime": [
+            2.0,
+            3.7,
+            3.4
+          ]
+        },
+        {
+          "date": "2025-11-28T22:20:00",
+          "dificulty": "easy",
+          "errors": 6,
+          "gameTime": 30,
+          "points": 15,
+          "reactionTime": [
+            3.9,
+            3.8,
+            2.2
+          ]
+        },
+        {
+          "date": "2025-11-28T22:40:00",
+          "dificulty": "medium",
+          "errors": 3,
+          "gameTime": 48,
+          "points": 1,
+          "reactionTime": [
+            3.4,
+            2.8,
+            1.6
+          ]
+        },
+        {
+          "date": "2025-11-28T23:00:00",
+          "dificulty": "medium",
+          "errors": 3,
+          "gameTime": 55,
+          "points": 6,
+          "reactionTime": [
+            1.5,
+            3.5,
+            3.8
+          ]
+        },
+        {
+          "date": "2025-11-28T23:20:00",
+          "dificulty": "medium",
+          "errors": 0,
+          "gameTime": 30,
+          "points": 10,
+          "reactionTime": [
+            3.0,
+            1.8,
+            2.2
+          ]
+        },
+        {
+          "date": "2025-11-28T23:40:00",
+          "dificulty": "medium",
+          "errors": 3,
+          "gameTime": 37,
+          "points": 1,
+          "reactionTime": [
+            1.8,
+            3.0,
+            3.9
+          ]
+        },
+        {
+          "date": "2025-11-29T00:00:00",
+          "dificulty": "hard",
+          "errors": 1,
+          "gameTime": 45,
+          "points": 2,
+          "reactionTime": [
+            2.3,
+            3.3,
+            2.4
+          ]
+        },
+        {
+          "date": "2025-11-29T00:20:00",
+          "dificulty": "easy",
+          "errors": 4,
+          "gameTime": 35,
+          "points": 13,
+          "reactionTime": [
+            3.7,
+            3.2,
+            1.7
+          ]
+        },
+        {
+          "date": "2025-11-29T00:40:00",
+          "dificulty": "easy",
+          "errors": 0,
+          "gameTime": 51,
+          "points": 2,
+          "reactionTime": [
+            3.1,
+            2.8,
+            1.7
+          ]
+        },
+        {
+          "date": "2025-11-29T01:00:00",
+          "dificulty": "medium",
+          "errors": 4,
+          "gameTime": 29,
+          "points": 14,
+          "reactionTime": [
+            1.7,
+            3.1,
+            1.6
+          ]
+        },
+        {
+          "date": "2025-11-29T01:20:00",
+          "dificulty": "hard",
+          "errors": 4,
+          "gameTime": 44,
+          "points": 6,
+          "reactionTime": [
+            3.2,
+            3.4,
+            3.8
+          ]
+        },
+        {
+          "date": "2025-11-29T01:40:00",
+          "dificulty": "hard",
+          "errors": 5,
+          "gameTime": 55,
+          "points": 7,
+          "reactionTime": [
+            3.9,
+            2.6,
+            2.6
+          ]
+        },
+        {
+          "date": "2025-11-29T02:00:00",
+          "dificulty": "hard",
+          "errors": 6,
+          "gameTime": 58,
+          "points": 0,
+          "reactionTime": [
+            2.8,
+            3.9,
+            1.5
+          ]
+        },
+        {
+          "date": "2025-11-29T02:20:00",
+          "dificulty": "hard",
+          "errors": 6,
+          "gameTime": 50,
+          "points": 15,
+          "reactionTime": [
+            1.9,
+            2.7,
+            2.4
+          ]
+        },
+        {
+          "date": "2025-11-29T02:40:00",
+          "dificulty": "easy",
+          "errors": 5,
+          "gameTime": 29,
+          "points": 5,
+          "reactionTime": [
+            2.3,
+            3.0,
+            2.8
+          ]
+        },
+        {
+          "date": "2025-11-29T03:00:00",
+          "dificulty": "hard",
+          "errors": 0,
+          "gameTime": 34,
+          "points": 4,
+          "reactionTime": [
+            2.1,
+            2.8,
+            3.7
+          ]
+        },
+        {
+          "date": "2025-11-29T03:20:00",
+          "dificulty": "hard",
+          "errors": 4,
+          "gameTime": 58,
+          "points": 6,
+          "reactionTime": [
+            3.9,
+            2.8,
+            2.1
+          ]
+        },
+        {
+          "date": "2025-11-29T03:40:00",
+          "dificulty": "easy",
+          "errors": 0,
+          "gameTime": 39,
+          "points": 12,
+          "reactionTime": [
+            2.1,
+            3.1,
+            2.1
+          ]
+        }
       ],
       "name": "Isabella"
     },
     {
       "age": 5,
       "gameList": [
-        {"date": "2025-11-25T10:30:00", "dificulty": "easy", "errors": 3, "gameTime": 44, "points": 7, "reactionTime": [2.7, 3.0, 2.8]},
-        {"date": "2025-11-25T10:55:00", "dificulty": "easy", "errors": 2, "gameTime": 41, "points": 8, "reactionTime": [2.5, 2.8, 2.6]}
-      ],
-      "name": "Diego"
-    },
-    {
-      "age": 5,
-      "gameList": [
-        {"date": "2025-11-25T13:00:00", "dificulty": "easy", "errors": 6, "gameTime": 55, "points": 4, "reactionTime": [3.8, 4.1, 3.9]},
-        {"date": "2025-11-25T13:30:00", "dificulty": "easy", "errors": 5, "gameTime": 51, "points": 5, "reactionTime": [3.5, 3.8, 3.6]}
+        {
+          "date": "2025-11-29T03:40:00",
+          "dificulty": "easy",
+          "errors": 0,
+          "gameTime": 36,
+          "points": 5,
+          "reactionTime": [
+            2.2,
+            2.6,
+            4.0
+          ]
+        },
+        {
+          "date": "2025-11-29T04:00:00",
+          "dificulty": "easy",
+          "errors": 6,
+          "gameTime": 55,
+          "points": 11,
+          "reactionTime": [
+            3.6,
+            2.3,
+            3.8
+          ]
+        },
+        {
+          "date": "2025-11-29T04:20:00",
+          "dificulty": "medium",
+          "errors": 6,
+          "gameTime": 59,
+          "points": 10,
+          "reactionTime": [
+            3.6,
+            2.2,
+            3.9
+          ]
+        },
+        {
+          "date": "2025-11-29T04:40:00",
+          "dificulty": "medium",
+          "errors": 1,
+          "gameTime": 58,
+          "points": 1,
+          "reactionTime": [
+            3.7,
+            2.9,
+            2.4
+          ]
+        },
+        {
+          "date": "2025-11-29T05:00:00",
+          "dificulty": "easy",
+          "errors": 0,
+          "gameTime": 35,
+          "points": 0,
+          "reactionTime": [
+            1.8,
+            2.4,
+            2.0
+          ]
+        },
+        {
+          "date": "2025-11-29T05:20:00",
+          "dificulty": "easy",
+          "errors": 0,
+          "gameTime": 36,
+          "points": 11,
+          "reactionTime": [
+            2.7,
+            3.3,
+            1.5
+          ]
+        },
+        {
+          "date": "2025-11-29T05:40:00",
+          "dificulty": "medium",
+          "errors": 4,
+          "gameTime": 50,
+          "points": 9,
+          "reactionTime": [
+            2.4,
+            3.4,
+            2.8
+          ]
+        },
+        {
+          "date": "2025-11-29T06:00:00",
+          "dificulty": "easy",
+          "errors": 4,
+          "gameTime": 38,
+          "points": 6,
+          "reactionTime": [
+            3.9,
+            3.6,
+            1.6
+          ]
+        },
+        {
+          "date": "2025-11-29T06:20:00",
+          "dificulty": "hard",
+          "errors": 4,
+          "gameTime": 36,
+          "points": 15,
+          "reactionTime": [
+            2.7,
+            1.9,
+            3.3
+          ]
+        },
+        {
+          "date": "2025-11-29T06:40:00",
+          "dificulty": "hard",
+          "errors": 6,
+          "gameTime": 39,
+          "points": 1,
+          "reactionTime": [
+            2.5,
+            3.4,
+            1.6
+          ]
+        },
+        {
+          "date": "2025-11-29T07:00:00",
+          "dificulty": "easy",
+          "errors": 3,
+          "gameTime": 58,
+          "points": 8,
+          "reactionTime": [
+            2.7,
+            3.9,
+            3.5
+          ]
+        },
+        {
+          "date": "2025-11-29T07:20:00",
+          "dificulty": "easy",
+          "errors": 3,
+          "gameTime": 40,
+          "points": 4,
+          "reactionTime": [
+            2.0,
+            2.4,
+            3.8
+          ]
+        },
+        {
+          "date": "2025-11-29T07:40:00",
+          "dificulty": "medium",
+          "errors": 3,
+          "gameTime": 39,
+          "points": 15,
+          "reactionTime": [
+            2.1,
+            3.0,
+            3.0
+          ]
+        },
+        {
+          "date": "2025-11-29T08:00:00",
+          "dificulty": "easy",
+          "errors": 6,
+          "gameTime": 51,
+          "points": 3,
+          "reactionTime": [
+            3.5,
+            1.9,
+            3.7
+          ]
+        },
+        {
+          "date": "2025-11-29T08:20:00",
+          "dificulty": "easy",
+          "errors": 2,
+          "gameTime": 60,
+          "points": 8,
+          "reactionTime": [
+            1.6,
+            3.9,
+            1.9
+          ]
+        },
+        {
+          "date": "2025-11-29T08:40:00",
+          "dificulty": "hard",
+          "errors": 2,
+          "gameTime": 44,
+          "points": 2,
+          "reactionTime": [
+            1.8,
+            1.8,
+            1.7
+          ]
+        },
+        {
+          "date": "2025-11-29T09:00:00",
+          "dificulty": "medium",
+          "errors": 2,
+          "gameTime": 31,
+          "points": 13,
+          "reactionTime": [
+            2.5,
+            1.5,
+            3.9
+          ]
+        },
+        {
+          "date": "2025-11-29T09:20:00",
+          "dificulty": "hard",
+          "errors": 2,
+          "gameTime": 44,
+          "points": 4,
+          "reactionTime": [
+            2.6,
+            2.8,
+            3.4
+          ]
+        },
+        {
+          "date": "2025-11-29T09:40:00",
+          "dificulty": "medium",
+          "errors": 3,
+          "gameTime": 39,
+          "points": 3,
+          "reactionTime": [
+            3.4,
+            2.2,
+            1.6
+          ]
+        },
+        {
+          "date": "2025-11-29T10:00:00",
+          "dificulty": "easy",
+          "errors": 5,
+          "gameTime": 41,
+          "points": 2,
+          "reactionTime": [
+            2.6,
+            2.1,
+            4.0
+          ]
+        },
+        {
+          "date": "2025-11-29T10:20:00",
+          "dificulty": "medium",
+          "errors": 1,
+          "gameTime": 54,
+          "points": 13,
+          "reactionTime": [
+            1.9,
+            1.8,
+            2.0
+          ]
+        },
+        {
+          "date": "2025-11-29T10:40:00",
+          "dificulty": "hard",
+          "errors": 6,
+          "gameTime": 57,
+          "points": 11,
+          "reactionTime": [
+            1.5,
+            2.9,
+            2.8
+          ]
+        },
+        {
+          "date": "2025-11-29T11:00:00",
+          "dificulty": "medium",
+          "errors": 6,
+          "gameTime": 54,
+          "points": 1,
+          "reactionTime": [
+            2.6,
+            2.3,
+            1.6
+          ]
+        },
+        {
+          "date": "2025-11-29T11:20:00",
+          "dificulty": "easy",
+          "errors": 0,
+          "gameTime": 38,
+          "points": 7,
+          "reactionTime": [
+            2.7,
+            2.2,
+            2.4
+          ]
+        },
+        {
+          "date": "2025-11-29T11:40:00",
+          "dificulty": "hard",
+          "errors": 6,
+          "gameTime": 31,
+          "points": 11,
+          "reactionTime": [
+            3.7,
+            3.7,
+            3.3
+          ]
+        },
+        {
+          "date": "2025-11-29T12:00:00",
+          "dificulty": "hard",
+          "errors": 0,
+          "gameTime": 56,
+          "points": 12,
+          "reactionTime": [
+            3.0,
+            1.6,
+            3.5
+          ]
+        },
+        {
+          "date": "2025-11-29T12:20:00",
+          "dificulty": "medium",
+          "errors": 3,
+          "gameTime": 44,
+          "points": 15,
+          "reactionTime": [
+            3.0,
+            3.9,
+            1.9
+          ]
+        },
+        {
+          "date": "2025-11-29T12:40:00",
+          "dificulty": "hard",
+          "errors": 4,
+          "gameTime": 35,
+          "points": 11,
+          "reactionTime": [
+            1.6,
+            1.7,
+            2.4
+          ]
+        },
+        {
+          "date": "2025-11-29T13:00:00",
+          "dificulty": "hard",
+          "errors": 2,
+          "gameTime": 50,
+          "points": 6,
+          "reactionTime": [
+            3.2,
+            1.6,
+            2.5
+          ]
+        },
+        {
+          "date": "2025-11-29T13:20:00",
+          "dificulty": "hard",
+          "errors": 5,
+          "gameTime": 49,
+          "points": 8,
+          "reactionTime": [
+            2.6,
+            3.8,
+            3.4
+          ]
+        },
+        {
+          "date": "2025-11-29T13:40:00",
+          "dificulty": "hard",
+          "errors": 6,
+          "gameTime": 58,
+          "points": 13,
+          "reactionTime": [
+            1.7,
+            2.2,
+            3.6
+          ]
+        },
+        {
+          "date": "2025-11-29T14:00:00",
+          "dificulty": "hard",
+          "errors": 1,
+          "gameTime": 41,
+          "points": 2,
+          "reactionTime": [
+            1.9,
+            2.5,
+            3.3
+          ]
+        },
+        {
+          "date": "2025-11-29T14:20:00",
+          "dificulty": "hard",
+          "errors": 3,
+          "gameTime": 59,
+          "points": 4,
+          "reactionTime": [
+            3.9,
+            1.9,
+            1.8
+          ]
+        },
+        {
+          "date": "2025-11-29T14:40:00",
+          "dificulty": "easy",
+          "errors": 3,
+          "gameTime": 30,
+          "points": 14,
+          "reactionTime": [
+            3.1,
+            2.1,
+            2.5
+          ]
+        },
+        {
+          "date": "2025-11-29T15:00:00",
+          "dificulty": "easy",
+          "errors": 3,
+          "gameTime": 34,
+          "points": 4,
+          "reactionTime": [
+            3.4,
+            2.6,
+            3.7
+          ]
+        },
+        {
+          "date": "2025-11-29T15:20:00",
+          "dificulty": "easy",
+          "errors": 4,
+          "gameTime": 57,
+          "points": 12,
+          "reactionTime": [
+            1.8,
+            2.5,
+            3.0
+          ]
+        },
+        {
+          "date": "2025-11-29T15:40:00",
+          "dificulty": "easy",
+          "errors": 1,
+          "gameTime": 35,
+          "points": 5,
+          "reactionTime": [
+            2.5,
+            2.2,
+            1.6
+          ]
+        },
+        {
+          "date": "2025-11-29T16:00:00",
+          "dificulty": "hard",
+          "errors": 3,
+          "gameTime": 31,
+          "points": 3,
+          "reactionTime": [
+            3.7,
+            4.0,
+            2.2
+          ]
+        },
+        {
+          "date": "2025-11-29T16:20:00",
+          "dificulty": "hard",
+          "errors": 2,
+          "gameTime": 30,
+          "points": 9,
+          "reactionTime": [
+            2.1,
+            3.4,
+            2.9
+          ]
+        },
+        {
+          "date": "2025-11-29T16:40:00",
+          "dificulty": "easy",
+          "errors": 3,
+          "gameTime": 40,
+          "points": 7,
+          "reactionTime": [
+            2.4,
+            3.9,
+            1.8
+          ]
+        },
+        {
+          "date": "2025-11-29T17:00:00",
+          "dificulty": "hard",
+          "errors": 4,
+          "gameTime": 38,
+          "points": 13,
+          "reactionTime": [
+            3.2,
+            2.1,
+            3.8
+          ]
+        },
+        {
+          "date": "2025-11-29T17:20:00",
+          "dificulty": "hard",
+          "errors": 0,
+          "gameTime": 45,
+          "points": 5,
+          "reactionTime": [
+            2.8,
+            1.8,
+            3.1
+          ]
+        },
+        {
+          "date": "2025-11-29T17:40:00",
+          "dificulty": "easy",
+          "errors": 6,
+          "gameTime": 51,
+          "points": 12,
+          "reactionTime": [
+            3.3,
+            3.7,
+            3.5
+          ]
+        },
+        {
+          "date": "2025-11-29T18:00:00",
+          "dificulty": "easy",
+          "errors": 1,
+          "gameTime": 43,
+          "points": 13,
+          "reactionTime": [
+            2.5,
+            3.4,
+            3.5
+          ]
+        },
+        {
+          "date": "2025-11-29T18:20:00",
+          "dificulty": "hard",
+          "errors": 6,
+          "gameTime": 31,
+          "points": 7,
+          "reactionTime": [
+            2.6,
+            3.4,
+            1.7
+          ]
+        },
+        {
+          "date": "2025-11-29T18:40:00",
+          "dificulty": "medium",
+          "errors": 6,
+          "gameTime": 41,
+          "points": 4,
+          "reactionTime": [
+            2.7,
+            3.2,
+            1.8
+          ]
+        },
+        {
+          "date": "2025-11-29T19:00:00",
+          "dificulty": "medium",
+          "errors": 1,
+          "gameTime": 40,
+          "points": 15,
+          "reactionTime": [
+            2.2,
+            3.7,
+            2.7
+          ]
+        },
+        {
+          "date": "2025-11-29T19:20:00",
+          "dificulty": "hard",
+          "errors": 2,
+          "gameTime": 52,
+          "points": 5,
+          "reactionTime": [
+            1.9,
+            3.3,
+            3.6
+          ]
+        },
+        {
+          "date": "2025-11-29T19:40:00",
+          "dificulty": "medium",
+          "errors": 4,
+          "gameTime": 32,
+          "points": 8,
+          "reactionTime": [
+            2.4,
+            2.7,
+            3.2
+          ]
+        },
+        {
+          "date": "2025-11-29T20:00:00",
+          "dificulty": "hard",
+          "errors": 2,
+          "gameTime": 30,
+          "points": 4,
+          "reactionTime": [
+            3.9,
+            1.6,
+            3.2
+          ]
+        },
+        {
+          "date": "2025-11-29T20:20:00",
+          "dificulty": "hard",
+          "errors": 3,
+          "gameTime": 57,
+          "points": 6,
+          "reactionTime": [
+            2.3,
+            2.4,
+            2.1
+          ]
+        },
+        {
+          "date": "2025-11-29T20:40:00",
+          "dificulty": "medium",
+          "errors": 4,
+          "gameTime": 51,
+          "points": 13,
+          "reactionTime": [
+            2.3,
+            2.8,
+            2.0
+          ]
+        },
+        {
+          "date": "2025-11-29T21:00:00",
+          "dificulty": "hard",
+          "errors": 6,
+          "gameTime": 29,
+          "points": 11,
+          "reactionTime": [
+            3.6,
+            2.4,
+            2.3
+          ]
+        },
+        {
+          "date": "2025-11-29T21:20:00",
+          "dificulty": "easy",
+          "errors": 2,
+          "gameTime": 29,
+          "points": 9,
+          "reactionTime": [
+            3.8,
+            2.4,
+            1.8
+          ]
+        },
+        {
+          "date": "2025-11-29T21:40:00",
+          "dificulty": "medium",
+          "errors": 0,
+          "gameTime": 40,
+          "points": 15,
+          "reactionTime": [
+            3.9,
+            2.6,
+            3.3
+          ]
+        }
       ],
       "name": "Emma"
     },
     {
       "age": 5,
       "gameList": [
-        {"date": "2025-11-25T15:30:00", "dificulty": "easy", "errors": 2, "gameTime": 39, "points": 8, "reactionTime": [2.3, 2.6, 2.4]},
-        {"date": "2025-11-25T15:50:00", "dificulty": "easy", "errors": 1, "gameTime": 35, "points": 9, "reactionTime": [2.1, 2.3, 2.2]},
-        {"date": "2025-11-25T16:10:00", "dificulty": "medium", "errors": 3, "gameTime": 46, "points": 7, "reactionTime": [2.5, 2.8, 2.6]}
+        {
+          "date": "2025-11-29T22:00:00",
+          "dificulty": "medium",
+          "errors": 5,
+          "gameTime": 45,
+          "points": 3,
+          "reactionTime": [
+            3.0,
+            1.9,
+            3.1
+          ]
+        },
+        {
+          "date": "2025-11-29T22:20:00",
+          "dificulty": "medium",
+          "errors": 1,
+          "gameTime": 57,
+          "points": 10,
+          "reactionTime": [
+            2.7,
+            3.6,
+            2.2
+          ]
+        },
+        {
+          "date": "2025-11-29T22:40:00",
+          "dificulty": "easy",
+          "errors": 6,
+          "gameTime": 34,
+          "points": 1,
+          "reactionTime": [
+            4.0,
+            2.5,
+            2.6
+          ]
+        },
+        {
+          "date": "2025-11-29T23:00:00",
+          "dificulty": "medium",
+          "errors": 0,
+          "gameTime": 28,
+          "points": 15,
+          "reactionTime": [
+            3.1,
+            1.8,
+            2.7
+          ]
+        },
+        {
+          "date": "2025-11-29T23:20:00",
+          "dificulty": "easy",
+          "errors": 6,
+          "gameTime": 30,
+          "points": 6,
+          "reactionTime": [
+            2.2,
+            3.3,
+            3.0
+          ]
+        },
+        {
+          "date": "2025-11-29T23:40:00",
+          "dificulty": "medium",
+          "errors": 5,
+          "gameTime": 57,
+          "points": 2,
+          "reactionTime": [
+            1.7,
+            1.6,
+            1.9
+          ]
+        },
+        {
+          "date": "2025-11-30T00:00:00",
+          "dificulty": "medium",
+          "errors": 1,
+          "gameTime": 38,
+          "points": 8,
+          "reactionTime": [
+            3.2,
+            1.9,
+            1.7
+          ]
+        },
+        {
+          "date": "2025-11-30T00:20:00",
+          "dificulty": "medium",
+          "errors": 6,
+          "gameTime": 28,
+          "points": 11,
+          "reactionTime": [
+            1.7,
+            2.2,
+            2.4
+          ]
+        },
+        {
+          "date": "2025-11-30T00:40:00",
+          "dificulty": "hard",
+          "errors": 4,
+          "gameTime": 36,
+          "points": 2,
+          "reactionTime": [
+            3.0,
+            2.7,
+            2.6
+          ]
+        },
+        {
+          "date": "2025-11-30T01:00:00",
+          "dificulty": "easy",
+          "errors": 0,
+          "gameTime": 38,
+          "points": 15,
+          "reactionTime": [
+            2.5,
+            2.3,
+            3.9
+          ]
+        },
+        {
+          "date": "2025-11-30T01:20:00",
+          "dificulty": "easy",
+          "errors": 1,
+          "gameTime": 31,
+          "points": 9,
+          "reactionTime": [
+            2.6,
+            2.0,
+            1.9
+          ]
+        },
+        {
+          "date": "2025-11-30T01:40:00",
+          "dificulty": "easy",
+          "errors": 1,
+          "gameTime": 51,
+          "points": 4,
+          "reactionTime": [
+            4.0,
+            1.5,
+            1.8
+          ]
+        },
+        {
+          "date": "2025-11-30T02:00:00",
+          "dificulty": "easy",
+          "errors": 1,
+          "gameTime": 30,
+          "points": 0,
+          "reactionTime": [
+            3.0,
+            3.7,
+            3.1
+          ]
+        },
+        {
+          "date": "2025-11-30T02:20:00",
+          "dificulty": "medium",
+          "errors": 6,
+          "gameTime": 57,
+          "points": 2,
+          "reactionTime": [
+            2.5,
+            2.4,
+            3.1
+          ]
+        },
+        {
+          "date": "2025-11-30T02:40:00",
+          "dificulty": "easy",
+          "errors": 1,
+          "gameTime": 28,
+          "points": 5,
+          "reactionTime": [
+            3.7,
+            3.6,
+            1.7
+          ]
+        },
+        {
+          "date": "2025-11-30T03:00:00",
+          "dificulty": "easy",
+          "errors": 1,
+          "gameTime": 31,
+          "points": 11,
+          "reactionTime": [
+            3.4,
+            2.8,
+            2.5
+          ]
+        },
+        {
+          "date": "2025-11-30T03:20:00",
+          "dificulty": "medium",
+          "errors": 6,
+          "gameTime": 60,
+          "points": 9,
+          "reactionTime": [
+            3.0,
+            3.7,
+            3.1
+          ]
+        },
+        {
+          "date": "2025-11-30T03:40:00",
+          "dificulty": "hard",
+          "errors": 5,
+          "gameTime": 56,
+          "points": 10,
+          "reactionTime": [
+            2.6,
+            2.1,
+            1.9
+          ]
+        },
+        {
+          "date": "2025-11-30T04:00:00",
+          "dificulty": "medium",
+          "errors": 5,
+          "gameTime": 36,
+          "points": 2,
+          "reactionTime": [
+            1.7,
+            3.3,
+            3.0
+          ]
+        },
+        {
+          "date": "2025-11-30T04:20:00",
+          "dificulty": "easy",
+          "errors": 2,
+          "gameTime": 58,
+          "points": 13,
+          "reactionTime": [
+            3.9,
+            3.9,
+            3.5
+          ]
+        },
+        {
+          "date": "2025-11-30T04:40:00",
+          "dificulty": "easy",
+          "errors": 1,
+          "gameTime": 34,
+          "points": 3,
+          "reactionTime": [
+            1.7,
+            3.6,
+            2.9
+          ]
+        },
+        {
+          "date": "2025-11-30T05:00:00",
+          "dificulty": "easy",
+          "errors": 5,
+          "gameTime": 59,
+          "points": 3,
+          "reactionTime": [
+            3.5,
+            2.6,
+            2.3
+          ]
+        },
+        {
+          "date": "2025-11-30T05:20:00",
+          "dificulty": "easy",
+          "errors": 4,
+          "gameTime": 38,
+          "points": 3,
+          "reactionTime": [
+            3.0,
+            4.0,
+            1.6
+          ]
+        },
+        {
+          "date": "2025-11-30T05:40:00",
+          "dificulty": "easy",
+          "errors": 1,
+          "gameTime": 34,
+          "points": 15,
+          "reactionTime": [
+            2.9,
+            3.5,
+            2.4
+          ]
+        },
+        {
+          "date": "2025-11-30T06:00:00",
+          "dificulty": "hard",
+          "errors": 5,
+          "gameTime": 48,
+          "points": 6,
+          "reactionTime": [
+            1.9,
+            3.0,
+            1.8
+          ]
+        },
+        {
+          "date": "2025-11-30T06:20:00",
+          "dificulty": "hard",
+          "errors": 4,
+          "gameTime": 60,
+          "points": 4,
+          "reactionTime": [
+            3.1,
+            1.7,
+            1.7
+          ]
+        },
+        {
+          "date": "2025-11-30T06:40:00",
+          "dificulty": "medium",
+          "errors": 5,
+          "gameTime": 39,
+          "points": 6,
+          "reactionTime": [
+            2.3,
+            3.4,
+            3.3
+          ]
+        },
+        {
+          "date": "2025-11-30T07:00:00",
+          "dificulty": "medium",
+          "errors": 4,
+          "gameTime": 34,
+          "points": 6,
+          "reactionTime": [
+            1.8,
+            1.8,
+            2.7
+          ]
+        },
+        {
+          "date": "2025-11-30T07:20:00",
+          "dificulty": "medium",
+          "errors": 5,
+          "gameTime": 42,
+          "points": 2,
+          "reactionTime": [
+            1.8,
+            3.9,
+            2.6
+          ]
+        },
+        {
+          "date": "2025-11-30T07:40:00",
+          "dificulty": "medium",
+          "errors": 6,
+          "gameTime": 31,
+          "points": 13,
+          "reactionTime": [
+            2.3,
+            4.0,
+            3.7
+          ]
+        },
+        {
+          "date": "2025-11-30T08:00:00",
+          "dificulty": "medium",
+          "errors": 4,
+          "gameTime": 33,
+          "points": 14,
+          "reactionTime": [
+            2.0,
+            2.8,
+            2.4
+          ]
+        },
+        {
+          "date": "2025-11-30T08:20:00",
+          "dificulty": "medium",
+          "errors": 0,
+          "gameTime": 40,
+          "points": 13,
+          "reactionTime": [
+            1.7,
+            1.7,
+            2.2
+          ]
+        },
+        {
+          "date": "2025-11-30T08:40:00",
+          "dificulty": "hard",
+          "errors": 3,
+          "gameTime": 44,
+          "points": 14,
+          "reactionTime": [
+            2.8,
+            3.7,
+            3.5
+          ]
+        },
+        {
+          "date": "2025-11-30T09:00:00",
+          "dificulty": "hard",
+          "errors": 5,
+          "gameTime": 43,
+          "points": 6,
+          "reactionTime": [
+            3.2,
+            2.0,
+            1.6
+          ]
+        },
+        {
+          "date": "2025-11-30T09:20:00",
+          "dificulty": "easy",
+          "errors": 4,
+          "gameTime": 57,
+          "points": 12,
+          "reactionTime": [
+            2.2,
+            2.8,
+            1.6
+          ]
+        },
+        {
+          "date": "2025-11-30T09:40:00",
+          "dificulty": "easy",
+          "errors": 1,
+          "gameTime": 37,
+          "points": 1,
+          "reactionTime": [
+            2.9,
+            3.3,
+            3.4
+          ]
+        },
+        {
+          "date": "2025-11-30T10:00:00",
+          "dificulty": "easy",
+          "errors": 3,
+          "gameTime": 48,
+          "points": 5,
+          "reactionTime": [
+            1.7,
+            2.8,
+            2.9
+          ]
+        },
+        {
+          "date": "2025-11-30T10:20:00",
+          "dificulty": "hard",
+          "errors": 3,
+          "gameTime": 37,
+          "points": 3,
+          "reactionTime": [
+            2.7,
+            2.7,
+            3.3
+          ]
+        },
+        {
+          "date": "2025-11-30T10:40:00",
+          "dificulty": "hard",
+          "errors": 1,
+          "gameTime": 49,
+          "points": 0,
+          "reactionTime": [
+            2.1,
+            2.9,
+            2.4
+          ]
+        },
+        {
+          "date": "2025-11-30T11:00:00",
+          "dificulty": "hard",
+          "errors": 5,
+          "gameTime": 40,
+          "points": 8,
+          "reactionTime": [
+            3.1,
+            2.2,
+            2.5
+          ]
+        },
+        {
+          "date": "2025-11-30T11:20:00",
+          "dificulty": "hard",
+          "errors": 4,
+          "gameTime": 57,
+          "points": 7,
+          "reactionTime": [
+            3.5,
+            2.7,
+            2.8
+          ]
+        },
+        {
+          "date": "2025-11-30T11:40:00",
+          "dificulty": "easy",
+          "errors": 1,
+          "gameTime": 50,
+          "points": 13,
+          "reactionTime": [
+            3.1,
+            1.8,
+            3.0
+          ]
+        },
+        {
+          "date": "2025-11-30T12:00:00",
+          "dificulty": "hard",
+          "errors": 0,
+          "gameTime": 38,
+          "points": 3,
+          "reactionTime": [
+            1.6,
+            3.5,
+            2.6
+          ]
+        },
+        {
+          "date": "2025-11-30T12:20:00",
+          "dificulty": "hard",
+          "errors": 0,
+          "gameTime": 47,
+          "points": 3,
+          "reactionTime": [
+            2.8,
+            2.2,
+            2.6
+          ]
+        },
+        {
+          "date": "2025-11-30T12:40:00",
+          "dificulty": "easy",
+          "errors": 2,
+          "gameTime": 56,
+          "points": 12,
+          "reactionTime": [
+            3.0,
+            3.9,
+            2.6
+          ]
+        },
+        {
+          "date": "2025-11-30T13:00:00",
+          "dificulty": "medium",
+          "errors": 0,
+          "gameTime": 32,
+          "points": 13,
+          "reactionTime": [
+            1.8,
+            2.6,
+            3.5
+          ]
+        },
+        {
+          "date": "2025-11-30T13:20:00",
+          "dificulty": "hard",
+          "errors": 4,
+          "gameTime": 56,
+          "points": 1,
+          "reactionTime": [
+            2.2,
+            3.5,
+            2.4
+          ]
+        },
+        {
+          "date": "2025-11-30T13:40:00",
+          "dificulty": "hard",
+          "errors": 4,
+          "gameTime": 36,
+          "points": 1,
+          "reactionTime": [
+            3.7,
+            2.4,
+            2.4
+          ]
+        },
+        {
+          "date": "2025-11-30T14:00:00",
+          "dificulty": "hard",
+          "errors": 4,
+          "gameTime": 47,
+          "points": 8,
+          "reactionTime": [
+            3.2,
+            3.2,
+            3.6
+          ]
+        },
+        {
+          "date": "2025-11-30T14:20:00",
+          "dificulty": "medium",
+          "errors": 1,
+          "gameTime": 43,
+          "points": 13,
+          "reactionTime": [
+            3.0,
+            2.8,
+            2.3
+          ]
+        },
+        {
+          "date": "2025-11-30T14:40:00",
+          "dificulty": "hard",
+          "errors": 1,
+          "gameTime": 31,
+          "points": 9,
+          "reactionTime": [
+            3.8,
+            3.7,
+            3.0
+          ]
+        },
+        {
+          "date": "2025-11-30T15:00:00",
+          "dificulty": "easy",
+          "errors": 4,
+          "gameTime": 41,
+          "points": 3,
+          "reactionTime": [
+            3.9,
+            3.3,
+            3.2
+          ]
+        },
+        {
+          "date": "2025-11-30T15:20:00",
+          "dificulty": "medium",
+          "errors": 5,
+          "gameTime": 29,
+          "points": 13,
+          "reactionTime": [
+            3.3,
+            2.6,
+            2.0
+          ]
+        },
+        {
+          "date": "2025-11-30T15:40:00",
+          "dificulty": "medium",
+          "errors": 3,
+          "gameTime": 56,
+          "points": 4,
+          "reactionTime": [
+            3.5,
+            2.0,
+            2.1
+          ]
+        },
+        {
+          "date": "2025-11-30T16:00:00",
+          "dificulty": "medium",
+          "errors": 0,
+          "gameTime": 50,
+          "points": 0,
+          "reactionTime": [
+            1.8,
+            2.4,
+            1.8
+          ]
+        }
       ],
-      "name": "Benjamin"
+      "name": "Diego"
     },
     {
       "age": 5,
       "gameList": [
-        {"date": "2025-11-25T11:45:00", "dificulty": "easy", "errors": 4, "gameTime": 50, "points": 6, "reactionTime": [3.1, 3.4, 3.2]},
-        {"date": "2025-11-25T12:10:00", "dificulty": "easy", "errors": 3, "gameTime": 47, "points": 7, "reactionTime": [2.9, 3.2, 3.0]}
+        {
+          "date": "2025-11-30T16:20:00",
+          "dificulty": "easy",
+          "errors": 0,
+          "gameTime": 37,
+          "points": 9,
+          "reactionTime": [
+            1.8,
+            2.5,
+            3.7
+          ]
+        },
+        {
+          "date": "2025-11-30T16:40:00",
+          "dificulty": "medium",
+          "errors": 0,
+          "gameTime": 35,
+          "points": 1,
+          "reactionTime": [
+            1.5,
+            3.5,
+            3.7
+          ]
+        },
+        {
+          "date": "2025-11-30T17:00:00",
+          "dificulty": "medium",
+          "errors": 6,
+          "gameTime": 59,
+          "points": 4,
+          "reactionTime": [
+            2.1,
+            2.0,
+            1.5
+          ]
+        },
+        {
+          "date": "2025-11-30T17:20:00",
+          "dificulty": "medium",
+          "errors": 3,
+          "gameTime": 38,
+          "points": 13,
+          "reactionTime": [
+            2.2,
+            2.8,
+            2.0
+          ]
+        },
+        {
+          "date": "2025-11-30T17:40:00",
+          "dificulty": "easy",
+          "errors": 6,
+          "gameTime": 34,
+          "points": 5,
+          "reactionTime": [
+            1.5,
+            2.5,
+            3.5
+          ]
+        },
+        {
+          "date": "2025-11-30T18:00:00",
+          "dificulty": "hard",
+          "errors": 2,
+          "gameTime": 37,
+          "points": 6,
+          "reactionTime": [
+            3.4,
+            2.1,
+            2.9
+          ]
+        },
+        {
+          "date": "2025-11-30T18:20:00",
+          "dificulty": "medium",
+          "errors": 1,
+          "gameTime": 39,
+          "points": 7,
+          "reactionTime": [
+            1.8,
+            3.4,
+            2.4
+          ]
+        },
+        {
+          "date": "2025-11-30T18:40:00",
+          "dificulty": "hard",
+          "errors": 3,
+          "gameTime": 43,
+          "points": 9,
+          "reactionTime": [
+            2.3,
+            3.9,
+            3.4
+          ]
+        },
+        {
+          "date": "2025-11-30T19:00:00",
+          "dificulty": "easy",
+          "errors": 6,
+          "gameTime": 50,
+          "points": 7,
+          "reactionTime": [
+            3.2,
+            2.5,
+            3.7
+          ]
+        },
+        {
+          "date": "2025-11-30T19:20:00",
+          "dificulty": "hard",
+          "errors": 3,
+          "gameTime": 35,
+          "points": 8,
+          "reactionTime": [
+            2.1,
+            3.6,
+            2.5
+          ]
+        },
+        {
+          "date": "2025-11-30T19:40:00",
+          "dificulty": "hard",
+          "errors": 3,
+          "gameTime": 38,
+          "points": 6,
+          "reactionTime": [
+            1.8,
+            3.4,
+            3.6
+          ]
+        },
+        {
+          "date": "2025-11-30T20:00:00",
+          "dificulty": "medium",
+          "errors": 0,
+          "gameTime": 49,
+          "points": 1,
+          "reactionTime": [
+            1.9,
+            1.8,
+            1.9
+          ]
+        },
+        {
+          "date": "2025-11-30T20:20:00",
+          "dificulty": "medium",
+          "errors": 1,
+          "gameTime": 60,
+          "points": 5,
+          "reactionTime": [
+            4.0,
+            1.5,
+            2.2
+          ]
+        },
+        {
+          "date": "2025-11-30T20:40:00",
+          "dificulty": "easy",
+          "errors": 4,
+          "gameTime": 28,
+          "points": 10,
+          "reactionTime": [
+            2.5,
+            2.2,
+            3.2
+          ]
+        },
+        {
+          "date": "2025-11-30T21:00:00",
+          "dificulty": "medium",
+          "errors": 5,
+          "gameTime": 45,
+          "points": 15,
+          "reactionTime": [
+            3.4,
+            3.2,
+            2.8
+          ]
+        },
+        {
+          "date": "2025-11-30T21:20:00",
+          "dificulty": "easy",
+          "errors": 1,
+          "gameTime": 44,
+          "points": 15,
+          "reactionTime": [
+            3.3,
+            3.5,
+            1.9
+          ]
+        },
+        {
+          "date": "2025-11-30T21:40:00",
+          "dificulty": "easy",
+          "errors": 4,
+          "gameTime": 34,
+          "points": 13,
+          "reactionTime": [
+            3.4,
+            1.9,
+            3.5
+          ]
+        },
+        {
+          "date": "2025-11-30T22:00:00",
+          "dificulty": "medium",
+          "errors": 3,
+          "gameTime": 44,
+          "points": 15,
+          "reactionTime": [
+            2.8,
+            2.4,
+            2.7
+          ]
+        },
+        {
+          "date": "2025-11-30T22:20:00",
+          "dificulty": "hard",
+          "errors": 1,
+          "gameTime": 57,
+          "points": 14,
+          "reactionTime": [
+            2.7,
+            3.7,
+            2.8
+          ]
+        },
+        {
+          "date": "2025-11-30T22:40:00",
+          "dificulty": "hard",
+          "errors": 4,
+          "gameTime": 50,
+          "points": 15,
+          "reactionTime": [
+            3.9,
+            2.0,
+            1.9
+          ]
+        },
+        {
+          "date": "2025-11-30T23:00:00",
+          "dificulty": "hard",
+          "errors": 5,
+          "gameTime": 29,
+          "points": 14,
+          "reactionTime": [
+            3.9,
+            3.5,
+            3.1
+          ]
+        },
+        {
+          "date": "2025-11-30T23:20:00",
+          "dificulty": "easy",
+          "errors": 3,
+          "gameTime": 30,
+          "points": 4,
+          "reactionTime": [
+            3.3,
+            2.0,
+            3.7
+          ]
+        },
+        {
+          "date": "2025-11-30T23:40:00",
+          "dificulty": "medium",
+          "errors": 6,
+          "gameTime": 45,
+          "points": 6,
+          "reactionTime": [
+            2.4,
+            1.5,
+            2.5
+          ]
+        },
+        {
+          "date": "2025-12-01T00:00:00",
+          "dificulty": "hard",
+          "errors": 0,
+          "gameTime": 35,
+          "points": 5,
+          "reactionTime": [
+            3.3,
+            1.7,
+            1.9
+          ]
+        },
+        {
+          "date": "2025-12-01T00:20:00",
+          "dificulty": "easy",
+          "errors": 5,
+          "gameTime": 56,
+          "points": 14,
+          "reactionTime": [
+            2.1,
+            3.5,
+            1.6
+          ]
+        },
+        {
+          "date": "2025-12-01T00:40:00",
+          "dificulty": "medium",
+          "errors": 6,
+          "gameTime": 57,
+          "points": 5,
+          "reactionTime": [
+            2.8,
+            2.1,
+            2.2
+          ]
+        },
+        {
+          "date": "2025-12-01T01:00:00",
+          "dificulty": "easy",
+          "errors": 4,
+          "gameTime": 29,
+          "points": 8,
+          "reactionTime": [
+            2.6,
+            2.8,
+            1.6
+          ]
+        },
+        {
+          "date": "2025-12-01T01:20:00",
+          "dificulty": "medium",
+          "errors": 4,
+          "gameTime": 52,
+          "points": 12,
+          "reactionTime": [
+            2.0,
+            2.3,
+            1.8
+          ]
+        },
+        {
+          "date": "2025-12-01T01:40:00",
+          "dificulty": "hard",
+          "errors": 0,
+          "gameTime": 45,
+          "points": 3,
+          "reactionTime": [
+            3.2,
+            2.5,
+            1.9
+          ]
+        },
+        {
+          "date": "2025-12-01T02:00:00",
+          "dificulty": "easy",
+          "errors": 0,
+          "gameTime": 60,
+          "points": 8,
+          "reactionTime": [
+            3.2,
+            2.9,
+            3.9
+          ]
+        },
+        {
+          "date": "2025-12-01T02:20:00",
+          "dificulty": "hard",
+          "errors": 6,
+          "gameTime": 60,
+          "points": 7,
+          "reactionTime": [
+            3.9,
+            3.5,
+            3.6
+          ]
+        },
+        {
+          "date": "2025-12-01T02:40:00",
+          "dificulty": "hard",
+          "errors": 3,
+          "gameTime": 43,
+          "points": 11,
+          "reactionTime": [
+            3.3,
+            1.7,
+            3.8
+          ]
+        },
+        {
+          "date": "2025-12-01T03:00:00",
+          "dificulty": "medium",
+          "errors": 6,
+          "gameTime": 31,
+          "points": 7,
+          "reactionTime": [
+            1.8,
+            3.2,
+            3.1
+          ]
+        },
+        {
+          "date": "2025-12-01T03:20:00",
+          "dificulty": "hard",
+          "errors": 2,
+          "gameTime": 34,
+          "points": 6,
+          "reactionTime": [
+            4.0,
+            3.4,
+            2.8
+          ]
+        },
+        {
+          "date": "2025-12-01T03:40:00",
+          "dificulty": "medium",
+          "errors": 1,
+          "gameTime": 54,
+          "points": 15,
+          "reactionTime": [
+            2.6,
+            2.0,
+            3.3
+          ]
+        },
+        {
+          "date": "2025-12-01T04:00:00",
+          "dificulty": "medium",
+          "errors": 2,
+          "gameTime": 37,
+          "points": 11,
+          "reactionTime": [
+            3.3,
+            3.9,
+            2.4
+          ]
+        },
+        {
+          "date": "2025-12-01T04:20:00",
+          "dificulty": "easy",
+          "errors": 6,
+          "gameTime": 34,
+          "points": 8,
+          "reactionTime": [
+            2.8,
+            1.9,
+            2.5
+          ]
+        },
+        {
+          "date": "2025-12-01T04:40:00",
+          "dificulty": "medium",
+          "errors": 2,
+          "gameTime": 53,
+          "points": 11,
+          "reactionTime": [
+            3.7,
+            1.7,
+            1.6
+          ]
+        },
+        {
+          "date": "2025-12-01T05:00:00",
+          "dificulty": "easy",
+          "errors": 4,
+          "gameTime": 50,
+          "points": 6,
+          "reactionTime": [
+            2.2,
+            3.8,
+            2.8
+          ]
+        },
+        {
+          "date": "2025-12-01T05:20:00",
+          "dificulty": "easy",
+          "errors": 3,
+          "gameTime": 40,
+          "points": 7,
+          "reactionTime": [
+            3.7,
+            2.3,
+            2.5
+          ]
+        },
+        {
+          "date": "2025-12-01T05:40:00",
+          "dificulty": "easy",
+          "errors": 4,
+          "gameTime": 41,
+          "points": 0,
+          "reactionTime": [
+            1.8,
+            2.3,
+            3.7
+          ]
+        },
+        {
+          "date": "2025-12-01T06:00:00",
+          "dificulty": "hard",
+          "errors": 4,
+          "gameTime": 28,
+          "points": 14,
+          "reactionTime": [
+            3.0,
+            2.2,
+            3.2
+          ]
+        },
+        {
+          "date": "2025-12-01T06:20:00",
+          "dificulty": "hard",
+          "errors": 1,
+          "gameTime": 28,
+          "points": 2,
+          "reactionTime": [
+            3.5,
+            3.8,
+            1.7
+          ]
+        },
+        {
+          "date": "2025-12-01T06:40:00",
+          "dificulty": "hard",
+          "errors": 1,
+          "gameTime": 48,
+          "points": 7,
+          "reactionTime": [
+            1.8,
+            3.7,
+            3.2
+          ]
+        },
+        {
+          "date": "2025-12-01T07:00:00",
+          "dificulty": "medium",
+          "errors": 3,
+          "gameTime": 59,
+          "points": 12,
+          "reactionTime": [
+            2.8,
+            1.7,
+            3.7
+          ]
+        },
+        {
+          "date": "2025-12-01T07:20:00",
+          "dificulty": "medium",
+          "errors": 3,
+          "gameTime": 58,
+          "points": 11,
+          "reactionTime": [
+            3.7,
+            2.5,
+            3.4
+          ]
+        },
+        {
+          "date": "2025-12-01T07:40:00",
+          "dificulty": "easy",
+          "errors": 2,
+          "gameTime": 58,
+          "points": 6,
+          "reactionTime": [
+            3.1,
+            2.3,
+            3.6
+          ]
+        },
+        {
+          "date": "2025-12-01T08:00:00",
+          "dificulty": "medium",
+          "errors": 6,
+          "gameTime": 45,
+          "points": 15,
+          "reactionTime": [
+            1.6,
+            1.6,
+            2.0
+          ]
+        },
+        {
+          "date": "2025-12-01T08:20:00",
+          "dificulty": "easy",
+          "errors": 5,
+          "gameTime": 49,
+          "points": 3,
+          "reactionTime": [
+            3.3,
+            1.9,
+            1.7
+          ]
+        },
+        {
+          "date": "2025-12-01T08:40:00",
+          "dificulty": "easy",
+          "errors": 5,
+          "gameTime": 46,
+          "points": 0,
+          "reactionTime": [
+            3.0,
+            1.7,
+            2.6
+          ]
+        },
+        {
+          "date": "2025-12-01T09:00:00",
+          "dificulty": "easy",
+          "errors": 5,
+          "gameTime": 48,
+          "points": 6,
+          "reactionTime": [
+            3.9,
+            2.6,
+            1.6
+          ]
+        },
+        {
+          "date": "2025-12-01T09:20:00",
+          "dificulty": "hard",
+          "errors": 6,
+          "gameTime": 42,
+          "points": 13,
+          "reactionTime": [
+            3.1,
+            2.0,
+            1.8
+          ]
+        },
+        {
+          "date": "2025-12-01T09:40:00",
+          "dificulty": "medium",
+          "errors": 1,
+          "gameTime": 28,
+          "points": 5,
+          "reactionTime": [
+            3.6,
+            1.6,
+            2.1
+          ]
+        },
+        {
+          "date": "2025-12-01T10:00:00",
+          "dificulty": "easy",
+          "errors": 0,
+          "gameTime": 40,
+          "points": 7,
+          "reactionTime": [
+            2.7,
+            1.9,
+            2.6
+          ]
+        },
+        {
+          "date": "2025-12-01T10:20:00",
+          "dificulty": "medium",
+          "errors": 0,
+          "gameTime": 33,
+          "points": 12,
+          "reactionTime": [
+            1.6,
+            3.8,
+            2.4
+          ]
+        }
       ],
-      "name": "Mia"
+      "name": "Martina"
     },
     {
       "age": 5,
       "gameList": [
-        {"date": "2025-11-25T16:30:00", "dificulty": "easy", "errors": 1, "gameTime": 33, "points": 9, "reactionTime": [2.0, 2.2, 2.1]},
-        {"date": "2025-11-25T16:50:00", "dificulty": "easy", "errors": 0, "gameTime": 31, "points": 10, "reactionTime": [1.8, 2.0, 1.9]},
-        {"date": "2025-11-25T17:10:00", "dificulty": "medium", "errors": 2, "gameTime": 41, "points": 8, "reactionTime": [2.2, 2.4, 2.3]},
-        {"date": "2025-11-25T17:30:00", "dificulty": "medium", "errors": 1, "gameTime": 39, "points": 9, "reactionTime": [2.1, 2.3, 2.2]}
+        {
+          "date": "2025-12-01T10:40:00",
+          "dificulty": "hard",
+          "errors": 0,
+          "gameTime": 55,
+          "points": 1,
+          "reactionTime": [
+            2.5,
+            2.6,
+            2.6
+          ]
+        },
+        {
+          "date": "2025-12-01T11:00:00",
+          "dificulty": "medium",
+          "errors": 5,
+          "gameTime": 60,
+          "points": 0,
+          "reactionTime": [
+            2.9,
+            1.8,
+            3.5
+          ]
+        },
+        {
+          "date": "2025-12-01T11:20:00",
+          "dificulty": "easy",
+          "errors": 0,
+          "gameTime": 37,
+          "points": 15,
+          "reactionTime": [
+            3.0,
+            3.4,
+            1.5
+          ]
+        },
+        {
+          "date": "2025-12-01T11:40:00",
+          "dificulty": "hard",
+          "errors": 3,
+          "gameTime": 57,
+          "points": 3,
+          "reactionTime": [
+            1.9,
+            2.5,
+            3.4
+          ]
+        },
+        {
+          "date": "2025-12-01T12:00:00",
+          "dificulty": "medium",
+          "errors": 0,
+          "gameTime": 40,
+          "points": 11,
+          "reactionTime": [
+            1.8,
+            2.6,
+            3.3
+          ]
+        },
+        {
+          "date": "2025-12-01T12:20:00",
+          "dificulty": "easy",
+          "errors": 0,
+          "gameTime": 55,
+          "points": 6,
+          "reactionTime": [
+            2.8,
+            3.8,
+            2.8
+          ]
+        },
+        {
+          "date": "2025-12-01T12:40:00",
+          "dificulty": "hard",
+          "errors": 1,
+          "gameTime": 50,
+          "points": 10,
+          "reactionTime": [
+            2.8,
+            3.1,
+            2.9
+          ]
+        },
+        {
+          "date": "2025-12-01T13:00:00",
+          "dificulty": "hard",
+          "errors": 1,
+          "gameTime": 60,
+          "points": 4,
+          "reactionTime": [
+            3.7,
+            2.3,
+            1.9
+          ]
+        },
+        {
+          "date": "2025-12-01T13:20:00",
+          "dificulty": "hard",
+          "errors": 3,
+          "gameTime": 55,
+          "points": 0,
+          "reactionTime": [
+            3.2,
+            2.5,
+            4.0
+          ]
+        },
+        {
+          "date": "2025-12-01T13:40:00",
+          "dificulty": "hard",
+          "errors": 0,
+          "gameTime": 35,
+          "points": 12,
+          "reactionTime": [
+            4.0,
+            3.2,
+            3.8
+          ]
+        },
+        {
+          "date": "2025-12-01T14:00:00",
+          "dificulty": "medium",
+          "errors": 0,
+          "gameTime": 58,
+          "points": 15,
+          "reactionTime": [
+            2.7,
+            2.2,
+            1.7
+          ]
+        },
+        {
+          "date": "2025-12-01T14:20:00",
+          "dificulty": "medium",
+          "errors": 1,
+          "gameTime": 42,
+          "points": 11,
+          "reactionTime": [
+            3.0,
+            2.8,
+            2.0
+          ]
+        },
+        {
+          "date": "2025-12-01T14:40:00",
+          "dificulty": "easy",
+          "errors": 0,
+          "gameTime": 45,
+          "points": 3,
+          "reactionTime": [
+            2.2,
+            1.5,
+            2.6
+          ]
+        },
+        {
+          "date": "2025-12-01T15:00:00",
+          "dificulty": "hard",
+          "errors": 0,
+          "gameTime": 38,
+          "points": 0,
+          "reactionTime": [
+            2.7,
+            3.3,
+            2.9
+          ]
+        },
+        {
+          "date": "2025-12-01T15:20:00",
+          "dificulty": "medium",
+          "errors": 2,
+          "gameTime": 37,
+          "points": 2,
+          "reactionTime": [
+            3.7,
+            1.8,
+            3.8
+          ]
+        },
+        {
+          "date": "2025-12-01T15:40:00",
+          "dificulty": "hard",
+          "errors": 1,
+          "gameTime": 30,
+          "points": 4,
+          "reactionTime": [
+            1.8,
+            1.6,
+            1.7
+          ]
+        },
+        {
+          "date": "2025-12-01T16:00:00",
+          "dificulty": "easy",
+          "errors": 2,
+          "gameTime": 47,
+          "points": 1,
+          "reactionTime": [
+            2.7,
+            3.4,
+            3.8
+          ]
+        },
+        {
+          "date": "2025-12-01T16:20:00",
+          "dificulty": "easy",
+          "errors": 6,
+          "gameTime": 50,
+          "points": 8,
+          "reactionTime": [
+            3.7,
+            1.7,
+            2.2
+          ]
+        },
+        {
+          "date": "2025-12-01T16:40:00",
+          "dificulty": "easy",
+          "errors": 5,
+          "gameTime": 29,
+          "points": 12,
+          "reactionTime": [
+            2.1,
+            3.2,
+            3.7
+          ]
+        },
+        {
+          "date": "2025-12-01T17:00:00",
+          "dificulty": "easy",
+          "errors": 1,
+          "gameTime": 36,
+          "points": 15,
+          "reactionTime": [
+            3.0,
+            3.7,
+            2.9
+          ]
+        },
+        {
+          "date": "2025-12-01T17:20:00",
+          "dificulty": "hard",
+          "errors": 3,
+          "gameTime": 31,
+          "points": 14,
+          "reactionTime": [
+            1.5,
+            3.9,
+            1.9
+          ]
+        },
+        {
+          "date": "2025-12-01T17:40:00",
+          "dificulty": "easy",
+          "errors": 4,
+          "gameTime": 38,
+          "points": 6,
+          "reactionTime": [
+            1.5,
+            2.4,
+            1.7
+          ]
+        },
+        {
+          "date": "2025-12-01T18:00:00",
+          "dificulty": "easy",
+          "errors": 2,
+          "gameTime": 30,
+          "points": 9,
+          "reactionTime": [
+            3.1,
+            3.1,
+            2.9
+          ]
+        },
+        {
+          "date": "2025-12-01T18:20:00",
+          "dificulty": "hard",
+          "errors": 1,
+          "gameTime": 47,
+          "points": 15,
+          "reactionTime": [
+            2.1,
+            1.8,
+            3.0
+          ]
+        },
+        {
+          "date": "2025-12-01T18:40:00",
+          "dificulty": "hard",
+          "errors": 1,
+          "gameTime": 33,
+          "points": 6,
+          "reactionTime": [
+            1.8,
+            2.3,
+            2.9
+          ]
+        },
+        {
+          "date": "2025-12-01T19:00:00",
+          "dificulty": "hard",
+          "errors": 5,
+          "gameTime": 43,
+          "points": 6,
+          "reactionTime": [
+            1.6,
+            3.2,
+            2.5
+          ]
+        },
+        {
+          "date": "2025-12-01T19:20:00",
+          "dificulty": "easy",
+          "errors": 1,
+          "gameTime": 52,
+          "points": 3,
+          "reactionTime": [
+            3.5,
+            2.5,
+            3.7
+          ]
+        },
+        {
+          "date": "2025-12-01T19:40:00",
+          "dificulty": "easy",
+          "errors": 0,
+          "gameTime": 39,
+          "points": 1,
+          "reactionTime": [
+            4.0,
+            1.9,
+            2.3
+          ]
+        },
+        {
+          "date": "2025-12-01T20:00:00",
+          "dificulty": "medium",
+          "errors": 4,
+          "gameTime": 43,
+          "points": 15,
+          "reactionTime": [
+            3.7,
+            3.8,
+            2.9
+          ]
+        },
+        {
+          "date": "2025-12-01T20:20:00",
+          "dificulty": "easy",
+          "errors": 5,
+          "gameTime": 45,
+          "points": 4,
+          "reactionTime": [
+            3.3,
+            3.4,
+            3.2
+          ]
+        },
+        {
+          "date": "2025-12-01T20:40:00",
+          "dificulty": "easy",
+          "errors": 5,
+          "gameTime": 31,
+          "points": 14,
+          "reactionTime": [
+            2.5,
+            2.2,
+            3.0
+          ]
+        },
+        {
+          "date": "2025-12-01T21:00:00",
+          "dificulty": "easy",
+          "errors": 2,
+          "gameTime": 43,
+          "points": 1,
+          "reactionTime": [
+            2.8,
+            2.9,
+            3.2
+          ]
+        },
+        {
+          "date": "2025-12-01T21:20:00",
+          "dificulty": "medium",
+          "errors": 0,
+          "gameTime": 58,
+          "points": 3,
+          "reactionTime": [
+            3.3,
+            3.7,
+            2.4
+          ]
+        },
+        {
+          "date": "2025-12-01T21:40:00",
+          "dificulty": "hard",
+          "errors": 6,
+          "gameTime": 40,
+          "points": 2,
+          "reactionTime": [
+            3.0,
+            3.2,
+            2.3
+          ]
+        },
+        {
+          "date": "2025-12-01T22:00:00",
+          "dificulty": "medium",
+          "errors": 6,
+          "gameTime": 49,
+          "points": 14,
+          "reactionTime": [
+            1.6,
+            3.1,
+            2.2
+          ]
+        },
+        {
+          "date": "2025-12-01T22:20:00",
+          "dificulty": "hard",
+          "errors": 1,
+          "gameTime": 46,
+          "points": 9,
+          "reactionTime": [
+            3.6,
+            2.7,
+            2.0
+          ]
+        },
+        {
+          "date": "2025-12-01T22:40:00",
+          "dificulty": "easy",
+          "errors": 0,
+          "gameTime": 36,
+          "points": 9,
+          "reactionTime": [
+            1.7,
+            3.3,
+            2.8
+          ]
+        },
+        {
+          "date": "2025-12-01T23:00:00",
+          "dificulty": "medium",
+          "errors": 1,
+          "gameTime": 60,
+          "points": 10,
+          "reactionTime": [
+            3.1,
+            3.1,
+            3.3
+          ]
+        },
+        {
+          "date": "2025-12-01T23:20:00",
+          "dificulty": "easy",
+          "errors": 1,
+          "gameTime": 55,
+          "points": 0,
+          "reactionTime": [
+            2.1,
+            2.0,
+            2.4
+          ]
+        },
+        {
+          "date": "2025-12-01T23:40:00",
+          "dificulty": "hard",
+          "errors": 2,
+          "gameTime": 43,
+          "points": 6,
+          "reactionTime": [
+            4.0,
+            3.5,
+            2.9
+          ]
+        },
+        {
+          "date": "2025-12-02T00:00:00",
+          "dificulty": "easy",
+          "errors": 5,
+          "gameTime": 60,
+          "points": 1,
+          "reactionTime": [
+            3.7,
+            2.0,
+            2.7
+          ]
+        },
+        {
+          "date": "2025-12-02T00:20:00",
+          "dificulty": "medium",
+          "errors": 1,
+          "gameTime": 32,
+          "points": 4,
+          "reactionTime": [
+            3.7,
+            2.5,
+            2.1
+          ]
+        },
+        {
+          "date": "2025-12-02T00:40:00",
+          "dificulty": "easy",
+          "errors": 0,
+          "gameTime": 52,
+          "points": 4,
+          "reactionTime": [
+            2.5,
+            4.0,
+            3.8
+          ]
+        },
+        {
+          "date": "2025-12-02T01:00:00",
+          "dificulty": "medium",
+          "errors": 3,
+          "gameTime": 40,
+          "points": 14,
+          "reactionTime": [
+            3.7,
+            2.0,
+            2.2
+          ]
+        },
+        {
+          "date": "2025-12-02T01:20:00",
+          "dificulty": "medium",
+          "errors": 3,
+          "gameTime": 40,
+          "points": 4,
+          "reactionTime": [
+            2.7,
+            3.0,
+            3.2
+          ]
+        },
+        {
+          "date": "2025-12-02T01:40:00",
+          "dificulty": "hard",
+          "errors": 4,
+          "gameTime": 39,
+          "points": 10,
+          "reactionTime": [
+            2.6,
+            3.2,
+            3.7
+          ]
+        },
+        {
+          "date": "2025-12-02T02:00:00",
+          "dificulty": "hard",
+          "errors": 1,
+          "gameTime": 28,
+          "points": 2,
+          "reactionTime": [
+            1.5,
+            3.5,
+            1.8
+          ]
+        },
+        {
+          "date": "2025-12-02T02:20:00",
+          "dificulty": "easy",
+          "errors": 3,
+          "gameTime": 43,
+          "points": 15,
+          "reactionTime": [
+            2.7,
+            3.5,
+            3.5
+          ]
+        },
+        {
+          "date": "2025-12-02T02:40:00",
+          "dificulty": "medium",
+          "errors": 0,
+          "gameTime": 58,
+          "points": 12,
+          "reactionTime": [
+            3.4,
+            4.0,
+            2.4
+          ]
+        },
+        {
+          "date": "2025-12-02T03:00:00",
+          "dificulty": "hard",
+          "errors": 3,
+          "gameTime": 33,
+          "points": 11,
+          "reactionTime": [
+            1.6,
+            2.3,
+            3.7
+          ]
+        },
+        {
+          "date": "2025-12-02T03:20:00",
+          "dificulty": "easy",
+          "errors": 2,
+          "gameTime": 30,
+          "points": 1,
+          "reactionTime": [
+            3.0,
+            3.7,
+            2.5
+          ]
+        },
+        {
+          "date": "2025-12-02T03:40:00",
+          "dificulty": "easy",
+          "errors": 0,
+          "gameTime": 28,
+          "points": 0,
+          "reactionTime": [
+            1.8,
+            2.3,
+            3.3
+          ]
+        },
+        {
+          "date": "2025-12-02T04:00:00",
+          "dificulty": "easy",
+          "errors": 1,
+          "gameTime": 39,
+          "points": 9,
+          "reactionTime": [
+            2.8,
+            3.5,
+            3.6
+          ]
+        },
+        {
+          "date": "2025-12-02T04:20:00",
+          "dificulty": "medium",
+          "errors": 0,
+          "gameTime": 49,
+          "points": 14,
+          "reactionTime": [
+            3.2,
+            3.8,
+            2.5
+          ]
+        },
+        {
+          "date": "2025-12-02T04:40:00",
+          "dificulty": "hard",
+          "errors": 0,
+          "gameTime": 53,
+          "points": 11,
+          "reactionTime": [
+            3.8,
+            2.5,
+            2.6
+          ]
+        }
       ],
-      "name": "Samuel"
-    },
-    {
-      "age": 5,
-      "gameList": [
-        {"date": "2025-11-25T09:45:00", "dificulty": "easy", "errors": 5, "gameTime": 53, "points": 5, "reactionTime": [3.4, 3.7, 3.5]},
-        {"date": "2025-11-25T10:10:00", "dificulty": "easy", "errors": 4, "gameTime": 49, "points": 6, "reactionTime": [3.1, 3.4, 3.2]}
-      ],
-      "name": "Olivia"
-    },
-    {
-      "age": 5,
-      "gameList": [
-        {"date": "2025-11-25T13:45:00", "dificulty": "easy", "errors": 3, "gameTime": 45, "points": 7, "reactionTime": [2.8, 3.1, 2.9]},
-        {"date": "2025-11-25T14:10:00", "dificulty": "easy", "errors": 2, "gameTime": 42, "points": 8, "reactionTime": [2.6, 2.9, 2.7]},
-        {"date": "2025-11-25T14:35:00", "dificulty": "medium", "errors": 4, "gameTime": 52, "points": 6, "reactionTime": [3.0, 3.3, 3.1]}
-      ],
-      "name": "Daniel"
-    },
-    {
-      "age": 5,
-      "gameList": [
-        {"date": "2025-11-25T15:15:00", "dificulty": "easy", "errors": 6, "gameTime": 56, "points": 4, "reactionTime": [3.9, 4.2, 4.0]},
-        {"date": "2025-11-25T15:40:00", "dificulty": "easy", "errors": 5, "gameTime": 53, "points": 5, "reactionTime": [3.6, 3.9, 3.7]}
-      ],
-      "name": "Victoria"
-    },
-    {
-      "age": 5,
-      "gameList": [
-        {"date": "2025-11-25T11:15:00", "dificulty": "easy", "errors": 2, "gameTime": 40, "points": 8, "reactionTime": [2.5, 2.8, 2.6]},
-        {"date": "2025-11-25T11:35:00", "dificulty": "easy", "errors": 1, "gameTime": 36, "points": 9, "reactionTime": [2.3, 2.5, 2.4]},
-        {"date": "2025-11-25T11:55:00", "dificulty": "medium", "errors": 3, "gameTime": 48, "points": 7, "reactionTime": [2.7, 3.0, 2.8]}
-      ],
-      "name": "Javier"
-    },
-    {
-      "age": 5,
-      "gameList": [
-        {"date": "2025-11-25T16:20:00", "dificulty": "easy", "errors": 4, "gameTime": 51, "points": 6, "reactionTime": [3.3, 3.6, 3.4]},
-        {"date": "2025-11-25T16:45:00", "dificulty": "easy", "errors": 3, "gameTime": 48, "points": 7, "reactionTime": [3.0, 3.3, 3.1]}
-      ],
-      "name": "Camila"
-    },
-    {
-      "age": 5,
-      "gameList": [
-        {"date": "2025-11-25T10:40:00", "dificulty": "easy", "errors": 1, "gameTime": 34, "points": 9, "reactionTime": [2.2, 2.4, 2.3]},
-        {"date": "2025-11-25T11:00:00", "dificulty": "easy", "errors": 0, "gameTime": 31, "points": 10, "reactionTime": [2.0, 2.2, 2.1]},
-        {"date": "2025-11-25T11:20:00", "dificulty": "medium", "errors": 2, "gameTime": 43, "points": 8, "reactionTime": [2.4, 2.6, 2.5]},
-        {"date": "2025-11-25T11:40:00", "dificulty": "medium", "errors": 1, "gameTime": 40, "points": 9, "reactionTime": [2.3, 2.5, 2.4]}
-      ],
-      "name": "Alejandro"
-    },
-    {
-      "age": 5,
-      "gameList": [
-        {"date": "2025-11-25T14:50:00", "dificulty": "easy", "errors": 5, "gameTime": 54, "points": 5, "reactionTime": [3.5, 3.8, 3.6]},
-        {"date": "2025-11-25T15:15:00", "dificulty": "easy", "errors": 4, "gameTime": 50, "points": 6, "reactionTime": [3.2, 3.5, 3.3]}
-      ],
-      "name": "Valeria"
-    },
-    {
-      "age": 5,
-      "gameList": [
-        {"date": "2025-11-25T13:20:00", "dificulty": "easy", "errors": 3, "gameTime": 46, "points": 7, "reactionTime": [2.9, 3.2, 3.0]},
-        {"date": "2025-11-25T13:45:00", "dificulty": "easy", "errors": 2, "gameTime": 43, "points": 8, "reactionTime": [2.7, 3.0, 2.8]},
-        {"date": "2025-11-25T14:10:00", "dificulty": "medium", "errors": 4, "gameTime": 53, "points": 6, "reactionTime": [3.1, 3.4, 3.2]}
-      ],
-      "name": "Adrian"
-    },
-    {
-      "age": 5,
-      "gameList": [
-        {"date": "2025-11-25T16:00:00", "dificulty": "easy", "errors": 6, "gameTime": 57, "points": 4, "reactionTime": [4.0, 4.3, 4.1]},
-        {"date": "2025-11-25T16:25:00", "dificulty": "easy", "errors": 5, "gameTime": 54, "points": 5, "reactionTime": [3.7, 4.0, 3.8]}
-      ],
-      "name": "Lucia"
-    },
-    {
-      "age": 5,
-      "gameList": [
-        {"date": "2025-11-25T08:15:00", "dificulty": "easy", "errors": 2, "gameTime": 37, "points": 8, "reactionTime": [2.3, 2.6, 2.4]},
-        {"date": "2025-11-25T08:35:00", "dificulty": "easy", "errors": 1, "gameTime": 33, "points": 9, "reactionTime": [2.1, 2.3, 2.2]},
-        {"date": "2025-11-25T08:55:00", "dificulty": "medium", "errors": 3, "gameTime": 45, "points": 7, "reactionTime": [2.5, 2.8, 2.6]}
-      ],
-      "name": "David"
-    },
-    {
-      "age": 5,
-      "gameList": [
-        {"date": "2025-11-25T09:30:00", "dificulty": "easy", "errors": 4, "gameTime": 49, "points": 6, "reactionTime": [3.1, 3.4, 3.2]},
-        {"date": "2025-11-25T09:55:00", "dificulty": "easy", "errors": 3, "gameTime": 46, "points": 7, "reactionTime": [2.8, 3.1, 2.9]},
-        {"date": "2025-11-25T10:20:00", "dificulty": "medium", "errors": 5, "gameTime": 55, "points": 5, "reactionTime": [3.2, 3.5, 3.3]}
-      ],
-      "name": "Elena"
-    },
-    {
-      "age": 5,
-      "gameList": [
-        {"date": "2025-11-25T10:45:00", "dificulty": "easy", "errors": 1, "gameTime": 32, "points": 9, "reactionTime": [2.0, 2.2, 2.1]},
-        {"date": "2025-11-25T11:05:00", "dificulty": "easy", "errors": 0, "gameTime": 29, "points": 10, "reactionTime": [1.8, 2.0, 1.9]},
-        {"date": "2025-11-25T11:25:00", "dificulty": "medium", "errors": 2, "gameTime": 40, "points": 8, "reactionTime": [2.2, 2.4, 2.3]},
-        {"date": "2025-11-25T11:45:00", "dificulty": "medium", "errors": 1, "gameTime": 37, "points": 9, "reactionTime": [2.1, 2.3, 2.2]}
-      ],
-      "name": "Miguel"
-    },
-    {
-      "age": 5,
-      "gameList": [
-        {"date": "2025-11-25T12:30:00", "dificulty": "easy", "errors": 5, "gameTime": 52, "points": 5, "reactionTime": [3.4, 3.7, 3.5]},
-        {"date": "2025-11-25T12:55:00", "dificulty": "easy", "errors": 4, "gameTime": 48, "points": 6, "reactionTime": [3.1, 3.4, 3.2]},
-        {"date": "2025-11-25T13:20:00", "dificulty": "easy", "errors": 3, "gameTime": 45, "points": 7, "reactionTime": [2.9, 3.2, 3.0]}
-      ],
-      "name": "Carmen"
-    },
-    {
-      "age": 5,
-      "gameList": [
-        {"date": "2025-11-25T13:45:00", "dificulty": "easy", "errors": 3, "gameTime": 44, "points": 7, "reactionTime": [2.8, 3.1, 2.9]},
-        {"date": "2025-11-25T14:10:00", "dificulty": "easy", "errors": 2, "gameTime": 41, "points": 8, "reactionTime": [2.6, 2.9, 2.7]},
-        {"date": "2025-11-25T14:35:00", "dificulty": "medium", "errors": 4, "gameTime": 51, "points": 6, "reactionTime": [3.0, 3.3, 3.1]},
-        {"date": "2025-11-25T15:00:00", "dificulty": "medium", "errors": 3, "gameTime": 48, "points": 7, "reactionTime": [2.8, 3.1, 2.9]}
-      ],
-      "name": "Jorge"
-    },
-    {
-      "age": 5,
-      "gameList": [
-        {"date": "2025-11-25T15:30:00", "dificulty": "easy", "errors": 6, "gameTime": 56, "points": 4, "reactionTime": [3.9, 4.2, 4.0]},
-        {"date": "2025-11-25T15:55:00", "dificulty": "easy", "errors": 5, "gameTime": 53, "points": 5, "reactionTime": [3.6, 3.9, 3.7]},
-        {"date": "2025-11-25T16:20:00", "dificulty": "easy", "errors": 4, "gameTime": 50, "points": 6, "reactionTime": [3.3, 3.6, 3.4]}
-      ],
-      "name": "Raquel"
-    },
-    {
-      "age": 5,
-      "gameList": [
-        {"date": "2025-11-25T08:20:00", "dificulty": "easy", "errors": 2, "gameTime": 38, "points": 8, "reactionTime": [2.4, 2.7, 2.5]},
-        {"date": "2025-11-25T08:40:00", "dificulty": "easy", "errors": 1, "gameTime": 34, "points": 9, "reactionTime": [2.2, 2.4, 2.3]},
-        {"date": "2025-11-25T09:00:00", "dificulty": "medium", "errors": 3, "gameTime": 46, "points": 7, "reactionTime": [2.6, 2.9, 2.7]},
-        {"date": "2025-11-25T09:20:00", "dificulty": "medium", "errors": 2, "gameTime": 43, "points": 8, "reactionTime": [2.4, 2.6, 2.5]}
-      ],
-      "name": "Pablo"
-    },
-    {
-      "age": 5,
-      "gameList": [
-        {"date": "2025-11-25T10:00:00", "dificulty": "easy", "errors": 4, "gameTime": 50, "points": 6, "reactionTime": [3.2, 3.5, 3.3]},
-        {"date": "2025-11-25T10:25:00", "dificulty": "easy", "errors": 3, "gameTime": 47, "points": 7, "reactionTime": [2.9, 3.2, 3.0]},
-        {"date": "2025-11-25T10:50:00", "dificulty": "medium", "errors": 5, "gameTime": 56, "points": 5, "reactionTime": [3.3, 3.6, 3.4]}
-      ],
-      "name": "Natalia"
-    },
-    {
-      "age": 5,
-      "gameList": [
-        {"date": "2025-11-25T11:30:00", "dificulty": "easy", "errors": 1, "gameTime": 33, "points": 9, "reactionTime": [2.1, 2.3, 2.2]},
-        {"date": "2025-11-25T11:50:00", "dificulty": "easy", "errors": 0, "gameTime": 30, "points": 10, "reactionTime": [1.9, 2.1, 2.0]},
-        {"date": "2025-11-25T12:10:00", "dificulty": "medium", "errors": 2, "gameTime": 42, "points": 8, "reactionTime": [2.3, 2.5, 2.4]},
-        {"date": "2025-11-25T12:30:00", "dificulty": "medium", "errors": 1, "gameTime": 39, "points": 9, "reactionTime": [2.2, 2.4, 2.3]}
-      ],
-      "name": "Alberto"
-    },
-    {
-      "age": 5,
-      "gameList": [
-        {"date": "2025-11-25T13:00:00", "dificulty": "easy", "errors": 5, "gameTime": 53, "points": 5, "reactionTime": [3.5, 3.8, 3.6]},
-        {"date": "2025-11-25T13:25:00", "dificulty": "easy", "errors": 4, "gameTime": 49, "points": 6, "reactionTime": [3.2, 3.5, 3.3]},
-        {"date": "2025-11-25T13:50:00", "dificulty": "easy", "errors": 3, "gameTime": 46, "points": 7, "reactionTime": [3.0, 3.3, 3.1]}
-      ],
-      "name": "Silvia"
-    },
-    {
-      "age": 5,
-      "gameList": [
-        {"date": "2025-11-25T14:15:00", "dificulty": "easy", "errors": 3, "gameTime": 45, "points": 7, "reactionTime": [2.9, 3.2, 3.0]},
-        {"date": "2025-11-25T14:40:00", "dificulty": "easy", "errors": 2, "gameTime": 42, "points": 8, "reactionTime": [2.7, 3.0, 2.8]},
-        {"date": "2025-11-25T15:05:00", "dificulty": "medium", "errors": 4, "gameTime": 52, "points": 6, "reactionTime": [3.1, 3.4, 3.2]},
-        {"date": "2025-11-25T15:30:00", "dificulty": "medium", "errors": 3, "gameTime": 49, "points": 7, "reactionTime": [2.9, 3.2, 3.0]}
-      ],
-      "name": "Fernando"
-    },
-    {
-      "age": 5,
-      "gameList": [
-        {"date": "2025-11-25T16:00:00", "dificulty": "easy", "errors": 6, "gameTime": 57, "points": 4, "reactionTime": [4.0, 4.3, 4.1]},
-        {"date": "2025-11-25T16:25:00", "dificulty": "easy", "errors": 5, "gameTime": 54, "points": 5, "reactionTime": [3.7, 4.0, 3.8]},
-        {"date": "2025-11-25T16:50:00", "dificulty": "easy", "errors": 4, "gameTime": 51, "points": 6, "reactionTime": [3.4, 3.7, 3.5]}
-      ],
-      "name": "Cristina"
-    },
-    {
-      "age": 5,
-      "gameList": [
-        {"date": "2025-11-25T08:25:00", "dificulty": "easy", "errors": 2, "gameTime": 39, "points": 8, "reactionTime": [2.5, 2.8, 2.6]},
-        {"date": "2025-11-25T08:45:00", "dificulty": "easy", "errors": 1, "gameTime": 35, "points": 9, "reactionTime": [2.3, 2.5, 2.4]},
-        {"date": "2025-11-25T09:05:00", "dificulty": "medium", "errors": 3, "gameTime": 47, "points": 7, "reactionTime": [2.7, 3.0, 2.8]},
-        {"date": "2025-11-25T09:25:00", "dificulty": "medium", "errors": 2, "gameTime": 44, "points": 8, "reactionTime": [2.5, 2.7, 2.6]}
-      ],
-      "name": "Ruben"
-    },
-    {
-      "age": 5,
-      "gameList": [
-        {"date": "2025-11-25T10:10:00", "dificulty": "easy", "errors": 4, "gameTime": 51, "points": 6, "reactionTime": [3.3, 3.6, 3.4]},
-        {"date": "2025-11-25T10:35:00", "dificulty": "easy", "errors": 3, "gameTime": 48, "points": 7, "reactionTime": [3.0, 3.3, 3.1]},
-        {"date": "2025-11-25T11:00:00", "dificulty": "medium", "errors": 5, "gameTime": 57, "points": 5, "reactionTime": [3.4, 3.7, 3.5]}
-      ],
-      "name": "Monica"
-    },
-    {
-      "age": 5,
-      "gameList": [
-        {"date": "2025-11-25T11:35:00", "dificulty": "easy", "errors": 1, "gameTime": 34, "points": 9, "reactionTime": [2.2, 2.4, 2.3]},
-        {"date": "2025-11-25T11:55:00", "dificulty": "easy", "errors": 0, "gameTime": 31, "points": 10, "reactionTime": [2.0, 2.2, 2.1]},
-        {"date": "2025-11-25T12:15:00", "dificulty": "medium", "errors": 2, "gameTime": 43, "points": 8, "reactionTime": [2.4, 2.6, 2.5]},
-        {"date": "2025-11-25T12:35:00", "dificulty": "medium", "errors": 1, "gameTime": 40, "points": 9, "reactionTime": [2.3, 2.5, 2.4]}
-      ],
-      "name": "Hector"
-    },
-    {
-      "age": 5,
-      "gameList": [
-        {"date": "2025-11-25T13:10:00", "dificulty": "easy", "errors": 5, "gameTime": 54, "points": 5, "reactionTime": [3.6, 3.9, 3.7]},
-        {"date": "2025-11-25T13:35:00", "dificulty": "easy", "errors": 4, "gameTime": 50, "points": 6, "reactionTime": [3.3, 3.6, 3.4]},
-        {"date": "2025-11-25T14:00:00", "dificulty": "easy", "errors": 3, "gameTime": 47, "points": 7, "reactionTime": [3.1, 3.4, 3.2]}
-      ],
-      "name": "Beatriz"
-    },
-    {
-      "age": 5,
-      "gameList": [
-        {"date": "2025-11-25T14:25:00", "dificulty": "easy", "errors": 3, "gameTime": 46, "points": 7, "reactionTime": [3.0, 3.3, 3.1]},
-        {"date": "2025-11-25T14:50:00", "dificulty": "easy", "errors": 2, "gameTime": 43, "points": 8, "reactionTime": [2.8, 3.1, 2.9]},
-        {"date": "2025-11-25T15:15:00", "dificulty": "medium", "errors": 4, "gameTime": 53, "points": 6, "reactionTime": [3.2, 3.5, 3.3]},
-        {"date": "2025-11-25T15:40:00", "dificulty": "medium", "errors": 3, "gameTime": 50, "points": 7, "reactionTime": [3.0, 3.3, 3.1]}
-      ],
-      "name": "Roberto"
-    },
-    {
-      "age": 5,
-      "gameList": [
-        {"date": "2025-11-25T16:10:00", "dificulty": "easy", "errors": 6, "gameTime": 58, "points": 4, "reactionTime": [4.1, 4.4, 4.2]},
-        {"date": "2025-11-25T16:35:00", "dificulty": "easy", "errors": 5, "gameTime": 55, "points": 5, "reactionTime": [3.8, 4.1, 3.9]},
-        {"date": "2025-11-25T17:00:00", "dificulty": "easy", "errors": 4, "gameTime": 52, "points": 6, "reactionTime": [3.5, 3.8, 3.6]}
-      ],
-      "name": "Patricia"
-    },
-    {
-      "age": 5,
-      "gameList": [
-        {"date": "2025-11-25T08:30:00", "dificulty": "easy", "errors": 2, "gameTime": 40, "points": 8, "reactionTime": [2.6, 2.9, 2.7]},
-        {"date": "2025-11-25T08:50:00", "dificulty": "easy", "errors": 1, "gameTime": 36, "points": 9, "reactionTime": [2.4, 2.6, 2.5]},
-        {"date": "2025-11-25T09:10:00", "dificulty": "medium", "errors": 3, "gameTime": 48, "points": 7, "reactionTime": [2.8, 3.1, 2.9]},
-        {"date": "2025-11-25T09:30:00", "dificulty": "medium", "errors": 2, "gameTime": 45, "points": 8, "reactionTime": [2.6, 2.8, 2.7]}
-      ],
-      "name": "Sergio"
-    },
-    {
-      "age": 5,
-      "gameList": [
-        {"date": "2025-11-25T10:20:00", "dificulty": "easy", "errors": 4, "gameTime": 52, "points": 6, "reactionTime": [3.4, 3.7, 3.5]},
-        {"date": "2025-11-25T10:45:00", "dificulty": "easy", "errors": 3, "gameTime": 49, "points": 7, "reactionTime": [3.1, 3.4, 3.2]},
-        {"date": "2025-11-25T11:10:00", "dificulty": "medium", "errors": 5, "gameTime": 58, "points": 5, "reactionTime": [3.5, 3.8, 3.6]}
-      ],
-      "name": "Laura"
+      "name": "Sebastian"
     }
   ]
 }
