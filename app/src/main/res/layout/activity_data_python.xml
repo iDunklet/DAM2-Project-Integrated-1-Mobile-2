@@ -1,111 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fillViewport="true"
-    android:background="#F5F5F5"
-    tools:context=".DataPython">
+    android:padding="16dp">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="16dp">
+        android:gravity="center">
 
-        <!-- Gráfico 1: Promedio de puntos por jugador -->
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
+        <!-- Título -->
+        <TextView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            app:cardCornerRadius="12dp"
-            app:cardElevation="6dp">
+            android:text="Gráficos Generados"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="20dp" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="12dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Promedio de puntos por jugador"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
-                    android:textColor="#333"/>
-
-                <ImageView
-                    android:id="@+id/chartImagePoints"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:scaleType="fitCenter"
-                    android:contentDescription="Puntos por jugador"/>
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-
-        <!-- Gráfico 2: Relación tiempo de juego vs puntos -->
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
+        <!-- Gráfico 1 -->
+        <TextView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            app:cardCornerRadius="12dp"
-            app:cardElevation="6dp">
+            android:text="Puntos por Jugador"
+            android:textStyle="bold"
+            android:layout_marginBottom="5dp" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="12dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Relación tiempo de juego vs puntos"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
-                    android:textColor="#333"/>
-
-                <ImageView
-                    android:id="@+id/chartImageRelation"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:scaleType="fitCenter"
-                    android:contentDescription="Scatter plot"/>
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-
-        <!-- Gráfico 3: Arbol -->
-        <androidx.cardview.widget.CardView
+        <ImageView
+            android:id="@+id/chartImagePoints"
             android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:layout_marginBottom="20dp"
+            android:background="@android:color/darker_gray" />
+
+        <!-- Gráfico 2 -->
+        <TextView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            app:cardCornerRadius="12dp"
-            app:cardElevation="6dp">
+            android:text="Tiempo vs Puntos"
+            android:textStyle="bold"
+            android:layout_marginBottom="5dp" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="12dp">
+        <ImageView
+            android:id="@+id/chartImageRelation"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:layout_marginBottom="20dp"
+            android:background="@android:color/darker_gray" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Relación tiempo de juego vs puntos"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
-                    android:textColor="#333"/>
+        <!-- Gráfico 3 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Árbol de Decisión"
+            android:textStyle="bold"
+            android:layout_marginBottom="5dp" />
 
-                <ImageView
-                    android:id="@+id/chartImageTree"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:scaleType="fitCenter"
-                    android:contentDescription="Scatter plot"/>
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
+        <ImageView
+            android:id="@+id/chartImageTree"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:background="@android:color/darker_gray" />
 
     </LinearLayout>
 </ScrollView>
