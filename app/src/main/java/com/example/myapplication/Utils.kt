@@ -2,71 +2,79 @@ package com.example.myapplication
 
 import android.app.Activity
 import android.content.Intent
-import android.os.Build
-import android.widget.ImageButton
-import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import com.google.gson.reflect.TypeToken
-import java.time.LocalDateTime
+import java.io.File
 
-
-
-
-
-fun setupExitButton(user: User,activity: Activity) {
-    appendUserToJsonFile(activity, user)
-    activity.finish()
+fun setupExitButton(user: User, activity: Activity) {
+    appendUserToJsonFile(activity, user) // save progress
+    activity.finishAffinity()            // close all Activities
+    android.os.Process.killProcess(android.os.Process.myPid()) // kill the process
 }
+
 fun saveJsonToInternal(activity: Activity, filename: String, json: String) {
-    activity.openFileOutput(filename, Activity.MODE_PRIVATE).use {
-        it.write(json.toByteArray())
-    }
+    val file = File(activity.filesDir, filename)
+    file.writeText(json) // creates the file if it does not exist, overwrites if it does
 }
 
-//Button try again(we save more data inside the User)
-fun setupTryAgainButton(user: User,activity: Activity){
-    //
+// Button "try again" (we save more data inside the User)
+fun setupTryAgainButton(user: User, activity: Activity) {
     appendUserToJsonFile(activity, user)
-    //call Game activity
 
     val intent = Intent(activity, GameDificulty::class.java)
     intent.putExtra("user_data_try_again", user)
     activity.startActivity(intent)
-
-
 }
-public fun showAlert(title: String, message: String, activity: AppCompatActivity) {
+
+fun showAlert(title: String, message: String, activity: AppCompatActivity) {
     val builder = androidx.appcompat.app.AlertDialog.Builder(activity)
     builder.setTitle(title)
         .setMessage(message)
         .setPositiveButton("OK", null)
         .show()
 }
+
 fun appendUserToJsonFile(activity: Activity, user: User, filename: String = "export.json") {
     val gson = GsonBuilder()
         .setPrettyPrinting()
         .create()
 
-    val existingJson = try {
-        activity.openFileInput(filename).bufferedReader().use { it.readText() }
-    } catch (e: Exception) {
-        """{"cat":[]}"""
-    }
+    // 1. Read existing JSON or create an empty one
+    val existingJson = readJsonFile(activity, filename)
 
-    val type = object : TypeToken<Map<String, List<User>>>() {}.type
-    val existingMap: Map<String, List<User>> = gson.fromJson(existingJson, type) ?: mapOf("cat" to emptyList())
+    // 2. Convert JSON to map
+    val existingMap = parseJsonToMap(gson, existingJson)
 
-    val userList = existingMap["cat"]?.toMutableList() ?: mutableListOf()
-    userList.add(user)
+    // 3. Update user list
+    val updatedList = updateUserList(existingMap, user)
 
-    val newJson = gson.toJson(mapOf("cat" to userList))
+    // 4. Convert to JSON and save
+    val newJson = gson.toJson(mapOf("cat" to updatedList))
     saveJsonToInternal(activity, filename, newJson)
 }
 
+private fun readJsonFile(activity: Activity, filename: String): String {
+    val file = File(activity.filesDir, filename)
+    return if (file.exists()) {
+        file.readText()
+    } else {
+        """{"cat":[]}""" // initial JSON if the file does not exist
+    }
+}
 
+private fun parseJsonToMap(gson: Gson, json: String): Map<String, List<User>> {
+    val type = object : TypeToken<Map<String, List<User>>>() {}.type
+    return try {
+        gson.fromJson(json, type) ?: mapOf("cat" to emptyList())
+    } catch (e: Exception) {
+        mapOf("cat" to emptyList()) // if JSON is corrupted, start empty
+    }
+}
 
-
-
-
+private fun updateUserList(existingMap: Map<String, List<User>>, user: User): MutableList<User> {
+    val userList = existingMap["cat"]?.toMutableList() ?: mutableListOf()
+    userList.add(user)
+    return userList
+}

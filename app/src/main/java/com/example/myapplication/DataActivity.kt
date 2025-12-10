@@ -4,6 +4,7 @@ import android.content.Intent
 import android.media.MediaPlayer
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import androidx.activity.enableEdgeToEdge
@@ -22,22 +23,25 @@ class DataActivity : AppCompatActivity() {
 
         startViews()
 
-        bContinue.setOnClickListener {
-            playButtonSound()
+        // Listener del botón continuar sin lambda
+        bContinue.setOnClickListener(object : View.OnClickListener {
+            override fun onClick(v: View?) {
+                playButtonSound()
 
-            val userName = etName.text.toString().trim()
-            val userAge = etAge.text.toString().toIntOrNull() ?: 0
+                val userName = etName.text.toString().trim()
+                val userAge = etAge.text.toString().toIntOrNull() ?: 0
 
-            if (userName.isNotEmpty() && userAge != 0) {
-                val user = User(userName, userAge)
-                val intent = Intent(this, GameDificulty::class.java)
-                intent.putExtra("user_data", user)
-                startActivity(intent)
-                finish()
-            } else {
-                showAlert("Error", "Debes completar nombre y edad.", this)
+                if (userName.isNotEmpty() && userAge != 0) {
+                    val user = User(userName, userAge)
+                    val intent = Intent(this@DataActivity, GameDificulty::class.java)
+                    intent.putExtra("user_data", user)
+                    startActivity(intent)
+                    finish()
+                } else {
+                    showAlert("Error", "Debes completar nombre y edad.", this@DataActivity)
+                }
             }
-        }
+        })
     }
 
     private fun startViews() {
@@ -49,13 +53,20 @@ class DataActivity : AppCompatActivity() {
     private fun playButtonSound() {
         try {
             val mediaPlayer = MediaPlayer.create(this, R.raw.button)
-            mediaPlayer.setOnCompletionListener { mp ->
-                mp.release()
-            }
-            mediaPlayer.setOnErrorListener { mp, what, extra ->
-                mp.release()
-                true
-            }
+
+            mediaPlayer.setOnCompletionListener(object : MediaPlayer.OnCompletionListener {
+                override fun onCompletion(mp: MediaPlayer) {
+                    mp.release()
+                }
+            })
+
+            mediaPlayer.setOnErrorListener(object : MediaPlayer.OnErrorListener {
+                override fun onError(mp: MediaPlayer, what: Int, extra: Int): Boolean {
+                    mp.release()
+                    return true
+                }
+            })
+
             mediaPlayer.start()
         } catch (e: Exception) {
             Log.e("AudioDebug", "Error en sonido: ${e.message}")
