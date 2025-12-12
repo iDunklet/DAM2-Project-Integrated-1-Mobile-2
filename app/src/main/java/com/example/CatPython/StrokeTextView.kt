@@ -1,4 +1,4 @@
-package com.example.myapplication
+package com.example.CatPython
 
 import android.content.Context
 import android.graphics.Canvas

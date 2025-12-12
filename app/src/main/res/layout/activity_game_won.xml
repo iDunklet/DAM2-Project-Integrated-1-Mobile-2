@@ -53,7 +53,7 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <com.example.myapplication.StrokeTextView
+    <com.example.CatPython.StrokeTextView
         android:layout_width="1149dp"
         android:layout_height="390dp"
         android:layout_marginTop="56dp"

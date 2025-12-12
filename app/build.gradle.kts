@@ -5,7 +5,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example.myapplication"
+    namespace = "com.example.CatPython"
     compileSdk = 34
     buildToolsVersion = "34.0.0"
 

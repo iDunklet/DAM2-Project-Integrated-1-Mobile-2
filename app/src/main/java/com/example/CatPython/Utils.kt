@@ -1,4 +1,4 @@
-package com.example.myapplication
+package com.example.CatPython
 
 import android.app.Activity
 import android.content.Intent

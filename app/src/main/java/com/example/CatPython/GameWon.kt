@@ -1,18 +1,10 @@
-package com.example.myapplication
+package com.example.CatPython
 
-import android.os.Build
 import android.os.Bundle
 import android.os.Handler
-import android.view.View
 import android.view.animation.AnimationUtils
-import android.widget.Button
-import android.widget.EditText
 import android.widget.ImageButton
-import androidx.activity.enableEdgeToEdge
-import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 
 class GameWon : AppCompatActivity() {
 

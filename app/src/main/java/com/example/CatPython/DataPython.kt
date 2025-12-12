@@ -1,4 +1,4 @@
-package com.example.myapplication
+package com.example.CatPython
 
 import android.graphics.BitmapFactory
 import android.os.Bundle
@@ -46,7 +46,14 @@ class DataPython : AppCompatActivity() {
         val imagenes = listOf(
             "graph1" to R.id.chartImagePoints,
             "graph2" to R.id.chartImageRelation,
-            "graph3" to R.id.chartImageTree
+            "graph3" to R.id.chartImageTree,
+            "confusion_matrix" to R.id.chartImageConfusion,
+            "hist_gameTime" to R.id.hist_gameTime,
+            "hist_errors" to R.id.hist_errors,
+            "heatmap_corr" to R.id.heatmap_corr
+
+
+
         )
 
         var cargadas = 0
