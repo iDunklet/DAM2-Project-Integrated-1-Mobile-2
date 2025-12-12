@@ -50,7 +50,9 @@ class DataPython : AppCompatActivity() {
             "confusion_matrix" to R.id.chartImageConfusion,
             "hist_gameTime" to R.id.hist_gameTime,
             "hist_errors" to R.id.hist_errors,
-            "heatmap_corr" to R.id.heatmap_corr
+            "heatmap_corr" to R.id.heatmap_corr,
+            "predictions_pie" to R.id.predictionsPie
+
 
 
 
