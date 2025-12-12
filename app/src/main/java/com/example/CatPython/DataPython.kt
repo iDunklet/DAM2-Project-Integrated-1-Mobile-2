@@ -52,12 +52,7 @@ class DataPython : AppCompatActivity() {
             "hist_errors" to R.id.hist_errors,
             "heatmap_corr" to R.id.heatmap_corr,
             "predictions_pie" to R.id.predictionsPie
-
-
-
-
         )
-
         var cargadas = 0
         for ((clave, idVista) in imagenes) {
             val base64Str = results[PyObject.fromJava(clave)]?.toString()
@@ -68,7 +63,6 @@ class DataPython : AppCompatActivity() {
                 cargadas++
             }
         }
-
         val mensaje = if (cargadas > 0) "$cargadas gráficos mostrados" else "No se pudieron cargar gráficos"
         Toast.makeText(this, mensaje, Toast.LENGTH_SHORT).show()
     }

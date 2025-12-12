@@ -34,7 +34,7 @@
             android:scaleType="fitCenter"
             android:adjustViewBounds="true"
             android:layout_marginBottom="20dp"
-            android:background="@android:color/darker_gray" />
+             />
 
         <!-- Gráfico 2 -->
         <TextView
@@ -51,7 +51,7 @@
             android:scaleType="fitCenter"
             android:adjustViewBounds="true"
             android:layout_marginBottom="20dp"
-            android:background="@android:color/darker_gray" />
+             />
 
         <!-- Gráfico 3 -->
         <TextView
@@ -67,7 +67,7 @@
             android:layout_height="400dp"
             android:scaleType="fitCenter"
             android:adjustViewBounds="true"
-            android:background="@android:color/darker_gray" />
+             />
 
         <!-- Gráfico 4: Matriz de Confusión -->
         <TextView
@@ -85,12 +85,12 @@
             android:scaleType="fitCenter"
             android:adjustViewBounds="true"
             android:layout_marginBottom="20dp"
-            android:background="@android:color/darker_gray" />
+             />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="hitograma"
+            android:text="Histograma de Tiempo de Juego"
             android:textStyle="bold"
             android:layout_marginTop="20dp"
             android:layout_marginBottom="5dp" />
@@ -102,7 +102,7 @@
             android:scaleType="fitCenter"
             android:adjustViewBounds="true"
             android:layout_marginBottom="20dp"
-            android:background="@android:color/darker_gray" />
+            />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -118,7 +118,7 @@
             android:scaleType="fitCenter"
             android:adjustViewBounds="true"
             android:layout_marginBottom="20dp"
-            android:background="@android:color/darker_gray" />
+             />
 
         <TextView
             android:layout_width="wrap_content"
@@ -135,7 +135,7 @@
             android:scaleType="fitCenter"
             android:adjustViewBounds="true"
             android:layout_marginBottom="20dp"
-            android:background="@android:color/darker_gray" />
+             />
 
         <TextView
             android:layout_width="wrap_content"
@@ -150,7 +150,7 @@
             android:layout_width="match_parent"
             android:layout_height="300dp"
             android:adjustViewBounds="true"
-            android:background="@android:color/darker_gray"
+
             android:layout_marginBottom="20dp" />
 
 

@@ -13,15 +13,11 @@ from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_sc
 plt.switch_backend('Agg')  # No usar GUI
 IMAGE_DIR = "/data/data/com.example.myapplication/files/graphs"
 
-def log(msg):
-    print(f"[PY_DEBUG] {msg}")
-
 # -----------------------------
 # 1. Cargar datos
 # -----------------------------
 def load_data():
     """Busca el dataset en varias rutas posibles y devuelve el JSON cargado."""
-    log("Cargando datos...")
     paths = [
         "/data/data/com.example.myapplication/files/dataset.json",
         "/data/user/0/com.example.myapplication/files/dataset.json",
@@ -31,7 +27,6 @@ def load_data():
         try:
             with open(path, "r", encoding="utf-8") as f:
                 data = json.load(f)
-            log(f"Datos cargados de: {path}")
             return data
         except:
             continue
@@ -57,7 +52,6 @@ def process_data(data):
             })
 
     df = pd.DataFrame(rows)
-    log(f"DataFrame creado: {len(df)} filas (incluyendo gameTime=0)")
 
     # Limpieza básica: duplicados, nulos y valores imposibles
     df = df.drop_duplicates()
@@ -127,11 +121,6 @@ def train_model(df):
     precision = precision_score(y_test, y_pred, zero_division=0)
     recall = recall_score(y_test, y_pred, zero_division=0)
     f1 = f1_score(y_test, y_pred, zero_division=0)
-
-    log(f"Accuracy: {accuracy:.3f}")
-    log(f"Precision: {precision:.3f}")
-    log(f"Recall: {recall:.3f}")
-    log(f"F1-score: {f1:.3f}")
 
     metrics = {
         "accuracy": accuracy,
@@ -230,24 +219,28 @@ def generate_graphs(df, clf, y, y_pred):
     results["heatmap_corr"] = fig_to_base64(fig_corr)
     plt.close(fig_corr)
 
-    # Gráfico de predicciones (pie chart)
+    # Gráfico de predicciones (pie chart) - CORREGIDO
     df["predicted_return"] = clf.predict(df[["age", "errors", "gameTime", "avgReaction"]])
-
+    
     fig_pred = plt.figure(figsize=(6, 6))
     pred_counts = df["predicted_return"].value_counts()
-
+    
+    # Manejar el caso cuando hay solo una categoría
+    colors = ["red", "green"]
+    if len(pred_counts) == 1:
+        # Si solo hay una categoría, usar solo el color correspondiente
+        colors = [colors[pred_counts.index[0]]]
+    
     plt.pie(
         pred_counts,
-        labels=["No vuelve", "Vuelve"],
         autopct="%1.1f%%",
-        colors=["red", "green"]
+        colors=colors
     )
     plt.title("Predicción Global de Retorno")
     plt.tight_layout()
 
     results["predictions_pie"] = fig_to_base64(fig_pred)
     plt.close(fig_pred)
-
 
     return results
 
@@ -256,7 +249,6 @@ def generate_graphs(df, clf, y, y_pred):
 # -----------------------------
 def create_graphs():
     """Orquesta todo el proceso: carga datos, entrena modelo y genera gráficos."""
-    log("=== CREANDO GRÁFICOS ===")
     try:
         data = load_data()
         df = process_data(data)
@@ -264,5 +256,4 @@ def create_graphs():
         results = generate_graphs(df, clf, y, y_pred)
         return results
     except Exception as e:
-        log(f"ERROR: {str(e)}")
         return {"error": str(e)}
