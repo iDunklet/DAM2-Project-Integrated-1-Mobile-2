@@ -149,6 +149,7 @@ def generate_graphs(df, clf, y, y_pred):
     results = {}
 
     # Gráfico 1
+    # 1. Puntos promedio obtenidos por cada niño
     fig1 = plt.figure(figsize=(10, 6))
     df.groupby("name")["points"].mean().plot(kind="bar", color="skyblue")
     plt.title("Puntos Promedio por Jugador")
@@ -160,6 +161,7 @@ def generate_graphs(df, clf, y, y_pred):
     plt.close(fig1)
 
     # Gráfico 2
+    # 2. Relación entre tiempo de juego y puntuación obtenida
     fig2 = plt.figure(figsize=(10, 6))
     plt.scatter(df["gameTime"], df["points"], alpha=0.6, color="green")
     plt.title("Tiempo de Juego vs Puntos")
@@ -171,6 +173,7 @@ def generate_graphs(df, clf, y, y_pred):
     plt.close(fig2)
 
     # Árbol de decisión
+    # 3. Árbol de decisiones que predice si un niño obtendrá puntos
     fig3 = plt.figure(figsize=(22, 14))
     tree.plot_tree(
         clf,
@@ -185,9 +188,11 @@ def generate_graphs(df, clf, y, y_pred):
     plt.close(fig3)
 
     # Matriz de confusión
+    # 4. Exactitud del modelo: predicciones correctas vs incorrectas
     results["confusion_matrix"] = generate_confusion_matrix_image(y, y_pred)
 
     # Histograma de tiempo
+    # 5. Frecuencia de diferentes tiempos de juego completados
     fig = plt.figure(figsize=(10, 6))
     plt.hist(df["gameTime"], bins=20, color="orange", edgecolor="black")
     plt.title("Distribución del Tiempo de Juego")
@@ -198,6 +203,7 @@ def generate_graphs(df, clf, y, y_pred):
     plt.close(fig)
 
     # Histograma de errores
+    # 6. Frecuencia de diferentes cantidades de errores cometidos
     fig_err = plt.figure(figsize=(10, 6))
     plt.hist(df["errors"], bins=15, color="red", edgecolor="black")
     plt.title("Distribución de Errores")
@@ -208,6 +214,7 @@ def generate_graphs(df, clf, y, y_pred):
     plt.close(fig_err)
 
     # Heatmap de correlación
+    # 7. Relaciones matemáticas entre todas las variables medidas
     fig_corr = plt.figure(figsize=(8, 6))
     corr = df[["age", "errors", "gameTime", "avgReaction", "points"]].corr()
     plt.imshow(corr, cmap="coolwarm", interpolation="nearest")
@@ -220,6 +227,7 @@ def generate_graphs(df, clf, y, y_pred):
     plt.close(fig_corr)
 
     # Gráfico de predicciones (pie chart) - CORREGIDO
+    # 8. Porcentaje de niños predichos para tener éxito o necesitar ayuda
     df["predicted_return"] = clf.predict(df[["age", "errors", "gameTime", "avgReaction"]])
     
     fig_pred = plt.figure(figsize=(6, 6))
